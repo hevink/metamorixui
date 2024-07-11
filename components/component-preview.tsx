@@ -45,6 +45,7 @@ export function ComponentPreview({
     }
 
     return <Component />;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name, key]);
 
   return (

@@ -39,6 +39,7 @@ export async function GET(req: Request) {
     return new ImageResponse(
       (
         <div tw="flex justify-center flex-col relative w-full h-full items-center bg-white">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             tw="absolute inset-0 w-full h-full"
             alt={title}
@@ -59,6 +60,7 @@ export async function GET(req: Request) {
           ></div> */}
 
           <h1 tw="absolute inset-0 flex justify-center items-center mb-57 flex-row">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               tw="h-10 w-10"
               alt={title}

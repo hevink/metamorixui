@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "Magic UI",
-  url: "https://magicui.design",
-  ogImage: "https://magicui.design/api/og",
+  name: "Metamorix UI",
+  url: "https://ui.metamorix.com",
+  ogImage: "https://ui.metamorix.com/api/og",
   description:
     "Beautifully designed landing page components built with React & Tailwind CSS.",
   links: {
@@ -17,6 +17,7 @@ export const siteConfig = {
     "Landing Page",
     "Components",
     "Next.js",
+    "Metamorix UI",
   ],
 };
 

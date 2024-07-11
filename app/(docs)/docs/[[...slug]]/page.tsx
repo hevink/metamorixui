@@ -1,11 +1,8 @@
 import { siteConfig } from "@/config/site";
-import { getTableOfContents } from "@/lib/toc";
 import { absoluteUrl, cn } from "@/lib/utils";
 import { badgeVariants } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Mdx } from "@/components/mdx-components";
 import { DocPager } from "@/components/pager";
-import SidebarCTA from "@/components/sidebar-cta";
 
 import "@/styles/mdx.css";
 
@@ -14,9 +11,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { allDocs } from "contentlayer/generated";
-
-import { Contribute } from "@/components/contribute";
-import { TableOfContents } from "@/components/toc";
 
 interface DocPageProps {
   params: {
@@ -86,14 +80,8 @@ export default async function DocPage({ params }: DocPageProps) {
     notFound();
   }
 
-  const toc = await getTableOfContents(doc.body.raw);
-
   return (
-    <main
-      className={cn("relative py-6 lg:gap-10 lg:py-8 xl:grid ", {
-        "xl:grid-cols-[1fr_300px]": doc.toc,
-      })}
-    >
+    <main>
       <div className="mx-auto w-full min-w-0">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
           <div className="truncate">Docs</div>
@@ -141,20 +129,6 @@ export default async function DocPage({ params }: DocPageProps) {
         </div>
         <DocPager doc={doc} />
       </div>
-      {doc.toc && (
-        <div className="hidden text-sm xl:block">
-          <div className="sticky top-16 -mt-10 pt-4">
-            <ScrollArea className="pb-10">
-              <div className="space-y-4 sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
-                <TableOfContents toc={toc} />
-                <Contribute doc={doc} />
-                <SidebarCTA />
-              </div>
-            </ScrollArea>
-          </div>
-        </div>
-      )}
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

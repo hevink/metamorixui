@@ -9,7 +9,8 @@ import { Icons } from "@/components/icons";
 import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
 import { ModeToggle } from "@/components/mode-toggle";
-import NumberTicker from "@/registry/components/magicui/number-ticker";
+
+// import NumberTicker from "@/registry/components/magicui/number-ticker";
 
 export async function SiteHeader() {
   let stars = 300; // Default value
@@ -48,50 +49,10 @@ export async function SiteHeader() {
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center justify-between gap-2 md:justify-end">
-          <Link
-            className={cn(
-              buttonVariants(),
-              "hidden max-w-52 gap-2 overflow-hidden whitespace-pre md:flex",
-              "group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
-            )}
-            target="_blank"
-            href={siteConfig.links.github}
-          >
-            <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
-            <div className="flex items-center">
-              <Icons.gitHub className="size-4" />
-              <span className="ml-1">Star on GitHub</span>{" "}
-            </div>
-            <div className="ml-2 flex items-center gap-1 text-sm md:flex">
-              <StarIcon className="size-4 text-gray-500 transition-all duration-300 group-hover:text-yellow-300" />
-              <NumberTicker
-                value={stars}
-                className="font-display font-medium text-white dark:text-black"
-              />
-            </div>
-          </Link>
-
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <CommandMenu />
           </div>
           <nav className="flex items-center gap-1">
-            <Link
-              href={siteConfig.links.discord}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.discord className="size-4" />
-                <span className="sr-only">Discord</span>
-              </div>
-            </Link>
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -124,23 +85,6 @@ export async function SiteHeader() {
               >
                 <Icons.twitter className="size-4 fill-current" />
                 <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.instagram}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.instagram className="size-4 fill-current" />
-                <span className="sr-only">Instagram</span>
               </div>
             </Link>
             <ModeToggle />

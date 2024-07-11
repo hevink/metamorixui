@@ -31,7 +31,7 @@ const nextConfig = {
       },
       {
         source: "/components",
-        destination: "/docs/components/marquee",
+        destination: "/docs/components/headers",
         permanent: true,
       },
       {
@@ -41,7 +41,7 @@ const nextConfig = {
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/marquee",
+        destination: "/docs/components/headers",
         permanent: true,
       },
     ];

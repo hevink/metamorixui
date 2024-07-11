@@ -45,7 +45,7 @@ export function ComponentPreview({
     }
 
     return <Component />;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name, key]);
 
   return (
@@ -73,10 +73,6 @@ export function ComponentPreview({
                 Code
               </TabsTrigger>
             </TabsList>
-          </div>
-        )}
-        <TabsContent value="preview" className="relative rounded-md" key={key}>
-          <ComponentWrapper>
             <Button
               onClick={() => setKey((prev) => prev + 1)}
               className="absolute right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
@@ -84,17 +80,22 @@ export function ComponentPreview({
             >
               <RotateCcw size={16} />
             </Button>
-            <React.Suspense
-              fallback={
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <Icons.spinner className="mr-2 size-4 animate-spin" />
-                  Loading...
-                </div>
-              }
-            >
-              {Preview}
-            </React.Suspense>
-          </ComponentWrapper>
+          </div>
+        )}
+        <TabsContent value="preview" className="relative rounded-md" key={key}>
+          {/* <ComponentWrapper> */}
+
+          <React.Suspense
+            fallback={
+              <div className="flex items-center text-sm text-muted-foreground">
+                <Icons.spinner className="mr-2 size-4 animate-spin" />
+                Loading...
+              </div>
+            }
+          >
+            {Preview}
+          </React.Suspense>
+          {/* </ComponentWrapper> */}
         </TabsContent>
         <TabsContent value="code">
           <div className="flex flex-col space-y-4">

@@ -8,6 +8,7 @@ const ui: Registry = {
     type: "components:magicui",
     files: ["registry/components/magicui/headers.tsx"],
   },
+  
 };
 
 const example: Registry = {

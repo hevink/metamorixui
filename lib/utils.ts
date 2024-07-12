@@ -55,8 +55,8 @@ export function absoluteUrl(path: string) {
 }
 
 export function constructMetadata({
-  title = "Magic UI - Modern React + Tailwind CSS components & Templates",
-  description = "Magic UI is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion",
+  title = "Metamorix UI - Modern React + Tailwind CSS components & Templates",
+  description = "Metamorix UI is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion",
   image = absoluteUrl("/api/og"),
   ...props
 }: {
@@ -75,6 +75,7 @@ export function constructMetadata({
       "Landing Page",
       "Components",
       "Next.js",
+      "Metamorix UI",
     ],
     openGraph: {
       title,
@@ -94,17 +95,17 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@dillionverma",
+      creator: "@Hevin_69",
     },
     icons: "/favicon.ico",
-    metadataBase: new URL("https://magicui.design"),
+    metadataBase: new URL("https://ui.metamorix.com"),
     authors: [
       {
-        name: "dillionverma",
-        url: "https://twitter.com/dillionverma",
+        name: "Hevin_69",
+        url: "https://x.com/Hevin_69",
       },
     ],
-    creator: "dillionverma",
+    creator: "Hevin_69",
     ...props,
   };
 }

@@ -27,7 +27,7 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const params = Object.fromEntries(url.searchParams);
   const title = capitalize(
-    (params.title || "Magic UI")
+    (params.title || "Metamorix UI")
       .replace(/-/g, " ")
       .split(" ")
       .slice(0, 3)

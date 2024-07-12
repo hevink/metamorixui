@@ -16,7 +16,7 @@ import type { Viewport } from "next";
 import { Metadata } from "next";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Magic UI",
+  title: "Metamorix UI",
   description:
     "Beautiful UI components and templates to make your landing page look stunning.",
   image: absoluteUrl("/api/og"),

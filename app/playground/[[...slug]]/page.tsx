@@ -60,7 +60,7 @@ export async function generateMetadata({
       title: doc.title,
       description: doc.description,
       images: [doc.image],
-      creator: "@Hevin_69",
+      creator: "@dillionverma",
     },
   };
 }
@@ -81,8 +81,8 @@ export default async function DocPage({ params }: DocPageProps) {
   }
 
   return (
-    <main>
-      <div className="mx-auto w-full min-w-0">
+    <>
+      <div className="mx-auto w-full min-w-0 min-h-screen">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
           <div className="truncate">Docs</div>
           <ChevronRightIcon className="size-4" />
@@ -135,6 +135,6 @@ export default async function DocPage({ params }: DocPageProps) {
           __html: JSON.stringify(doc.structuredData),
         }}
       />
-    </main>
+    </>
   );
 }

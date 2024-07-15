@@ -8,11 +8,11 @@ const ui: Registry = {
     type: "components:magicui",
     files: ["registry/components/magicui/headers.tsx"],
   },
-  footers: {
-    name: "footers",
-    type: "components:magicui",
-    files: ["registry/components/magicui/footers.tsx"],
-  },
+  // footers: {
+  //   name: "footers",
+  //   type: "components:magicui",
+  //   files: ["registry/components/magicui/footers.tsx"],
+  // },
 };
 
 const example: Registry = {

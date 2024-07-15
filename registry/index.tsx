@@ -20,9 +20,9 @@ const example: Registry = {
     name: "headers-demo",
     type: "components:example",
     registryDependencies: ["headers"],
-    files: ["registry/components/example/headers-demo.tsx"],
+    files: ["registry/components/example/headers/headers-demo.tsx"],
     component: React.lazy(
-      () => import("@/registry/components/example/headers-demo"),
+      () => import("@/registry/components/example/headers/headers-demo"),
     ),
   },
 };

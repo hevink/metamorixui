@@ -18,7 +18,7 @@ const menuItems = [
   },
 ];
 
-const HeaderOne = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
@@ -130,4 +130,4 @@ const HeaderOne = () => {
   );
 };
 
-export default HeaderOne;
+export default Header;

@@ -23,7 +23,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Footer",
-          href: `/docs/components/footer`,
+          href: `/docs/components/footers`,
           items: [],
         },
         {

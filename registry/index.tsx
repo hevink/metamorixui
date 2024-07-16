@@ -8,11 +8,11 @@ const ui: Registry = {
     type: "components:magicui",
     files: ["registry/components/magicui/headers.tsx"],
   },
-  // footers: {
-  //   name: "footers",
-  //   type: "components:magicui",
-  //   files: ["registry/components/magicui/footers.tsx"],
-  // },
+  footers: {
+    name: "footers",
+    type: "components:magicui",
+    files: ["registry/components/magicui/footers.tsx"],
+  },
 };
 
 const example: Registry = {
@@ -23,6 +23,15 @@ const example: Registry = {
     files: ["registry/components/example/headers/headers-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/headers/headers-demo"),
+    ),
+  },
+  "footer-one": {
+    name: "footer-one",
+    type: "components:example",
+    registryDependencies: ["footers"],
+    files: ["registry/components/example/footers/footer-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/footers/footer-one"),
     ),
   },
 };

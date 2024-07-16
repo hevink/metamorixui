@@ -82,20 +82,23 @@ export function ComponentPreview({
             </Button>
           </div>
         )}
-        <TabsContent value="preview" className="relative rounded-md" key={key}>
-          {/* <ComponentWrapper> */}
-
-          <React.Suspense
-            fallback={
-              <div className="flex items-center text-sm text-muted-foreground">
-                <Icons.spinner className="mr-2 size-4 animate-spin" />
-                Loading...
-              </div>
-            }
-          >
-            {Preview}
-          </React.Suspense>
-          {/* </ComponentWrapper> */}
+        <TabsContent
+          value="preview"
+          className="relative border rounded-md"
+          key={key}
+        >
+          <div className="px-10">
+            <React.Suspense
+              fallback={
+                <div className="flex items-center text-sm text-muted-foreground">
+                  <Icons.spinner className="mr-2 size-4 animate-spin" />
+                  Loading...
+                </div>
+              }
+            >
+              {Preview}
+            </React.Suspense>
+          </div>
         </TabsContent>
         <TabsContent value="code">
           <div className="flex flex-col space-y-4">

@@ -33,6 +33,14 @@ const example: Registry = {
     component: React.lazy(
       () => import("@/registry/components/example/footers/footer-one"),
     ),
+  },"footer-two": {
+    name: "footer-two",
+    type: "components:example",
+    registryDependencies: ["footers"],
+    files: ["registry/components/example/footers/footer-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/footers/footer-two"),
+    ),
   },
 };
 export const registry: Registry = {

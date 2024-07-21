@@ -33,13 +33,41 @@ const example: Registry = {
     component: React.lazy(
       () => import("@/registry/components/example/footers/footer-one"),
     ),
-  },"footer-two": {
+  },
+  "footer-two": {
     name: "footer-two",
     type: "components:example",
     registryDependencies: ["footers"],
     files: ["registry/components/example/footers/footer-two.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/footers/footer-two"),
+    ),
+  },
+  "footer-three": {
+    name: "footer-three",
+    type: "components:example",
+    registryDependencies: ["footers"],
+    files: ["registry/components/example/footers/footer-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/footers/footer-three"),
+    ),
+  },
+  "footer-four": {
+    name: "footer-four",
+    type: "components:example",
+    registryDependencies: ["footers"],
+    files: ["registry/components/example/footers/footer-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/footers/footer-four"),
+    ),
+  },
+  "footer-five": {
+    name: "footer-five",
+    type: "components:example",
+    registryDependencies: ["footers"],
+    files: ["registry/components/example/footers/footer-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/footers/footer-five"),
     ),
   },
 };

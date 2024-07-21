@@ -8,7 +8,7 @@ const plans = [
   {
     name: "Pro",
     id: "pro",
-    sellingPrice: { monthly: "$19" },
+    sellingPrice: { monthly: "$199" },
     features: [
       "Priority Support",
       "Private Repository Access",
@@ -31,22 +31,6 @@ const plans = [
       "Custom Integrations",
       "Unlimited API Requests",
       "Dedicated Account Manager",
-    ],
-  },
-  {
-    name: "Enterprise",
-    id: "enterprise",
-    sellingPrice: { monthly: "$999" },
-    features: [
-      "All Ultimate Features",
-      "Personalized Onboarding",
-      "Dedicated Technical Account Manager",
-      "24/7 Priority Support",
-      "Custom Security Review",
-      "Unlimited Storage",
-      "Custom SLA",
-      "Advanced Compliance",
-      "Custom Training Sessions",
     ],
   },
 ];

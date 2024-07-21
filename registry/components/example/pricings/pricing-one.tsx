@@ -8,7 +8,7 @@ const plans = [
   {
     name: "Pro",
     id: "pro",
-    sellingPrice: { monthly: "$149" },
+    sellingPrice: { monthly: "$19" },
     features: [
       "Priority Support",
       "Private Repository Access",
@@ -20,7 +20,7 @@ const plans = [
   {
     name: "Ultimate",
     id: "ultimate",
-    sellingPrice: { monthly: "$199" },
+    sellingPrice: { monthly: "$499" },
     features: [
       "Dedicated Support",
       "Advanced Analytics",
@@ -31,6 +31,22 @@ const plans = [
       "Custom Integrations",
       "Unlimited API Requests",
       "Dedicated Account Manager",
+    ],
+  },
+  {
+    name: "Enterprise",
+    id: "enterprise",
+    sellingPrice: { monthly: "$999" },
+    features: [
+      "All Ultimate Features",
+      "Personalized Onboarding",
+      "Dedicated Technical Account Manager",
+      "24/7 Priority Support",
+      "Custom Security Review",
+      "Unlimited Storage",
+      "Custom SLA",
+      "Advanced Compliance",
+      "Custom Training Sessions",
     ],
   },
 ];
@@ -45,14 +61,15 @@ const Pricing = () => {
         Predictable pricing, designed to scale
       </h1>
       <p className="text-center text-sm font-medium leading-4 max-w-lg mx-auto text-gray-700 dark:text-gray-300">
-        Our pricing is designed to scale with your business. Our plans have no hidden fees, and we never take a cut of your sales.
+        Our pricing is designed to scale with your business. Our plans have no
+        hidden fees, and we never take a cut of your sales.
       </p>
 
       <div className="grid mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
         {plans.map((plan) => (
           <div
             key={plan.id}
-            className="w-full shadow-sm p-6 rounded-2xl flex mx-auto flex-col mt-6"
+            className="w-full shadow-sm rounded-2xl flex mx-auto flex-col mt-6"
           >
             <div className="space-y-4 w-full mt-4">
               <p className="text-lg font-semibold">{plan.name.toUpperCase()}</p>
@@ -76,7 +93,10 @@ const Pricing = () => {
                   key={feature}
                   className="flex items-start gap-3 font-medium"
                 >
-                  <CheckIcon />
+                  <span className="size-5">
+                    <CheckIcon />
+                  </span>
+
                   <span>{feature}</span>
                 </li>
               ))}

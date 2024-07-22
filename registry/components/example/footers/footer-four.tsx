@@ -48,7 +48,7 @@ const FooterFour = () => {
             <input
               type="email"
               placeholder="Your email"
-              className="bg-gray-200 dark:text-black text-[15px] rounded-l py-3 px-4 max-md:w-full outline-none"
+              className="dark:bg-transparent dark:text-white bg-gray-200 dark:border-2  text-[15px] rounded-l py-3 px-4 max-md:w-full outline-none"
             />
             <button className="bg-[#FE6019] text-white rounded-r py-3 px-4 text-[15px] tracking-wide">
               Subscribe
@@ -57,7 +57,7 @@ const FooterFour = () => {
         </div>
       </div>
 
-      <hr className="my-12 border-gray-300" />
+      <hr className="my-12" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>

@@ -25,24 +25,38 @@ const FooterThree = () => {
               <span className="font-bold">Metamorix UI</span>
             </div>
           </Link>
-          <ul className="flex flex-wrap items-center mb-2 font-medium sm:mb-0 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100">
+          <ul className="flex flex-wrap items-center mb-2 font-medium sm:mb-0">
             <li>
-              <a href="#" className="me-4 md:me-6">
+              <a
+                href="/"
+                className="me-4 md:me-6 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="me-4 md:me-6">
+              <a
+                href="/"
+                className="me-4 md:me-6 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+              >
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="me-4 md:me-6">
+              <a
+                href="/"
+                className="me-4 md:me-6 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+              >
                 Licensing
               </a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a
+                href="/"
+                className="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+              >
+                Contact
+              </a>
             </li>
           </ul>
         </div>

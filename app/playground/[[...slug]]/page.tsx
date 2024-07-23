@@ -12,6 +12,9 @@ import { notFound } from "next/navigation";
 import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { allDocs } from "contentlayer/generated";
 
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+
 interface DocPageProps {
   params: {
     slug: string[];
@@ -82,48 +85,8 @@ export default async function DocPage({ params }: DocPageProps) {
 
   return (
     <>
+      <SiteHeader />
       <div className="mx-auto w-full min-w-0 min-h-screen">
-        <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
-          <div className="truncate">Docs</div>
-          <ChevronRightIcon className="size-4" />
-          <div className="font-medium text-foreground">{doc.title}</div>
-        </div>
-        <div className="space-y-2">
-          <h1 className={cn("scroll-m-20 text-4xl font-bold tracking-tight")}>
-            {doc.title}
-          </h1>
-          {doc.description && (
-            <p className="text-balance text-lg text-muted-foreground">
-              {doc.description}
-            </p>
-          )}
-        </div>
-        {doc.links ? (
-          <div className="flex items-center space-x-2 pt-4">
-            {doc.links?.doc && (
-              <Link
-                href={doc.links.doc}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
-              >
-                Docs
-                <ExternalLinkIcon className="size-3" />
-              </Link>
-            )}
-            {doc.links?.api && (
-              <Link
-                href={doc.links.api}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
-              >
-                API Reference
-                <ExternalLinkIcon className="size-3" />
-              </Link>
-            )}
-          </div>
-        ) : null}
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
         </div>
@@ -135,6 +98,7 @@ export default async function DocPage({ params }: DocPageProps) {
           __html: JSON.stringify(doc.structuredData),
         }}
       />
+      <SiteFooter />
     </>
   );
 }

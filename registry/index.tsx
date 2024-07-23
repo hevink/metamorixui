@@ -66,6 +66,22 @@ const example: Registry = {
       () => import("@/registry/components/example/pricings/pricing-four"),
     ),
   },
+  // "pricing-five": {
+  //   name: "pricing-five",
+  //   type: "components:example",
+  //   files: ["registry/components/example/pricings/pricing-five.tsx"],
+  //   component: React.lazy(
+  //     () => import("@/registry/components/example/pricings/pricing-five"),
+  //   ),
+  // },
+  "feature-one": {
+    name: "feature-one",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-one"),
+    ),
+  },
 };
 export const registry: Registry = {
   ...ui,

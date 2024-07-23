@@ -125,7 +125,7 @@ const Pricing = () => {
                           <div className="mb-1 flex items-center gap-x-1 text-sm">
                             <span
                               className={cn(
-                                toggleProYear
+                                toggleBusinessYear
                                   ? "text-gray-400"
                                   : "text-black dark:text-white",
                               )}
@@ -135,7 +135,7 @@ const Pricing = () => {
                             <span>|</span>
                             <span
                               className={cn(
-                                toggleProYear
+                                toggleBusinessYear
                                   ? "text-black dark:text-white"
                                   : "text-gray-400",
                               )}
@@ -173,7 +173,7 @@ const Pricing = () => {
                           <div className="mb-1 flex items-center gap-x-1 text-sm">
                             <span
                               className={cn(
-                                toggleProYear
+                                toggleDataroomsYear
                                   ? "text-gray-400"
                                   : "text-black dark:text-white",
                               )}
@@ -183,7 +183,7 @@ const Pricing = () => {
                             <span>|</span>
                             <span
                               className={cn(
-                                toggleProYear
+                                toggleDataroomsYear
                                   ? "text-black dark:text-white"
                                   : "text-gray-400",
                               )}

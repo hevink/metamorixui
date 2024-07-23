@@ -19,7 +19,8 @@
     "lint:fix": "next lint --fix",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.3",

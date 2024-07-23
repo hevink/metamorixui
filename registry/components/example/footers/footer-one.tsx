@@ -4,61 +4,52 @@ import { cn } from "@/lib/utils";
 
 const navigation = {
   features: [
-    { title: "URL Shortener", href: "/features/url-shortener" },
-    { title: "Link Checker", href: "/features/link-checker" },
-    { title: "Link Rotator", href: "/features/link-rotator" },
-    { title: "Link Retargeter", href: "/features/link-retargeter" },
-    { title: "Link Cloaker", href: "/features/link-cloaker" },
-  ].map(({ title, href }) => ({
-    name: title,
-    href,
-  })),
+    { title: "URL Shortener", href: "/" },
+    { title: "Link Checker", href: "/" },
+    { title: "Link Rotator", href: "/" },
+    { title: "Link Retargeter", href: "/" },
+    { title: "Link Cloaker", href: "/" },
+  ],
   product: [
-    { name: "Blog", href: "/blog" },
-    { name: "Brand", href: "/brand" },
-    { name: "Changelog", href: "/changelog" },
-    { name: "Customers", href: "/customers" },
-    { name: "Enterprise", href: "/enterprise" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Help Center", href: "/help" },
+    { name: "Blog", href: "/" },
+    { name: "Brand", href: "/" },
+    { name: "Changelog", href: "/" },
+    { name: "Customers", href: "/" },
+    { name: "Enterprise", href: "/" },
+    { name: "Pricing", href: "/" },
+    { name: "Help Center", href: "/" },
   ],
   compare: [
-    { name: "Bitly", slug: "/compare/bitly" },
-    { name: "Branch", slug: "/compare/branch" },
-    { name: "ClickMeter", slug: "/compare/clickmeter" },
-    { name: "Rebrandly", slug: "/compare/rebrandly" },
-    { name: "TinyURL", slug: "/compare/tinyurl" },
-  ].map(({ name, slug }) => ({
-    name,
-    href: `/compare/${slug}`,
-  })),
+    { name: "Bitly", href: "/" },
+    { name: "Branch", href: "/" },
+    { name: "ClickMeter", href: "/" },
+    { name: "Rebrandly", href: "/" },
+    { name: "TinyURL", href: "/" },
+  ],
   legal: [
-    { name: "Privacy", href: "/privacy" },
-    { name: "Terms", href: "/terms" },
-    { name: "Abuse", href: "/abuse" },
+    { name: "Privacy", href: "/" },
+    { name: "Terms", href: "/" },
+    { name: "Abuse", href: "/" },
   ],
   tools: [
-    { name: "URL Shortener", slug: "url-shortener" },
-    { name: "Link Checker", slug: "link-checker" },
-    { name: "Link Rotator", slug: "link-rotator" },
-    { name: "Link Retargeter", slug: "link-retargeter" },
-    { name: "Link Cloaker", slug: "link-cloaker" },
-  ].map(({ name, slug }) => ({
-    name,
-    href: `/tools/${slug}`,
-  })),
+    { name: "URL Shortener", href: "/" },
+    { name: "Link Checker", href: "/" },
+    { name: "Link Rotator", href: "/" },
+    { name: "Link Retargeter", href: "/" },
+    { name: "Link Cloaker", href: "/" },
+  ],
 };
 
 const Footer = () => {
   return (
     <footer>
-      <div className="relative max-w-7xl z-10 overflow-hidden py-16 backdrop-blur-lg md:rounded-t-2xl">
+      <div className="relative z-10 overflow-hidden py-4 sm:py-10 backdrop-blur-lg md:rounded-t-2xl">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-6">
             <Link href="/" className="block max-w-fit">
               <div className="inline-flex items-center space-x-2">
                 <svg
-                  width="40"
+                  width="30"
                   height="30"
                   viewBox="0 0 40 30"
                   fill="none"
@@ -82,7 +73,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Metamorix consultancy, Inc.
             </p>
             <div className="flex items-center space-x-3">
-              <a
+              <Link
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
@@ -90,8 +81,8 @@ const Footer = () => {
               >
                 <span className="sr-only">Github</span>
                 <Github className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-black" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noreferrer"
@@ -99,8 +90,8 @@ const Footer = () => {
               >
                 <span className="sr-only">LinkedIn</span>
                 <LinkedIn className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-[#0077b5]" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noreferrer"
@@ -108,10 +99,11 @@ const Footer = () => {
               >
                 <span className="sr-only">YouTube</span>
                 <YouTube className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-[#ff0000]" />
-              </a>
+              </Link>
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-4 xl:col-span-2 xl:mt-0">
+
+          <div className="mt-10 sm:mt-16 grid grid-cols-2 gap-4 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2">
               <div>
                 <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200">
@@ -119,12 +111,12 @@ const Footer = () => {
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.features.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.title}>
                       <Link
-                        href="/"
+                        href={item.href}
                         className="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                       >
-                        {item.name}
+                        {item.title}
                       </Link>
                     </li>
                   ))}
@@ -138,7 +130,7 @@ const Footer = () => {
                   {navigation.product.map((item) => (
                     <li key={item.name}>
                       <Link
-                        href="/"
+                        href={item.href}
                         className="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                       >
                         {item.name}
@@ -158,7 +150,7 @@ const Footer = () => {
                     {navigation.compare.map((item) => (
                       <li key={item.name}>
                         <Link
-                          href="/"
+                          href={item.href}
                           className="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                         >
                           {item.name}
@@ -175,7 +167,7 @@ const Footer = () => {
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
                         <Link
-                          href="/"
+                          href={item.href}
                           className="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                         >
                           {item.name}
@@ -194,7 +186,7 @@ const Footer = () => {
                   {navigation.tools.map((item) => (
                     <li key={item.name}>
                       <Link
-                        href="/"
+                        href={item.href}
                         className="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                       >
                         {item.name}

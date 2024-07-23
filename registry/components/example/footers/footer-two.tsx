@@ -26,7 +26,7 @@ const navigation = {
   ],
 };
 
-const FooterTwo = () => {
+const Footer = () => {
   return (
     <footer>
       <div className="overflow-hidden py-4 xl:py-10 md:rounded-t-2xl space-y-6">
@@ -128,7 +128,7 @@ const FooterTwo = () => {
             </Link>
 
             <div className="flex items-center space-x-4 sm:space-x-6">
-              <a
+              <Link
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
@@ -136,8 +136,8 @@ const FooterTwo = () => {
               >
                 <span className="sr-only">Github</span>
                 <Github className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-black" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noreferrer"
@@ -145,8 +145,8 @@ const FooterTwo = () => {
               >
                 <span className="sr-only">LinkedIn</span>
                 <LinkedIn className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-[#0077b5]" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noreferrer"
@@ -154,7 +154,7 @@ const FooterTwo = () => {
               >
                 <span className="sr-only">YouTube</span>
                 <YouTube className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-[#ff0000]" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -167,7 +167,7 @@ const FooterTwo = () => {
   );
 };
 
-export default FooterTwo;
+export default Footer;
 
 function YouTube({ className }: { className?: string }) {
   return (

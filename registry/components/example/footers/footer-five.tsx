@@ -1,7 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-const FooterFive = () => {
+const links = [
+  { href: "/", text: "Terms of Service" },
+  { href: "/", text: "Privacy Policy" },
+  { href: "/", text: "Contact" },
+];
+
+const Footer = () => {
   return (
     <footer className="py-4 xl:py-6 md:rounded-t-2xl font-sans tracking-wide">
       <div className="flex max-lg:flex-col items-center justify-between">
@@ -31,34 +37,22 @@ const FooterFive = () => {
           © {new Date().getFullYear()} Metamorix consultancy, Inc.
         </p>
         <ul className="flex gap-2 whitespace-nowrap">
-          <li>
-            <a
-              href="javascript:void(0)"
-              className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-sm sm:text-base"
-            >
-              Terms of Service
-            </a>
-          </li>
-          <li>
-            <a
-              href="javascript:void(0)"
-              className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-sm sm:text-base"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="javascript:void(0)"
-              className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-sm sm:text-base"
-            >
-              Contact
-            </a>
-          </li>
+          {links.map((item) => {
+            return (
+              <li>
+                <Link
+                  href={item.href}
+                  className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-sm sm:text-base"
+                >
+                  {item.text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </footer>
   );
 };
 
-export default FooterFive;
+export default Footer;

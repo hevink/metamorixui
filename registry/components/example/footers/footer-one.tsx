@@ -73,7 +73,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Metamorix consultancy, Inc.
             </p>
             <div className="flex items-center space-x-3">
-              <a
+              <Link
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
@@ -81,8 +81,8 @@ const Footer = () => {
               >
                 <span className="sr-only">Github</span>
                 <Github className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-black" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noreferrer"
@@ -90,8 +90,8 @@ const Footer = () => {
               >
                 <span className="sr-only">LinkedIn</span>
                 <LinkedIn className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-[#0077b5]" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noreferrer"
@@ -99,10 +99,10 @@ const Footer = () => {
               >
                 <span className="sr-only">YouTube</span>
                 <YouTube className="size-4 text-gray-600 dark:text-gray-200 transition-colors group-hover:text-[#ff0000]" />
-              </a>
+              </Link>
             </div>
           </div>
-          
+
           <div className="mt-10 sm:mt-16 grid grid-cols-2 gap-4 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2">
               <div>

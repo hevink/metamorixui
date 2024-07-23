@@ -1,7 +1,34 @@
 import React from "react";
 import Link from "next/link";
 
-const FooterFour = () => {
+const links = {
+  quickLinks: [
+    { name: "Our Story", href: "/" },
+    { name: "Newsroom", href: "/" },
+    { name: "Careers", href: "/" },
+    { name: "Blog", href: "/" },
+  ],
+  services: [
+    { name: "Web Development", href: "/" },
+    { name: "Testing Automation", href: "/" },
+    { name: "AWS Development Services", href: "/" },
+    { name: "Mobile App Development", href: "/" },
+  ],
+  platforms: [
+    { text: "Hubspot", href: "/" },
+    { text: "Marketo Integration Services", href: "/" },
+    { text: "Marketing Glossary", href: "/" },
+    { text: "UIPath", href: "/" },
+  ],
+  company: [
+    { name: "Accessibility", href: "/" },
+    { name: "About", href: "/" },
+    { name: "Contact", href: "/" },
+    { name: "Learn more", href: "/" },
+  ],
+};
+
+const Footer = () => {
   return (
     <footer className="py-4 xl:py-6 md:rounded-t-2xl font-sans tracking-wide">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -38,6 +65,7 @@ const FooterFour = () => {
           <h4 className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 font-semibold text-lg mb-6">
             Subscribe
           </h4>
+
           <p className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]">
             Subscribe to stay updated with the latest news, offers, and
             exclusive content. Join our mailing list and be the first to receive
@@ -65,38 +93,18 @@ const FooterFour = () => {
             Quick Links
           </h4>
           <ul className="space-y-4">
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Our Story
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Newsroom
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Careers
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Blog
-              </a>
-            </li>
+            {links.quickLinks.map((item) => {
+              return (
+                <li>
+                  <Link
+                    href={item.href}
+                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -105,38 +113,18 @@ const FooterFour = () => {
             Services
           </h4>
           <ul className="space-y-4">
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Web Development
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Testing Automation
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                AWS Development Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Mobile App Development
-              </a>
-            </li>
+            {links.services.map((item) => {
+              return (
+                <li>
+                  <Link
+                    href={item.href}
+                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -145,38 +133,18 @@ const FooterFour = () => {
             Platforms
           </h4>
           <ul className="space-y-4">
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Hubspot
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Marketo Integration Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Marketing Glossary
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                UIPath
-              </a>
-            </li>
+            {links.platforms.map((item) => {
+              return (
+                <li>
+                  <Link
+                    href={item.href}
+                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -185,38 +153,18 @@ const FooterFour = () => {
             Company
           </h4>
           <ul className="space-y-4">
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Accessibility
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Contact
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
-              >
-                Learn more
-              </a>
-            </li>
+            {links.company.map((item) => {
+              return (
+                <li>
+                  <Link
+                    href={item.href}
+                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -224,4 +172,4 @@ const FooterFour = () => {
   );
 };
 
-export default FooterFour;
+export default Footer;

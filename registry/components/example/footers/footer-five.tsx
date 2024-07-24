@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 const links = [
-  { href: "/", text: "Terms of Service" },
-  { href: "/", text: "Privacy Policy" },
-  { href: "/", text: "Contact" },
+  { href: "/", name: "Terms of Service" },
+  { href: "/", name: "Privacy Policy" },
+  { href: "/", name: "Contact" },
 ];
 
 const Footer = () => {
@@ -39,12 +39,12 @@ const Footer = () => {
         <ul className="flex gap-2 whitespace-nowrap">
           {links.map((item) => {
             return (
-              <li>
+              <li key={item.name}>
                 <Link
                   href={item.href}
                   className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-sm sm:text-base"
                 >
-                  {item.text}
+                  {item.name}
                 </Link>
               </li>
             );

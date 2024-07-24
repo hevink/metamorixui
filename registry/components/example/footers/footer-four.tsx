@@ -15,10 +15,10 @@ const links = {
     { name: "Mobile App Development", href: "/" },
   ],
   platforms: [
-    { text: "Hubspot", href: "/" },
-    { text: "Marketo Integration Services", href: "/" },
-    { text: "Marketing Glossary", href: "/" },
-    { text: "UIPath", href: "/" },
+    { name: "Hubspot", href: "/" },
+    { name: "Marketo Integration Services", href: "/" },
+    { name: "Marketing Glossary", href: "/" },
+    { name: "UIPath", href: "/" },
   ],
   company: [
     { name: "Accessibility", href: "/" },
@@ -95,7 +95,7 @@ const Footer = () => {
           <ul className="space-y-4">
             {links.quickLinks.map((item) => {
               return (
-                <li>
+                <li key={item.name}>
                   <Link
                     href={item.href}
                     className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
@@ -115,7 +115,7 @@ const Footer = () => {
           <ul className="space-y-4">
             {links.services.map((item) => {
               return (
-                <li>
+                <li key={item.name}>
                   <Link
                     href={item.href}
                     className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
@@ -135,12 +135,12 @@ const Footer = () => {
           <ul className="space-y-4">
             {links.platforms.map((item) => {
               return (
-                <li>
+                <li key={item.name}>
                   <Link
                     href={item.href}
                     className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
                   >
-                    {item.text}
+                    {item.name}
                   </Link>
                 </li>
               );
@@ -155,7 +155,7 @@ const Footer = () => {
           <ul className="space-y-4">
             {links.company.map((item) => {
               return (
-                <li>
+                <li key={item.name}>
                   <Link
                     href={item.href}
                     className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"

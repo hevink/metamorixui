@@ -35,7 +35,7 @@ const Footer = () => {
           <ul className="flex flex-wrap items-center mb-2 font-medium sm:mb-0">
             {navigation.map((item) => {
               return (
-                <li>
+                <li key={item.href}>
                   <Link
                     href={item.href}
                     className="me-4 md:me-6 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"

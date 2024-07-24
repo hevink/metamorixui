@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const SELECTED_PLAN_BAR_LAYOUT_ID = "selected-plan-bar";
 
-const PricingTable = () => {
+const Pricing = () => {
   const [period, setPeriod] = useState<"MONTHLY" | "YEARLY">("MONTHLY");
 
   return (
@@ -184,4 +184,4 @@ const PricingTable = () => {
   );
 };
 
-export default PricingTable;
+export default Pricing;

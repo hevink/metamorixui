@@ -31,7 +31,7 @@ const features = [
 
 const Feature = () => {
   return (
-    <div className="p-10">
+    <div className="py-10">
       <p className="text-sm text-orange-500 mb-4">Features</p>
       <h2 className="text-2xl font-bold mb-2">
         Ham teen bhai teeno tabaahi Sherrrrrr

@@ -1,10 +1,4 @@
-import {
-  ArrowRight,
-  FileText,
-  LayoutDashboard,
-  MoveRight,
-  User,
-} from "lucide-react";
+import { ArrowRight, FileText, LayoutDashboard, User } from "lucide-react";
 
 const features = [
   {
@@ -57,7 +51,7 @@ const Feature = () => {
             </p>
             <div className="flex items-center gap-2 cursor-pointer group">
               Learn More
-              <ArrowRight className="size-4 transition-transform transform group-hover:translate-x-1" />
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </div>
           </div>
         ))}

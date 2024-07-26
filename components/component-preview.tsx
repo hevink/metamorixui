@@ -87,7 +87,7 @@ export function ComponentPreview({
           className="relative border rounded-md"
           key={key}
         >
-          <div className="px-4">
+          <div className="p-4">
             <React.Suspense
               fallback={
                 <div className="flex items-center text-sm text-muted-foreground">

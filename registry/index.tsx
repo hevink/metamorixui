@@ -90,14 +90,22 @@ const example: Registry = {
       () => import("@/registry/components/example/features/feature-two"),
     ),
   },
-  // "feature-three": {
-  //   name: "feature-three",
-  //   type: "components:example",
-  //   files: ["registry/components/example/features/feature-three.tsx"],
-  //   component: React.lazy(
-  //     () => import("@/registry/components/example/features/feature-three"),
-  //   ),
-  // },
+  "feature-three": {
+    name: "feature-three",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-three"),
+    ),
+  },
+  "feature-four": {
+    name: "feature-four",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-four"),
+    ),
+  },
 };
 export const registry: Registry = {
   ...ui,

@@ -48,7 +48,7 @@ const Feature = () => {
           {features.map((feature) => (
             <div
               key={feature.name}
-              className="flex items-start gap-4 p-4 border rounded-xl bg-slate-500/10 dark:bg-slate-700/10  hover:scale-[1.02] transition-all duration-300 ease-in-out"
+              className="flex items-start gap-4 p-4 border rounded-xl bg-black/5 dark:bg-white/5  hover:scale-[1.02] transition-all duration-300 ease-in-out"
             >
               <div className="shrink-0">
                 <div className="flex size-10 items-center justify-center rounded-lg bg-blue-600">

@@ -43,7 +43,7 @@ const Feature = () => {
           interfaces and robust backend support ensure a seamless deployment.
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-zxl sm:mt-14 lg:mt-16 lg:max-w-4xl">
+      <div className="mx-auto mt-10 max-w-xl sm:mt-14 lg:mt-16 lg:max-w-4xl">
         <div className="grid grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
           {features.map((feature) => (
             <div

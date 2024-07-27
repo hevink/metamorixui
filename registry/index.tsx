@@ -102,6 +102,7 @@ const example: Registry = {
       () => import("@/registry/components/example/pricings/pricing-four"),
     ),
   },
+<<<<<<< HEAD
   "testimonial-one": {
     name: "testimonial-one",
     type: "components:example",
@@ -143,9 +144,58 @@ const example: Registry = {
     component: React.lazy(
       () =>
         import("@/registry/components/example/testimonial/testimonial-five"),
+=======
+  // "pricing-five": {
+  //   name: "pricing-five",
+  //   type: "components:example",
+  //   files: ["registry/components/example/pricings/pricing-five.tsx"],
+  //   component: React.lazy(
+  //     () => import("@/registry/components/example/pricings/pricing-five"),
+  //   ),
+  // },
+  "feature-one": {
+    name: "feature-one",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-one"),
+    ),
+  },
+  "feature-two": {
+    name: "feature-two",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-two"),
+    ),
+  },
+  "feature-three": {
+    name: "feature-three",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-three"),
+    ),
+  },
+  "feature-four": {
+    name: "feature-four",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-four"),
+    ),
+  },
+  "feature-five": {
+    name: "feature-five",
+    type: "components:example",
+    files: ["registry/components/example/features/feature-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/features/feature-five"),
+>>>>>>> ecce2235005e72453c2233ed35024ce453331e3c
     ),
   },
 };
+
 export const registry: Registry = {
   ...ui,
   ...example,

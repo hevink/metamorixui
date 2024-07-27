@@ -65,7 +65,7 @@ const Pricing = () => {
                 </span>
               </p>
             </div>
-            <button className="w-full py-2 bg-gradient-to-t from-blue-500 to-blue-600 text-white hover:bg-lp2-primary rounded-lg my-5">
+            <button className="w-full py-2 bg-gradient-to-t from-blue-500 to-blue-600 text-white rounded-lg my-5">
               Buy Now
             </button>
 

@@ -102,6 +102,49 @@ const example: Registry = {
       () => import("@/registry/components/example/pricings/pricing-four"),
     ),
   },
+  "testimonial-one": {
+    name: "testimonial-one",
+    type: "components:example",
+    files: ["registry/components/example/testimonial/testimonial-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/testimonial/testimonial-one"),
+    ),
+  },
+  "testimonial-two": {
+    name: "testimonial-two",
+    type: "components:example",
+    files: ["registry/components/example/testimonial/testimonial-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/testimonial/testimonial-two"),
+    ),
+  },
+  "testimonial-three": {
+    name: "testimonial-three",
+    type: "components:example",
+    files: ["registry/components/example/testimonial/testimonial-three.tsx"],
+    component: React.lazy(
+      () =>
+        import("@/registry/components/example/testimonial/testimonial-three"),
+    ),
+  },
+  "testimonial-four": {
+    name: "testimonial-four",
+    type: "components:example",
+    files: ["registry/components/example/testimonial/testimonial-four.tsx"],
+    component: React.lazy(
+      () =>
+        import("@/registry/components/example/testimonial/testimonial-four"),
+    ),
+  },
+  "testimonial-five": {
+    name: "testimonial-five",
+    type: "components:example",
+    files: ["registry/components/example/testimonial/testimonial-five.tsx"],
+    component: React.lazy(
+      () =>
+        import("@/registry/components/example/testimonial/testimonial-five"),
+    ),
+  },
 };
 export const registry: Registry = {
   ...ui,

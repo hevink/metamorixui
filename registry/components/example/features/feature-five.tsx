@@ -3,10 +3,9 @@ import { CloudUpload, Layers, Lock, Shield } from "lucide-react";
 const Feature = () => {
   return (
     <section className="pt-10">
-      <div className="absolute top-72 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-br from-violet-600 to-purple-600 rounded-3xl opacity-40 blur-[300px] -z-50" />
-
+      <div className="absolute top-36 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-32 bg-gradient-to-br from-violet-600 to-purple-600 rounded-3xl opacity-40 blur-[200px] -z-50" />
       <h1 className="text-4xl font-semibold text-center mx-auto max-w-md">
-        <span className="bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
           Dua lipa{" "}
         </span>{" "}
         is the best singer in the world

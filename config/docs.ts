@@ -83,7 +83,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Stats",
-          href: `/docs/components/stats`,
+          href: `/docs/components/state`,
           items: [],
         },
         {

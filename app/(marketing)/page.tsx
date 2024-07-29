@@ -16,18 +16,18 @@ export default function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setGradientIndex((prevIndex) => (prevIndex + 1) % gradients.length);
-    }, 3000); // Change every 3 seconds
+    }, 1500); // Change every 1.5 seconds
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen relative">
+    <div className="flex items-center justify-center h-[calc(100vh-110px)] relative">
       <div
         className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-32 bg-gradient-to-br ${gradients[gradientIndex]} rounded-3xl blur-[200px] -z-50 transition-colors duration-1000`}
       />
 
-      <p className="bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent text-4xl font-bold">
+      <p className={`bg-gradient-to-r ${gradients[gradientIndex]}  bg-clip-text text-transparent text-4xl font-bold`}>
         Rukja ja bhai abhi banaunga
       </p>
     </div>

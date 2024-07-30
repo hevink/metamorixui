@@ -45,7 +45,7 @@ export default function RootLayout({
         )}
       >
         <PHProvider>
-          <ThemeProvider attribute="class" defaultTheme="light">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <TooltipProvider>
               {children}
               <Toaster />

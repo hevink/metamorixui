@@ -1,11 +1,8 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface StepItemProps {
-  number: number;
-  children: ReactNode;
-}
+// Inspired by https://posthog.com
 
-const Steps = () => {
+const Feature = () => {
   return (
     <section className="mt-12 mb-24 px-5">
       <div className="max-w-screen-2xl mx-auto">
@@ -42,7 +39,7 @@ const Steps = () => {
               </p>
             </li>
             <li className="relative md:max-w-md py-4 md:py-8 pl-16 pr-2 md:pl-20 md:pr-6 ">
-              <span className="absolute left-4 md:left-8 top-4.5 md:top-6.5 inline-block w-8 h-8 text-primary dark:text-primary-dark opacity-60">
+              <span className="absolute left-4 md:left-8 top-4.5 md:top-6.5 inline-block size-8 text-primary dark:text-primary-dark opacity-60">
                 <svg
                   className="LemonIcon"
                   width="100%"
@@ -71,7 +68,7 @@ const Steps = () => {
               </p>
             </li>
             <li className="relative md:max-w-md py-4 md:py-8 pl-16 pr-2 md:pl-20 md:pr-6 ">
-              <span className="absolute left-4 md:left-8 top-4.5 md:top-6.5 inline-block w-8 h-8 text-primary dark:text-primary-dark opacity-60">
+              <span className="absolute left-4 md:left-8 top-4.5 md:top-6.5 inline-block size-8 text-primary dark:text-primary-dark opacity-60">
                 <svg
                   className="LemonIcon"
                   width="100%"
@@ -200,21 +197,4 @@ const Steps = () => {
   );
 };
 
-const StepItem: React.FC<StepItemProps> = ({ number, children }) => (
-  <div className="relative group">
-    <div
-      className="absolute h-px hidden sm:block group-last:hidden top-[20px] left-[calc(50%+20px)] w-[calc(100%-40px)]"
-      style={{
-        backgroundImage: "linear-gradient(to right, #18181b, #3F3F46, #18181b)",
-      }}
-    ></div>
-    <div className="relative rounded-lg flex items-center justify-center mb-4 size-10 border border-gray-300 shrink-0 mx-auto font-semibold text-gray-900 dark:text-gray-300">
-      {number}
-    </div>
-    <p className="mt-2 text-gray-600 dark:text-gray-400 text-center max-w-48 mx-auto prose prose-primary dark:prose-invert prose-sm">
-      {children}
-    </p>
-  </div>
-);
-
-export default Steps;
+export default Feature;

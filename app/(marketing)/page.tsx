@@ -2,6 +2,12 @@
 
 import { useEffect, useState } from "react";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 export default function Home() {
   const [gradientIndex, setGradientIndex] = useState(0);
 
@@ -27,11 +33,18 @@ export default function Home() {
         className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-32 bg-gradient-to-br ${gradients[gradientIndex]} rounded-3xl blur-[200px] -z-50 transition-colors duration-1000`}
       />
 
-      <p
-        className={`bg-gradient-to-r ${gradients[gradientIndex]}  bg-clip-text text-transparent text-4xl font-bold`}
-      >
-        Rukja ja bhai abhi banaunga
-      </p>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <p
+            className={`bg-gradient-to-r ${gradients[gradientIndex]}  bg-clip-text text-transparent text-4xl font-bold`}
+          >
+            Rukja ja bhai abhi banaunga
+          </p>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Work in progress brother 😊</p>
+        </TooltipContent>
+      </Tooltip>
     </div>
   );
 }

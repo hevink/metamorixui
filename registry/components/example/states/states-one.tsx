@@ -67,7 +67,7 @@ const State = () => {
 export default State;
 
 // Thank you magic-ui for the NumberTicker component
-function NumberTicker({
+const NumberTicker = ({
   value,
   direction = "up",
   delay = 0,
@@ -77,7 +77,7 @@ function NumberTicker({
   direction?: "up" | "down";
   className?: string;
   delay?: number; // delay in s
-}) {
+}) => {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(direction === "down" ? value : 0);
   const springValue = useSpring(motionValue, {
@@ -114,4 +114,4 @@ function NumberTicker({
       ref={ref}
     />
   );
-}
+};

@@ -82,6 +82,7 @@ module.exports = {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
         backgroundPositionSpin:
           "background-position-spin 3000ms infinite alternate",
+        borderBeam: "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
         "accordion-down": {

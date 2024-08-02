@@ -1,40 +1,140 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Testimonial = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTestimonial(
+        (prevTestimonial) => (prevTestimonial + 1) % testimonials.length,
+      );
+    }, 5000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  const { description, name, image, email } = testimonials[currentTestimonial];
+
+  const variants = {
+    initial: { opacity: 0, y: "100%", scale: 0.1 },
+    animate: { opacity: 1, y: 0, scale: 1 },
+    exit: { opacity: 0, y: "100%", scale: 0.1 },
+  };
+  const dotVariants = {
+    active: { scale: 1.2, backgroundColor: "#3f3f46" },
+    inactive: { scale: 1, backgroundColor: "#D1D5DB" },
+  };
+
   return (
-    <section>
-      <div className="flex flex-col justify-center items-center max-w-xl mx-auto my-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-14 fill-gray-300 inline"
-          viewBox="0 0 475.082 475.081"
-        >
-          <path
-            d="M164.454 36.547H54.818c-15.229 0-28.171 5.33-38.832 15.987C5.33 63.193 0 76.135 0 91.365v109.632c0 15.229 5.327 28.169 15.986 38.826 10.66 10.656 23.606 15.988 38.832 15.988h63.953c7.611 0 14.084 2.666 19.414 7.994 5.33 5.325 7.994 11.8 7.994 19.417v9.131c0 20.177-7.139 37.397-21.413 51.675-14.275 14.271-31.499 21.409-51.678 21.409h-18.27c-4.952 0-9.233 1.813-12.851 5.427-3.615 3.614-5.424 7.898-5.424 12.847v36.549c0 4.941 1.809 9.233 5.424 12.848 3.621 3.613 7.898 5.427 12.851 5.427h18.271c19.797 0 38.688-3.86 56.676-11.566 17.987-7.707 33.546-18.131 46.68-31.265 13.131-13.135 23.553-28.691 31.261-46.679 7.707-17.987 11.562-36.877 11.562-56.671V91.361c0-15.23-5.33-28.171-15.987-38.828s-23.602-15.986-38.827-15.986zm294.635 15.987c-10.656-10.657-23.599-15.987-38.828-15.987H310.629c-15.229 0-28.171 5.33-38.828 15.987-10.656 10.66-15.984 23.601-15.984 38.831v109.632c0 15.229 5.328 28.169 15.984 38.826 10.657 10.656 23.6 15.988 38.828 15.988h63.953c7.611 0 14.089 2.666 19.418 7.994 5.324 5.328 7.994 11.8 7.994 19.417v9.131c0 20.177-7.139 37.397-21.416 51.675-14.274 14.271-31.494 21.409-51.675 21.409h-18.274c-4.948 0-9.233 1.813-12.847 5.427-3.617 3.614-5.428 7.898-5.428 12.847v36.549c0 4.941 1.811 9.233 5.428 12.848 3.613 3.613 7.898 5.427 12.847 5.427h18.274c19.794 0 38.684-3.86 56.674-11.566 17.984-7.707 33.541-18.131 46.676-31.265 13.134-13.135 23.562-28.695 31.265-46.679 7.706-17.983 11.563-36.877 11.563-56.671V91.361c-.003-15.23-5.328-28.171-15.992-38.827z"
-            data-original="#000000"
-          />
-        </svg>
-
-        <div className="mt-8">
-          <p className="text-base">
-            Exceptional Service: Prompt Delivery and Enjoyable Dining
-            Experience.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center mt-4">
-            <img
-              src="https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?ga=GA1.1.156494736.1719603061&semt=sph"
-              className="w-10 h-10 rounded-full object-cover"
-            />
-            <div className="ml-4 text-left">
-              <p className="text-sm font-bold">John Doe</p>
-              <p className="text-xs text-gray-500">johndoe23@gmail.com</p>
+    <section className="py-12 md:py-16">
+      <div className="w-full">
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            key={currentTestimonial}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={variants}
+            className="flex w-full flex-col items-center justify-center space-y-4"
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 10,
+                stiffness: 150,
+                restDelta: 0.001,
+              },
+            }}
+          >
+            <div className="flex items-center mx-auto">
+              <img
+                src={image}
+                alt={name}
+                className="m-0 h-[82px] w-[82px] rounded-full object-cover"
+              />
+              <div className="flex flex-col items-center justify-center space-x-3">
+                <div className="font-medium text-base text-gray-900/80 dark:text-gray-300">
+                  {name}
+                </div>
+                <div className="font-regular text-base text-gray-600 dark:text-gray-300">
+                  {email}
+                </div>
+              </div>
             </div>
+            <p className="m-0 text-center text-2xl max-w-xl font-medium tracking-tight">
+              {description}
+            </p>
+          </motion.div>
+          <div className="mt-6 flex justify-center">
+            {testimonials.map((_, index) => (
+              <motion.div
+                key={index}
+                className="mx-1 h-1 w-1 cursor-pointer rounded-full"
+                variants={dotVariants}
+                animate={index === currentTestimonial ? "active" : "inactive"}
+                onClick={() => setCurrentTestimonial(index)}
+              />
+            ))}
           </div>
-        </div>
+        </AnimatePresence>
       </div>
     </section>
   );
 };
 
 export default Testimonial;
+
+const testimonials = [
+  {
+    name: "John Doe",
+    email: "johndoe23@gmail.com",
+    image:
+      "https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?ga=GA1.1.156494736.1719603061&semt=sph",
+    description:
+      "Innovative solutions that exceeded our expectations. Great work!",
+  },
+  {
+    name: "Alex Johnson",
+    email: "alexjohnson@gmail.com",
+    image:
+      "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
+    description:
+      "Professional and efficient, delivering high-quality tech solutions.",
+  },
+  {
+    name: "Emily Davis",
+    email: "emilydavis@gmail.com",
+    image:
+      "https://img.freepik.com/free-photo/horizontal-view-smiling-brunette-young-woman-with-pleasant-appearance_273609-18455.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
+    description:
+      "Fantastic attention to detail and great communication throughout the project.",
+  },
+  {
+    name: "Michael Brown",
+    email: "michaelbrown@gmail.com",
+    image:
+      "https://img.freepik.com/free-photo/young-bearded-man-with-round-glasses-denim-shirt_273609-12127.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
+    description:
+      "Reliable and skilled in modern web technologies. Highly recommend!",
+  },
+  {
+    name: "Sarah Miller",
+    email: "sarahmiller@gmail.com",
+    image:
+      "https://img.freepik.com/free-photo/portrait-smiling-blonde-woman_23-2148316635.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
+    description:
+      "Delivered our project on time with outstanding results. Truly impressive work!",
+  },
+  {
+    name: "Laura White",
+    email: "laurawhite@gmail.com",
+    image:
+      "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
+    description:
+      "Exceptional expertise in React and Node.js. Great to work with!",
+  },
+];

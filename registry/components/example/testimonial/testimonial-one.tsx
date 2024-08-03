@@ -65,7 +65,7 @@ const testimonials = [
     name: "John Doe",
     email: "johndoe23@gmail.com",
     description:
-      "I've never seen anything like this before. It's amazing. I love it. The user interface is smooth and the functionality is top-notch. This product has exceeded my expectations and I can't recommend it enough.",
+      "I've never seen anything like this before. It's amazing. I love it. The user interface is smooth and the functionality is top-notch. This product has exceeded my expectations.",
     img: "https://img.freepik.com/free-photo/portrait-smiling-blonde-woman_23-2148316635.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
   },
   {
@@ -84,9 +84,9 @@ const testimonials = [
   },
 ];
 
-const firstRow = testimonials.slice(0, testimonials.length / 2);
+const firstRow = testimonials.slice(testimonials.length / 2);
 const secondRow = testimonials.slice(testimonials.length / 2);
-const thirdRow = testimonials.slice(0, testimonials.length / 2);
+const thirdRow = testimonials.slice(testimonials.length / 2);
 
 interface MarqueeProps {
   className?: string;

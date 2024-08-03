@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const Testimonial = () => {
   return (
@@ -12,7 +11,7 @@ const Testimonial = () => {
               are saying.
             </h1>
             <h3 className="text-xl mb-5 font-light text-gray-800 dark:text-gray-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Check out what our customers have to say about us!
             </h3>
             <div className="text-center mb-10">
               <span className="inline-block w-1 h-1 rounded-full bg-[#FE6019] ml-1"></span>
@@ -22,7 +21,7 @@ const Testimonial = () => {
               <span className="inline-block w-1 h-1 rounded-full bg-[#FE6019] ml-1"></span>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 !gap-y-0">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard key={index} {...testimonial} />
             ))}
@@ -37,11 +36,7 @@ export default Testimonial;
 
 const TestimonialCard = ({ name, image, description }: any) => {
   return (
-    <motion.div
-      className="relative w-full mx-auto rounded-lg border dark:border-gray-800 p-5 text-gray-800 font-light mb-6"
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-    >
+    <div className="relative w-full mx-auto rounded-lg border dark:border-gray-800 p-5 text-gray-800 font-light mb-6 hover:scale-105">
       <div className="w-full flex mb-4 items-center">
         <div className="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200 dark:border-gray-500">
           <img src={image} alt={name} />
@@ -63,7 +58,7 @@ const TestimonialCard = ({ name, image, description }: any) => {
           </span>
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -72,36 +67,36 @@ const testimonials = [
     name: "Kenzie Edgar",
     image: "https://i.pravatar.cc/100?img=1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.",
+      "I've been using this product for several months now, and I must say, it has exceeded my expectations in every way possible. The quality is outstanding, and the customer service is second to none!",
   },
   {
     name: "Stevie Tifft",
     image: "https://i.pravatar.cc/100?img=2",
     description:
-      "Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.",
+      "Amazing service! The team went above and beyond to help me with my issue. I highly recommend this company to anyone looking for reliability and excellent support.",
   },
   {
     name: "Tommie Ewart",
     image: "https://i.pravatar.cc/100?img=3",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, obcaecati ullam excepturi dicta error deleniti sequi.",
+      "This product has completely transformed how I work. It's intuitive, fast, and reliable. I can't imagine going back to anything else.",
   },
   {
     name: "Charlie Howse",
     image: "https://i.pravatar.cc/100?img=4",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque reprehenderit natus, hic sequi itaque dicta nisi voluptatem! Culpa, iusto.",
+      "I was skeptical at first, but after using this product for a few weeks, I'm a believer. It's simply the best out there.",
   },
   {
     name: "Nevada Herbertson",
     image: "https://i.pravatar.cc/100?img=5",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatem porro obcaecati dicta, quibusdam sunt ipsum, laboriosam nostrum facere exercitationem pariatur deserunt tempora molestiae assumenda nesciunt alias eius? Illo, autem!",
+      "The customer support is phenomenal. They were able to resolve my issue quickly and professionally. I'm impressed!",
   },
   {
     name: "Kris Stanton",
     image: "https://i.pravatar.cc/100?img=6",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iusto, explicabo, cupiditate quas totam!",
+      "Top-notch product! It's rare to find something that works so well without any hiccups. Highly recommended.",
   },
 ];

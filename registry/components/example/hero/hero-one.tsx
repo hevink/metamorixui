@@ -13,6 +13,7 @@ const menuItems = [
 const Hero = () => {
   return (
     <div className="">
+      <Header />
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-32 bg-gradient-to-br from-orange-600 to-yellow-600 rounded-3xl opacity-80 blur-[200px] -z-50" />
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -66,7 +67,7 @@ const Header = () => {
 
   return (
     <header className="relative w-full">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between py-2">
         <div className="inline-flex items-center space-x-2">
           <svg
             width="40"
@@ -107,8 +108,8 @@ const Header = () => {
           <Menu onClick={toggleMenu} className="size-6 cursor-pointer" />
         </div>
         {isMenuOpen && (
-          <div className="absolute inset-x-0 top-0 z-50 origin-top-right p-2 transition lg:hidden">
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white dark:bg-neutral-950 shadow-lg ring-1 ring-black/5 dark:ring-gray-700/5">
+          <div className="absolute inset-x-0 top-0 z-50 origin-top-right transition lg:hidden">
+            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white dark:bg-gradient-to-b dark:from-neutral-800 dark:to-gray-800 shadow-lg ring-1 ring-black/5 dark:ring-gray-700/5">
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
@@ -157,7 +158,7 @@ const Header = () => {
                 </div>
                 <button
                   type="button"
-                  className="mt-4 w-full rounded-md bg-black dark:bg-white px-3 py-2 text-sm font-semibold text-white dark:text-black shadow-sm hover:bg-black/80 dark:hover:bg-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  className="mt-4 w-full rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-400"
                 >
                   Login
                 </button>

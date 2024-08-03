@@ -1,6 +1,6 @@
 import React from "react";
 
-const CTA = () => {
+const Cta = () => {
   return (
     <section>
       <div className="flex flex-col lg:flex-row items-center p-8 lg:p-16">
@@ -32,4 +32,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default Cta;

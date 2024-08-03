@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const CTA = () => {
+const Cta = () => {
   return (
     <section>
       <div className="flex flex-col items-center justify-center md:px-4">
@@ -44,4 +44,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default Cta;

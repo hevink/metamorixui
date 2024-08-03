@@ -236,7 +236,7 @@ const example: Registry = {
   "cta-one": {
     name: "cta-one",
     type: "components:example",
-    files: ["registry/components/example/ct/cta-one.tsx"],
+    files: ["registry/components/example/cta/cta-one.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/cta/cta-one"),
     ),
@@ -244,7 +244,7 @@ const example: Registry = {
   "cta-two": {
     name: "cta-two",
     type: "components:example",
-    files: ["registry/components/example/ct/cta-two.tsx"],
+    files: ["registry/components/example/cta/cta-two.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/cta/cta-two"),
     ),

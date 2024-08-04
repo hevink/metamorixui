@@ -85,16 +85,17 @@ const Hero = () => {
         className="absolute size-[544px] md:size-[980px] border border-white opacity-20 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <div className="absolute size-2 left-0  bg-white rounded-full top-1/2 -translate-x-1/2  -translate-y-1/2  inline-flex  items-center justify-center "></div>
-        <div className="absolute size-2 left-full  bg-white rounded-full top-1/2 -translate-x-1/2  -translate-y-1/2  inline-flex  items-center justify-center "></div>
+        <div className="absolute size-2 left-full  bg-white rounded-full top-1/2 -translate-x-1/2 -translate-y-1/2  inline-flex  items-center justify-center "></div>
       </motion.div>
 
       <div className="container relative mt-16">
         <h1 className="md:text-[164px] text-7xl md:leading-none font-semibold tracking-tighter bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] bg-white text-transparent  bg-clip-text text-center">
-          100xDevs
+          Meta murix
         </h1>
         <p className="text-lg md:text-xl text-white/70 mt-5 text-center max-w-xl mx-auto">
-          Take a Stand Against Digital Piracy: Report Pirated Content Across All
-          Platforms and Earn Cash Rewards – Get Started Today
+          Trust me when I say this, Metamorix UI is the best way to build your
+          next website. It's fast, reliable, and easy to use. You can build your
+          dream website in minutes.
         </p>
       </div>
     </motion.section>

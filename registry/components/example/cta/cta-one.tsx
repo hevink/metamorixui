@@ -16,7 +16,7 @@ const Cta = () => {
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
             fugiat. Quasi aperiam sit non sit neque reprehenderit.
           </p>
-          <button className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded-lg  transition">
+          <button className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded-lg transition">
             Join our team
           </button>
         </div>

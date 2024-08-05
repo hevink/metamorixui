@@ -15,7 +15,11 @@ const Testimonial = () => {
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <Marquee pauseOnHover vertical className="[--duration:20s]">
+      <Marquee
+        pauseOnHover
+        vertical
+        className="[--duration:20s] hidden sm:block"
+      >
         {thirdRow.map((review) => (
           <ReviewCard key={review.name} {...review} />
         ))}

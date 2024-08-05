@@ -16,9 +16,13 @@ const Cta = () => {
           type="video/mp4"
         />
       </video>
-      <div className="relative z-10 text-center sm:px-4 md:px-8 lg:px-12">
+      <div className="relative z-10 text-center sm:px-4 md:px-8 lg:px-12 flex flex-col items-center justify-center">
         <h2 className="text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
-          Add collaboration to your product today
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
+            Add collaboration
+          </span>{" "}
+          <br />
+          to your product today
         </h2>
         <p className="text-white text-base md:text-lg lg:text-xl xl:text-2xl mb-6">
           Enhance your team's productivity and streamline your workflow with our

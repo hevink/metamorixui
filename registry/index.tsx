@@ -257,6 +257,22 @@ const example: Registry = {
       () => import("@/registry/components/example/cta/cta-three"),
     ),
   },
+  "cta-four": {
+    name: "cta-four",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-four"),
+    ),
+  },
+  "cta-five": {
+    name: "cta-five",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-five"),
+    ),
+  },
 };
 
 export const registry: Registry = {

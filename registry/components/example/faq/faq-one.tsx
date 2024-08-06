@@ -1,124 +1,59 @@
-import React from "react";
+const faqItems = [
+  {
+    question: "What is artificial intelligence?",
+    answer:
+      "AI simulates human intelligence in machines, allowing them to perform tasks like recognizing speech, making decisions, and identifying patterns..",
+  },
+  {
+    question: "How does machine learning differ from AI?",
+    answer:
+      "Machine learning, a subset of AI, uses algorithms to learn from data. AI is broader, encompassing various techniques, including machine learning. ",
+  },
+  {
+    question: "Can AI create music?",
+    answer:
+      "Yes, AI can analyze and generate music in various styles. For example, OpenAI's MuseNet composes music in different genres.",
+  },
+  {
+    question: "Who is Dua Lipa?",
+    answer:
+      "Dua Lipa is a British singer known for hits like 'Levitating' and 'Don't Start Now'. ",
+  },
+  {
+    question: "What are some popular songs by Dua Lipa?",
+    answer:
+      '"Levitating", "Don\'t Start Now", and "Physical" are some of her popular songs. ',
+  },
+  {
+    question: "Has Dua Lipa collaborated with any AI projects?",
+    answer:
+      "While she hasn't directly collaborated with AI, AI is used in the music industry to analyze trends and create sounds.",
+  },
+];
 
-const Faq = () => {
+const FAQ: React.FC = () => {
   return (
-    <div
-      className="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-8 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32"
-      id="faq"
-    >
-      <h2 className="font-cal text-2xl leading-10 text-gray-900">
+    <div className="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-8 dark:divide-gray-100/10 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32">
+      <h2 className="text-2xl leading-10 text-gray-900 dark:text-gray-100">
         Frequently asked questions
       </h2>
-      <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
-        <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-            Do you store my emails?
-          </dt>
-          <dd className="mt-4 lg:col-span-7 lg:mt-0">
-            <p className="text-base leading-7 text-gray-600">
-              We store a hashed version of your emails for our analytics
-              feature. As our code is open-source you can check our code to see
-              this for yourself. For full data privacy you can self-host your
-              own instance of Inbox Zero.
-            </p>
-          </dd>
-        </div>
-        <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-            Is the code open-source?
-          </dt>
-          <dd className="mt-4 lg:col-span-7 lg:mt-0">
-            <p className="text-base leading-7 text-gray-600">
-              Yes! You can see the source code in our{/* */}{" "}
-              <a
-                href="/github"
-                target="_blank"
-                className="font-semibold hover:underline"
-                rel="noreferrer"
-              >
-                GitHub repo
-              </a>
-              .
-            </p>
-          </dd>
-        </div>
-        <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-            Do you take feature requests?
-          </dt>
-          <dd className="mt-4 lg:col-span-7 lg:mt-0">
-            <p className="text-base leading-7 text-gray-600">
-              Yes! Post an issue on{/* */}{" "}
-              <a
-                href="/github"
-                target="_blank"
-                className="font-semibold hover:underline"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>{" "}
-              {/* */}or{/* */}{" "}
-              <a
-                href="mailto:elie@getinboxzero.com"
-                target="_blank"
-                className="font-semibold hover:underline"
-                rel="noreferrer"
-              >
-                email
-              </a>{" "}
-              {/* */}us. We{/* */}'{/* */}re happy to hear how we can improve
-              your email experience.
-            </p>
-          </dd>
-        </div>
-        <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-            Can I still use Inbox Zero alongside my current email client?
-          </dt>
-          <dd className="mt-4 lg:col-span-7 lg:mt-0">
-            <p className="text-base leading-7 text-gray-600">
-              Yes! Inbox Zero is intended to be used alongside your existing
-              email client.
-            </p>
-          </dd>
-        </div>
-        <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-            Which email providers does Inbox Zero support?
-          </dt>
-          <dd className="mt-4 lg:col-span-7 lg:mt-0">
-            <p className="text-base leading-7 text-gray-600">
-              We only support Gmail and Google Workspace email accounts today.
-              We may add support for other email providers such as Outlook in
-              the future.
-            </p>
-          </dd>
-        </div>
-        <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-            Do you offer refunds?
-          </dt>
-          <dd className="mt-4 lg:col-span-7 lg:mt-0">
-            <p className="text-base leading-7 text-gray-600">
-              If you don{/* */}'{/* */}t think we provided you with value send
-              us an
-              {/* */}{" "}
-              <a
-                href="mailto:elie@getinboxzero.com"
-                target="_blank"
-                className="font-semibold hover:underline"
-                rel="noreferrer"
-              >
-                email
-              </a>{" "}
-              {/* */}within 14 days of upgrading and we{/* */}'{/* */}ll refund
-              you.
-            </p>
-          </dd>
-        </div>
+      <dl className="mt-10 space-y-8 divide-y divide-gray-900/10 dark:divide-gray-100/10">
+        {faqItems.map((item, index) => (
+          <div key={index} className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+            <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-gray-100 lg:col-span-5">
+              {item.question}
+            </dt>
+            <dd className="mt-4 lg:col-span-7 lg:mt-0">
+              <p
+                className="text-base leading-7 text-gray-600 dark:text-gray-300"
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              />
+            </dd>
+          </div>
+        ))}
       </dl>
     </div>
   );
 };
 
-export default Faq;
+export default FAQ;

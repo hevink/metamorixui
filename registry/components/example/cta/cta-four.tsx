@@ -1,45 +1,7 @@
-import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 
-const CTASection = () => {
-  const [email, setEmail] = useState("");
-  const [activeFeature, setActiveFeature] = useState(0);
-  const controls = useAnimation();
-
-  const features = [
-    {
-      icon: "📊",
-      title: "Data Insights",
-      description: "Unlock powerful analytics",
-    },
-    {
-      icon: "🚀",
-      title: "Rapid Growth",
-      description: "Accelerate your business",
-    },
-    {
-      icon: "🔒",
-      title: "Enhanced Security",
-      description: "Protect your assets",
-    },
-    { icon: "🌐", title: "Global Network", description: "Connect worldwide" },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    controls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
-  }, [activeFeature]);
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-  };
-
+const Cta = () => {
   return (
     <section className="relative flex items-center justify-center overflow-hidden py-12 bg-gradient-to-br from-orange-400 to-red-600">
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -63,16 +25,11 @@ const CTASection = () => {
               Join the revolution of innovative companies leveraging
               cutting-edge technology to skyrocket their success.
             </motion.p>
-            <motion.form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-4"
-            >
+            <motion.form className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-grow px-4 py-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-orange-300"
+                className="flex-grow px-4 py-3 rounded-lg text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-300"
                 required
               />
               <motion.button
@@ -89,15 +46,28 @@ const CTASection = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               Key Features
             </h3>
-            <div className="space-y-6">
+            <motion.div
+              className="space-y-6"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.2,
+                    delayChildren: 0.3,
+                  },
+                },
+              }}
+            >
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={controls}
-                  className={`flex items-center space-x-4 ${
-                    index === activeFeature ? "text-orange-300" : "text-white"
-                  }`}
+                  variants={{
+                    hidden: { opacity: 0, x: 50 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  transition={{ duration: 0.6 }}
+                  className="flex items-center space-x-4 text-white"
                 >
                   <div className="text-4xl">{feature.icon}</div>
                   <div>
@@ -106,7 +76,7 @@ const CTASection = () => {
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -122,4 +92,23 @@ const CTASection = () => {
   );
 };
 
-export default CTASection;
+export default Cta;
+
+const features = [
+  {
+    icon: "📊",
+    title: "Data Insights",
+    description: "Unlock powerful analytics",
+  },
+  {
+    icon: "🚀",
+    title: "Rapid Growth",
+    description: "Accelerate your business",
+  },
+  {
+    icon: "🔒",
+    title: "Enhanced Security",
+    description: "Protect your assets",
+  },
+  { icon: "🌐", title: "Global Network", description: "Connect worldwide" },
+];

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const Testimonial = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -16,6 +17,18 @@ const Testimonial = () => {
     };
   }, []);
 
+  const handlePrevious = () => {
+    setCurrentTestimonial((prevTestimonial) =>
+      prevTestimonial === 0 ? testimonials.length - 1 : prevTestimonial - 1,
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentTestimonial(
+      (prevTestimonial) => (prevTestimonial + 1) % testimonials.length,
+    );
+  };
+
   const { description, name, image, email } = testimonials[currentTestimonial];
 
   const variants = {
@@ -23,13 +36,14 @@ const Testimonial = () => {
     animate: { opacity: 1, y: 0, scale: 1 },
     exit: { opacity: 0, y: "100%", scale: 0.1 },
   };
+
   const dotVariants = {
     active: { scale: 1.2, backgroundColor: "#3f3f46" },
     inactive: { scale: 1, backgroundColor: "#D1D5DB" },
   };
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 relative">
       <div className="w-full">
         <AnimatePresence mode="popLayout">
           <motion.div
@@ -82,6 +96,20 @@ const Testimonial = () => {
           </div>
         </AnimatePresence>
       </div>
+      <button
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 "
+        onClick={handlePrevious}
+        aria-label="Previous Testimonial"
+      >
+        <ArrowLeft />
+      </button>
+      <button
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 700"
+        onClick={handleNext}
+        aria-label="Next Testimonial"
+      >
+        <ArrowRight />
+      </button>
     </section>
   );
 };

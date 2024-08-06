@@ -32,9 +32,9 @@ const Cta = () => {
             </div>
             <p className="text-sm text-gray-600 text-center">
               We care about your data in our{" "}
-              <a href="#" className="text-orange-600 underline">
+              <Link href="#" className="text-orange-600 underline">
                 privacy policy
-              </a>
+              </Link>
               .
             </p>
           </form>

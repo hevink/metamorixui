@@ -3,7 +3,7 @@ import React from "react";
 const Testimonial = () => {
   return (
     <section className="min-w-screen min-h-screen flex items-center justify-center sm:py-5">
-      <div className="w-full border-t  border-gray-200 dark:border-gray-700 sm:px-5 py-16 md:py-24 text-gray-800">
+      <div className="w-full border-gray-200 dark:border-gray-700 sm:px-5 py-16 md:py-24 text-gray-800">
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center max-w-xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-5 text-gray-800 dark:text-gray-200">
@@ -38,7 +38,7 @@ export default Testimonial;
 
 const TestimonialCard = ({ name, image, description }: any) => {
   return (
-    <div className="relative w-full mx-auto rounded-lg border p-5 text-gray-800 font-light mb-6 hover:scale-105">
+    <div className="relative w-full mx-auto rounded-lg border p-5 text-gray-800 font-light mb-6 transition-transform duration-300 ease-in-out transform hover:scale-105">
       <div className="w-full flex mb-4 items-center">
         <div className="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200 dark:border-gray-500">
           <img src={image} alt={name} />

@@ -249,6 +249,46 @@ const example: Registry = {
       () => import("@/registry/components/example/faq/faq-one"),
     ),
   },
+  "faq-two": {
+    name: "faq-two",
+    type: "components:example",
+    files: ["registry/components/example/faq/faq-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/faq/faq-two"),
+    ),
+  },
+  "faq-three": {
+    name: "faq-three",
+    type: "components:example",
+    files: ["registry/components/example/faq/faq-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/faq/faq-three"),
+    ),
+  },
+  "faq-four": {
+    name: "faq-four",
+    type: "components:example",
+    files: ["registry/components/example/faq/faq-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/faq/faq-four"),
+    ),
+  },
+  "faq-five": {
+    name: "faq-five",
+    type: "components:example",
+    files: ["registry/components/example/faq/faq-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/faq/faq-five"),
+    ),
+  },
+  "faq-six": {
+    name: "faq-six",
+    type: "components:example",
+    files: ["registry/components/example/faq/faq-six.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/faq/faq-six"),
+    ),
+  },
 };
 
 export const registry: Registry = {

@@ -33,7 +33,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "FAQs",
-          href: `/docs/components/faqs`,
+          href: `/docs/components/faq`,
           items: [],
         },
         {

@@ -84,10 +84,10 @@ export function ComponentPreview({
         )}
         <TabsContent
           value="preview"
-          className="relative border rounded-md"
+          className="relative rounded-md border"
           key={key}
         >
-          <div className="p-4">
+          <div className="overflow-hidden p-4">
             <React.Suspense
               fallback={
                 <div className="flex items-center text-sm text-muted-foreground">

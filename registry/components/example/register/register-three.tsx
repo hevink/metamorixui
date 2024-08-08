@@ -123,7 +123,7 @@ const SignIn = () => {
               </svg>
             </div>
             <h2 className="text-center text-xl font-bold leading-tight md:text-2xl">
-              Sign in to your account
+              Sign up for free
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-300">
               Already have an account?{" "}

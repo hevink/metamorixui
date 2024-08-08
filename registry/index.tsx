@@ -297,6 +297,14 @@ const example: Registry = {
       () => import("@/registry/components/example/faq/faq-six"),
     ),
   },
+  "login-one": {
+    name: "login-one",
+    type: "components:example",
+    files: ["registry/components/example/login/login-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/login/login-one"),
+    ),
+  },
 };
 
 export const registry: Registry = {

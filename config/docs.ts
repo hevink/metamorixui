@@ -98,5 +98,30 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
+    {
+      title: "Authentication",
+      items: [
+        {
+          title: "Login",
+          href: `/docs/components/login`,
+          items: [],
+        },
+        {
+          title: "Register",
+          href: `/docs/components/register`,
+          items: [],
+        },
+        {
+          title: "Forgot Password",
+          href: `/docs/components/forgot-password`,
+          items: [],
+        },
+        {
+          title: "Reset Password",
+          href: `/docs/components/reset-password`,
+          items: [],
+        },
+      ],
+    },
   ],
 };

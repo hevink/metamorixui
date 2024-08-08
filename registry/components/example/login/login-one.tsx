@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
-const SignInThree = () => {
+const Login = () => {
   return (
     <section>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
@@ -137,4 +137,4 @@ const SignInThree = () => {
   );
 };
 
-export default SignInThree;
+export default Login;

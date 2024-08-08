@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const Login = () => {
+const SignIn = () => {
   const [isSignIn, setIsSignIn] = useState(true);
 
   return (
@@ -197,4 +197,4 @@ const TabButton: React.FC<TabButtonProps> = ({ isActive, onClick, label }) => {
   );
 };
 
-export default Login;
+export default SignIn;

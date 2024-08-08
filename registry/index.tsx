@@ -337,6 +337,46 @@ const example: Registry = {
       () => import("@/registry/components/example/login/login-five"),
     ),
   },
+  "register-one": {
+    name: "register-one",
+    type: "components:example",
+    files: ["registry/components/example/register/register-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-one"),
+    ),
+  },
+  "register-two": {
+    name: "register-two",
+    type: "components:example",
+    files: ["registry/components/example/register/register-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-two"),
+    ),
+  },
+  "register-three": {
+    name: "register-three",
+    type: "components:example",
+    files: ["registry/components/example/register/register-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-three"),
+    ),
+  },
+  "register-four": {
+    name: "register-four",
+    type: "components:example",
+    files: ["registry/components/example/register/register-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-four"),
+    ),
+  },
+  "register-five": {
+    name: "register-five",
+    type: "components:example",
+    files: ["registry/components/example/register/register-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-five"),
+    ),
+  },
 };
 
 export const registry: Registry = {

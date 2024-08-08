@@ -25,6 +25,24 @@ const example: Registry = {
       () => import("@/registry/components/example/headers/headers-demo"),
     ),
   },
+  "headers-two": {
+    name: "headers-two",
+    type: "components:example",
+    registryDependencies: ["headers"],
+    files: ["registry/components/example/headers/headers-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/headers/headers-two"),
+    ),
+  },
+  "headers-three": {
+    name: "headers-three",
+    type: "components:example",
+    registryDependencies: ["headers"],
+    files: ["registry/components/example/headers/headers-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/headers/headers-three"),
+    ),
+  },
   "footer-one": {
     name: "footer-one",
     type: "components:example",

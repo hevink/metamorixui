@@ -96,6 +96,11 @@ export const docsConfig: DocsConfig = {
         //   href: `/docs/components/card`,
         //   items: [],
         // },
+        {
+          title: "Logo-cloud",
+          href: `/docs/components/logo-cloud`,
+          items: [],
+        },
       ],
     },
     {

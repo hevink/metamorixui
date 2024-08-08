@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const LogoCloud = () => {
-  return (
-    <div>LogoCloud</div>
-  )
-}
+  return <div>LogoCloud</div>;
+};
 
-export default LogoCloud
+export default LogoCloud;

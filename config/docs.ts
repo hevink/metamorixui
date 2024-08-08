@@ -41,11 +41,11 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/pricing`,
           items: [],
         },
-        {
-          title: "Bentogrid",
-          href: `/docs/components/bentogrid`,
-          items: [],
-        },
+        // {
+        //   title: "Bentogrid",
+        //   href: `/docs/components/bentogrid`,
+        //   items: [],
+        // },
         {
           title: "Testimonials",
           href: `/docs/components/testimonials`,
@@ -61,41 +61,41 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/cta`,
           items: [],
         },
-        {
-          title: "Table",
-          href: `/docs/components/table`,
-          items: [],
-        },
-        {
-          title: "Sidebar",
-          href: `/docs/components/sidebar`,
-          items: [],
-        },
+        // {
+        //   title: "Table",
+        //   href: `/docs/components/table`,
+        //   items: [],
+        // },
+        // {
+        //   title: "Sidebar",
+        //   href: `/docs/components/sidebar`,
+        //   items: [],
+        // },
         {
           title: "Features",
           href: `/docs/components/features`,
           items: [],
         },
-        {
-          title: "Newsletter",
-          href: `/docs/components/newsletter`,
-          items: [],
-        },
+        // {
+        //   title: "Newsletter",
+        //   href: `/docs/components/newsletter`,
+        //   items: [],
+        // },
         {
           title: "Stats",
           href: `/docs/components/state`,
           items: [],
         },
-        {
-          title: "Modal",
-          href: `/docs/components/modal`,
-          items: [],
-        },
-        {
-          title: "Card",
-          href: `/docs/components/card`,
-          items: [],
-        },
+        // {
+        //   title: "Modal",
+        //   href: `/docs/components/modal`,
+        //   items: [],
+        // },
+        // {
+        //   title: "Card",
+        //   href: `/docs/components/card`,
+        //   items: [],
+        // },
       ],
     },
     {

@@ -25,6 +25,54 @@ const logos = [
     name: "Post CSS",
     url: "https://svgl.app/library/postcss_wordmark.svg",
   },
+  {
+    name: "Babel",
+    url: "https://svgl.app/library/babel.svg",
+  },
+  {
+    name: "Ngrok",
+    url: "https://svgl.app/library/ngrok-light.svg",
+  },
+  {
+    name: "Webflow",
+    url: "https://svgl.app/library/webflow.svg",
+  },
+  {
+    name: "Perplexity",
+    url: "https://svgl.app/library/perplexity_wordmark_light.svg",
+  },
+  {
+    name: "Sanity",
+    url: "https://svgl.app/library/sanity.svg",
+  },
+  {
+    name: "Post CSS",
+    url: "https://svgl.app/library/postcss_wordmark.svg",
+  },
+  {
+    name: "Babel",
+    url: "https://svgl.app/library/babel.svg",
+  },
+  {
+    name: "Ngrok",
+    url: "https://svgl.app/library/ngrok-light.svg",
+  },
+  {
+    name: "Webflow",
+    url: "https://svgl.app/library/webflow.svg",
+  },
+  {
+    name: "Perplexity",
+    url: "https://svgl.app/library/perplexity_wordmark_light.svg",
+  },
+  {
+    name: "Sanity",
+    url: "https://svgl.app/library/sanity.svg",
+  },
+  {
+    name: "Post CSS",
+    url: "https://svgl.app/library/postcss_wordmark.svg",
+  },
 ];
 
 const LogoCloud = () => {
@@ -38,12 +86,12 @@ const LogoCloud = () => {
         </div>
         <div className="w-full py-12">
           <div className="flex w-full flex-col items-center justify-center px-4 md:px-8">
-            <div className="grid grid-cols-3 gap-x-6 md:grid-cols-5 lg:grid-cols-6">
+            <div className="grid grid-cols-3 gap-6 md:grid-cols-5 lg:grid-cols-6">
               {logos.map((logo, key) => (
                 <img
                   key={key}
                   src={logo.url}
-                  className="h-12 w-28 px-2 brightness-0 hover:brightness-200 dark:invert dark:hover:invert-0"
+                  className="h-12 w-28 px-2"
                   alt={`${logo.name}`}
                 />
               ))}

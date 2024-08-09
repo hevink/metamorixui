@@ -102,6 +102,14 @@ const example: Registry = {
       () => import("@/registry/components/example/pricings/pricing-four"),
     ),
   },
+  "pricing-five": {
+    name: "pricing-five",
+    type: "components:example",
+    files: ["registry/components/example/pricings/pricing-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/pricings/pricing-five"),
+    ),
+  },
   "testimonial-one": {
     name: "testimonial-one",
     type: "components:example",
@@ -215,6 +223,14 @@ const example: Registry = {
     files: ["registry/components/example/states/states-three.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/states/states-three"),
+    ),
+  },
+  "states-four": {
+    name: "states-four",
+    type: "components:example",
+    files: ["registry/components/example/states/states-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/states/states-four"),
     ),
   },
   "hero-one": {

@@ -47,7 +47,7 @@ const logos = [
 const AnimatedLogoCloud = () => {
   return (
     <div className="w-full py-12">
-      <div className="mx-auto w-full px-4 md:px-8">
+      <div className="mx-auto w-full px-2 md:px-4">
         <div
           className="group relative mt-6 flex gap-6 overflow-hidden p-2"
           style={{
@@ -66,8 +66,8 @@ const AnimatedLogoCloud = () => {
                   <img
                     key={key}
                     src={logo.url}
-                    className="h-10 w-28 px-2 brightness-0 hover:brightness-200 dark:invert dark:hover:invert-0"
-                    alt={`${logo.name}`}
+                    className="h-10 w-28 px-2"
+                    alt={logo.name}
                   />
                 ))}
               </div>

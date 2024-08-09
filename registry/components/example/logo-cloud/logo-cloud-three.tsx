@@ -85,8 +85,8 @@ const LogoCloud = () => {
           </h2>
         </div>
         <div className="w-full py-12">
-          <div className="flex w-full flex-col items-center justify-center px-4 md:px-8">
-            <div className="grid grid-cols-3 gap-6 md:grid-cols-5 lg:grid-cols-6">
+          <div className="flex w-full flex-col items-center justify-center px-2 md:px-4">
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-5 lg:grid-cols-6">
               {logos.map((logo, key) => (
                 <img
                   key={key}

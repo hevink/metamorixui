@@ -1,7 +1,7 @@
 const LogoCloud = () => {
   return (
-    <div className="">
-      <div className="mb-4 text-center text-2xl font-medium leading-6">
+    <div className="my-10">
+      <div className="mb-6 text-center text-2xl font-medium leading-6">
         <p>Trusted by companies and employees of</p>
       </div>
       <div className="overflow-hidden rounded-xl ">
@@ -9,7 +9,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#249edc] hover:text-white dark:bg-black dark:text-white dark:hover:bg-[#249edc]"
+            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#249edc] hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-[#249edc]"
             href="#"
           >
             <svg
@@ -30,7 +30,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="hover group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#10239e] hover:text-white dark:bg-black dark:text-white dark:hover:bg-[#10239e]"
+            className="hover group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#10239e] hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-[#10239e]"
             href="#"
           >
             <svg
@@ -47,7 +47,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-1 flex h-[100px] items-center justify-center bg-white p-8 text-black transition-colors hover:bg-yellow-500 hover:text-white dark:bg-black dark:text-white dark:hover:bg-yellow-500"
+            className="group col-span-1 flex h-[100px] items-center justify-center bg-white p-8 text-black transition-colors hover:bg-yellow-500 hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-yellow-500"
             href="#"
           >
             <svg
@@ -64,7 +64,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#d82227] hover:text-white dark:bg-black dark:text-white dark:hover:bg-[#d82227]"
+            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#d82227] hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-[#d82227]"
             href="#"
           >
             <svg
@@ -135,7 +135,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#FF6D2D] hover:text-white dark:bg-black dark:text-white dark:hover:bg-[#FF6D2D]"
+            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#FF6D2D] hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-[#FF6D2D]"
             href="#"
           >
             <svg
@@ -203,7 +203,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#3A5CFC] hover:text-white dark:bg-black dark:text-white dark:hover:bg-[#3A5CFC]"
+            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#3A5CFC] hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-[#3A5CFC]"
             href="#"
           >
             <svg
@@ -266,7 +266,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#E94F2E] hover:text-white dark:bg-black dark:text-white dark:hover:bg-[#E94F2E]"
+            className="group col-span-1 flex items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#E94F2E] hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-[#E94F2E]"
             href="#"
           >
             <svg
@@ -326,7 +326,7 @@ const LogoCloud = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-1 flex h-[100px] items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#8C1515] hover:text-white dark:bg-black dark:text-white dark:hover:bg-[#8C1515]"
+            className="group col-span-1 flex h-[100px] items-center justify-center bg-white p-8 text-black transition-colors hover:bg-[#8C1515] hover:text-white dark:bg-neutral-900 dark:text-white dark:hover:bg-[#8C1515]"
             href="#"
           >
             <svg

@@ -1,30 +1,57 @@
 const blogPosts = [
   {
-    title: "How to build coffee inside your home in 5 minutes.",
+    title: "Mastering Home Coffee Brewing in Just 5 Minutes",
     date: "March 21, 2020",
-    category: "Lifestyle",
+    category: "Food & Drink",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+      "Discover quick and easy methods to brew delicious coffee at home without the need for specialized equipment. Perfect for busy mornings.",
     imageUrl:
-      "https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-1.jpg",
+      "https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg",
   },
   {
-    title: "7 Tips to run your remote team faster and better.",
+    title: "Effective Strategies for Managing Remote Teams",
     date: "April 04, 2020",
-    category: "Marketing",
+    category: "Business",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+      "Explore actionable tips and techniques to enhance the productivity and cohesion of your remote team. Learn how to streamline communication and manage projects effectively.",
     imageUrl:
-      "https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-2.jpg",
+      "https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg",
   },
   {
-    title: "5 Productivity tips to write faster at morning.",
+    title: "Boost Your Morning Productivity with These 5 Tips",
     date: "May 12, 2020",
-    category: "Productivity",
+    category: "Personal Development",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+      "Uncover simple yet powerful strategies to enhance your writing speed and productivity in the early hours of the day. Start your mornings on the right foot.",
     imageUrl:
-      "https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-3.jpg",
+      "https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg",
+  },
+  {
+    title: "Mastering Home Coffee Brewing in Just 5 Minutes",
+    date: "March 21, 2020",
+    category: "Food & Drink",
+    description:
+      "Discover quick and easy methods to brew delicious coffee at home without the need for specialized equipment. Perfect for busy mornings.",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg",
+  },
+  {
+    title: "Effective Strategies for Managing Remote Teams",
+    date: "April 04, 2020",
+    category: "Business",
+    description:
+      "Explore actionable tips and techniques to enhance the productivity and cohesion of your remote team. Learn how to streamline communication and manage projects effectively.",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg",
+  },
+  {
+    title: "Boost Your Morning Productivity with These 5 Tips",
+    date: "May 12, 2020",
+    category: "Personal Development",
+    description:
+      "Uncover simple yet powerful strategies to enhance your writing speed and productivity in the early hours of the day. Start your mornings on the right foot.",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg",
   },
 ];
 

@@ -425,6 +425,14 @@ const example: Registry = {
       () => import("@/registry/components/example/logo-cloud/logo-cloud-six"),
     ),
   },
+  "logo-cloud-seven": {
+    name: "logo-cloud-seven",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-seven.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-seven"),
+    ),
+  },
 };
 
 export const registry: Registry = {

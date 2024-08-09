@@ -44,7 +44,7 @@ const logos = [
   },
 ];
 
-const AnimatedLogoCloud = () => {
+const LogoCloud = () => {
   return (
     <div className="w-full py-12">
       <div className="mx-auto w-full px-2 md:px-4">
@@ -78,4 +78,4 @@ const AnimatedLogoCloud = () => {
   );
 };
 
-export default AnimatedLogoCloud;
+export default LogoCloud;

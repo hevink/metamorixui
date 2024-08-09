@@ -44,7 +44,7 @@ const LogoCloud = () => {
                   key={key}
                   src={logo.url}
                   className="h-12 w-28 px-2"
-                  alt={`${logo.name}`}
+                  alt={logo.name}
                 />
               ))}
             </div>

@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col md:min-h-screen">
-      <header className="bg-black text-white sm:p-4">
+      <header className="bg-black p-4 text-white">
         <div className="flex items-center justify-between sm:container sm:mx-auto">
           <div className="text-2xl font-bold">
             <svg
@@ -151,7 +151,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </header>
-      <hr />
+      <hr className="hidden sm:block" />
 
       <div className="relative my-10 overflow-hidden sm:my-0">
         <motion.div

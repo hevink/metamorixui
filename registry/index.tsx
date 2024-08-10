@@ -129,6 +129,14 @@ const example: Registry = {
       () => import("@/registry/components/example/pricings/pricing-four"),
     ),
   },
+  "pricing-five": {
+    name: "pricing-five",
+    type: "components:example",
+    files: ["registry/components/example/pricings/pricing-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/pricings/pricing-five"),
+    ),
+  },
   "testimonial-one": {
     name: "testimonial-one",
     type: "components:example",
@@ -244,6 +252,14 @@ const example: Registry = {
       () => import("@/registry/components/example/states/states-three"),
     ),
   },
+  "states-four": {
+    name: "states-four",
+    type: "components:example",
+    files: ["registry/components/example/states/states-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/states/states-four"),
+    ),
+  },
   "hero-one": {
     name: "hero-one",
     type: "components:example",
@@ -322,6 +338,166 @@ const example: Registry = {
     files: ["registry/components/example/faq/faq-six.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/faq/faq-six"),
+    ),
+  },
+  "login-one": {
+    name: "login-one",
+    type: "components:example",
+    files: ["registry/components/example/login/login-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/login/login-one"),
+    ),
+  },
+  "login-two": {
+    name: "login-two",
+    type: "components:example",
+    files: ["registry/components/example/login/login-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/login/login-two"),
+    ),
+  },
+  "login-three": {
+    name: "login-three",
+    type: "components:example",
+    files: ["registry/components/example/login/login-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/login/login-three"),
+    ),
+  },
+  "login-four": {
+    name: "login-four",
+    type: "components:example",
+    files: ["registry/components/example/login/login-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/login/login-four"),
+    ),
+  },
+  "login-five": {
+    name: "login-five",
+    type: "components:example",
+    files: ["registry/components/example/login/login-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/login/login-five"),
+    ),
+  },
+  "register-one": {
+    name: "register-one",
+    type: "components:example",
+    files: ["registry/components/example/register/register-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-one"),
+    ),
+  },
+  "register-two": {
+    name: "register-two",
+    type: "components:example",
+    files: ["registry/components/example/register/register-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-two"),
+    ),
+  },
+  "register-three": {
+    name: "register-three",
+    type: "components:example",
+    files: ["registry/components/example/register/register-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-three"),
+    ),
+  },
+  "register-four": {
+    name: "register-four",
+    type: "components:example",
+    files: ["registry/components/example/register/register-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-four"),
+    ),
+  },
+  "register-five": {
+    name: "register-five",
+    type: "components:example",
+    files: ["registry/components/example/register/register-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/register/register-five"),
+    ),
+  },
+  "logo-cloud-one": {
+    name: "logo-cloud-one",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-one"),
+    ),
+  },
+  "logo-cloud-two": {
+    name: "logo-cloud-two",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-two"),
+    ),
+  },
+  "logo-cloud-three": {
+    name: "logo-cloud-three",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-three"),
+    ),
+  },
+  "logo-cloud-four": {
+    name: "logo-cloud-four",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-four"),
+    ),
+  },
+  "logo-cloud-five": {
+    name: "logo-cloud-five",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-five"),
+    ),
+  },
+  "logo-cloud-six": {
+    name: "logo-cloud-six",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-six.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-six"),
+    ),
+  },
+  "logo-cloud-seven": {
+    name: "logo-cloud-seven",
+    type: "components:example",
+    files: ["registry/components/example/logo-cloud/logo-cloud-seven.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-cloud/logo-cloud-seven"),
+    ),
+  },
+  "blog-one": {
+    name: "blog-one",
+    type: "components:example",
+    files: ["registry/components/example/blog/blog-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/blog/blog-one"),
+    ),
+  },
+  "blog-two": {
+    name: "blog-two",
+    type: "components:example",
+    files: ["registry/components/example/blog/blog-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/blog/blog-two"),
+    ),
+  },
+  "blog-three": {
+    name: "blog-three",
+    type: "components:example",
+    files: ["registry/components/example/blog/blog-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/blog/blog-three"),
     ),
   },
 };

@@ -473,6 +473,46 @@ const example: Registry = {
       () => import("@/registry/components/example/blog/blog-three"),
     ),
   },
+  "cta-one": {
+    name: "cta-one",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-one"),
+    ),
+  },
+  "cta-two": {
+    name: "cta-two",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-two"),
+    ),
+  },
+  "cta-three": {
+    name: "cta-three",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-three"),
+    ),
+  },
+  "cta-four": {
+    name: "cta-four",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-four"),
+    ),
+  },
+  "cta-five": {
+    name: "cta-five",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-five"),
+    ),
+  },
 };
 
 export const registry: Registry = {

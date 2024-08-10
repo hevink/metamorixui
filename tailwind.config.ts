@@ -83,6 +83,7 @@ module.exports = {
         backgroundPositionSpin:
           "background-position-spin 3000ms infinite alternate",
         borderBeam: "border-beam calc(var(--duration)*1s) infinite linear",
+        "logo-cloud": "logo-cloud 30s linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -194,6 +195,10 @@ module.exports = {
           to: {
             "background-position": "0% 0%",
           },
+        },
+        "logo-cloud": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
     },

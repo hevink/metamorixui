@@ -15,7 +15,7 @@ const Hero = () => {
     <div className="">
       <Header />
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-32 bg-gradient-to-br from-orange-600 to-yellow-600 rounded-3xl opacity-80 blur-[200px] -z-50" />
+        <div className="absolute left-1/2 top-1/2 -z-50 h-32 w-[100px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-gradient-to-br from-orange-600 to-yellow-600 opacity-80 blur-[200px] md:w-[600px]" />
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-300 dark:ring-gray-300/10 dark:hover:ring-gray-300/20">
@@ -44,6 +44,7 @@ const Hero = () => {
               >
                 Get started
               </a>
+
               <a
                 href="#"
                 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-300"
@@ -109,7 +110,7 @@ const Header = () => {
         </div>
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 origin-top-right transition lg:hidden">
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white dark:bg-gradient-to-b dark:from-neutral-800 dark:to-gray-800 shadow-lg ring-1 ring-black/5 dark:ring-gray-700/5">
+            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black/5 dark:bg-gradient-to-b dark:from-neutral-800 dark:to-gray-800 dark:ring-gray-700/5">
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
@@ -134,7 +135,7 @@ const Header = () => {
                     <button
                       type="button"
                       onClick={toggleMenu}
-                      className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 dark:text-white hover:bg-gray-100 hover:dark:bg-white/10 hover:text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                      className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:text-white hover:dark:bg-white/10"
                     >
                       <span className="sr-only">Close menu</span>
                       <X className="size-6" aria-hidden="true" />

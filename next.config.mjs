@@ -20,7 +20,7 @@ const nextConfig = {
     },
   },
   images: {
-    domains: ["localhost", "cdn.magicui.design", "framerusercontent.com"],
+    domains: ["localhost", "ui.metamorix.com", "framerusercontent.com"],
   },
   async redirects() {
     return [

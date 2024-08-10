@@ -4,6 +4,12 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const Testimonial = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [rating, setRating] = useState(2);
+
+  useEffect(() => {
+    const randomRating = Math.floor(Math.random() * 4) + 2;
+    setRating(randomRating);
+  }, [currentTestimonial]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -43,7 +49,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 relative">
+    <section className="relative py-12 md:py-16">
       <div className="w-full">
         <AnimatePresence mode="popLayout">
           <motion.div
@@ -64,24 +70,29 @@ const Testimonial = () => {
               },
             }}
           >
-            <div className="flex items-center mx-auto">
+            <p className="m-0 max-w-xl text-center text-2xl font-medium tracking-tight">
+              {description}
+            </p>
+            <div className="mx-auto flex items-center">
               <img
                 src={image}
                 alt={name}
-                className="m-0 h-[82px] w-[82px] rounded-full object-cover"
+                className="m-0 h-[70px] w-[70px] rounded-full object-cover"
               />
-              <div className="flex flex-col items-center justify-center space-x-3">
-                <div className="font-medium text-base text-gray-900/80 dark:text-gray-300">
-                  {name}
-                </div>
-                <div className="font-regular text-base text-gray-600 dark:text-gray-300">
-                  {email}
-                </div>
+            </div>
+            <div className="flex flex-col items-center justify-center space-x-3">
+              <div className="text-base font-medium text-gray-900/80 dark:text-gray-300">
+                {name}
+              </div>
+              <div className="font-regular text-base text-gray-600 dark:text-gray-300">
+                {email}
               </div>
             </div>
-            <p className="m-0 text-center text-2xl max-w-xl font-medium tracking-tight">
-              {description}
-            </p>
+            <div className="flex">
+              {Array.from({ length: 5 }, (_, index) => (
+                <Star key={index} filled={index < rating} />
+              ))}
+            </div>
           </motion.div>
           <div className="mt-6 flex justify-center">
             {testimonials.map((_, index) => (
@@ -97,14 +108,14 @@ const Testimonial = () => {
         </AnimatePresence>
       </div>
       <button
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 "
+        className="absolute left-0 top-1/2 -translate-y-1/2 transform p-2 "
         onClick={handlePrevious}
         aria-label="Previous Testimonial"
       >
         <ArrowLeft />
       </button>
       <button
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 700"
+        className="700 absolute right-0 top-1/2 -translate-y-1/2 transform p-2"
         onClick={handleNext}
         aria-label="Next Testimonial"
       >
@@ -116,6 +127,23 @@ const Testimonial = () => {
 
 export default Testimonial;
 
+const Star = ({ filled }: any) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill={filled ? "#FFD700" : "none"}
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke={filled ? "#FFD700" : "#E5E7EB"}
+    className="h-6 w-6"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 17.25L6.516 20.06a.75.75 0 01-1.09-.79l.82-4.773-3.467-3.393a.75.75 0 01.417-1.28l4.794-.697L11.24 4.3a.75.75 0 011.352 0l2.144 4.918 4.794.697a.75.75 0 01.417 1.28l-3.467 3.393.82 4.773a.75.75 0 01-1.09.79L12 17.25z"
+    />
+  </svg>
+);
+
 const testimonials = [
   {
     name: "John Doe",
@@ -123,7 +151,7 @@ const testimonials = [
     image:
       "https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?ga=GA1.1.156494736.1719603061&semt=sph",
     description:
-      "Innovative solutions that exceeded our expectations. Great work!",
+      "Innovative solutions that exceeded our expectations. John’s team delivered a complex project ahead of schedule, incorporating cutting-edge technologies with seamless integration.",
   },
   {
     name: "Alex Johnson",
@@ -131,7 +159,7 @@ const testimonials = [
     image:
       "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
     description:
-      "Professional and efficient, delivering high-quality tech solutions.",
+      "Professional and efficient, delivering high-quality tech solutions. Alex's attention to detail and commitment to excellence ensured that our project not only met but exceeded industry standards.",
   },
   {
     name: "Emily Davis",
@@ -139,7 +167,7 @@ const testimonials = [
     image:
       "https://img.freepik.com/free-photo/horizontal-view-smiling-brunette-young-woman-with-pleasant-appearance_273609-18455.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
     description:
-      "Fantastic attention to detail and great communication throughout the project.",
+      "Fantastic attention to detail and great communication throughout the project. Emily's proactive approach and regular updates kept us informed at every stage.",
   },
   {
     name: "Michael Brown",
@@ -147,7 +175,7 @@ const testimonials = [
     image:
       "https://img.freepik.com/free-photo/young-bearded-man-with-round-glasses-denim-shirt_273609-12127.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
     description:
-      "Reliable and skilled in modern web technologies. Highly recommend!",
+      "Reliable and skilled in modern web technologies. Highly recommend! Michael demonstrated exceptional expertise in both frontend and backend development",
   },
   {
     name: "Sarah Miller",
@@ -155,7 +183,7 @@ const testimonials = [
     image:
       "https://img.freepik.com/free-photo/portrait-smiling-blonde-woman_23-2148316635.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
     description:
-      "Delivered our project on time with outstanding results. Truly impressive work!",
+      "Delivered our project on time with outstanding results. Truly impressive work! Sarah's leadership and technical acumen were key to the success of our project.",
   },
   {
     name: "Laura White",
@@ -163,6 +191,6 @@ const testimonials = [
     image:
       "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?ga=GA1.1.156494736.1719603061&semt=ais_hybrid",
     description:
-      "Exceptional expertise in React and Node.js. Great to work with!",
+      "Exceptional expertise in React and Node.js. Great to work with! Laura's deep knowledge of modern web frameworks enabled her to deliver a highly interactive and responsive application.",
   },
 ];

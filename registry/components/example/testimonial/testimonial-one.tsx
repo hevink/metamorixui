@@ -4,15 +4,15 @@ import { cn } from "@/lib/utils";
 
 const Testimonial = () => {
   return (
-    <div className="sm:px-4 py-16 md:px-6 lg:px-8">
-      <div className="text-center max-w-4xl mx-auto mb-16">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+    <div className="py-16 sm:px-4 md:px-6 lg:px-8">
+      <div className="mx-auto mb-16 max-w-4xl text-center">
+        <h1 className="mb-6 text-5xl font-bold text-gray-900 dark:text-gray-100 md:text-6xl">
           Loved by Individuals and{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+          <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
             Organizations
           </span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+        <p className="text-xl text-gray-600 dark:text-gray-300 md:text-2xl">
           Join over 100,000 satisfied users who rely on our platform for their
           digital solutions, from personal projects to large-scale enterprise
           needs.
@@ -25,15 +25,22 @@ const Testimonial = () => {
             <ReviewCard key={review.name} {...review} />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+        <Marquee
+          reverse
+          pauseOnHover
+          vertical
+          className="hidden [--duration:20s] sm:block"
+        >
           {secondRow.map((review) => (
-            <ReviewCard key={review.name} {...review} />
+            <div key={review.name} className="mb-4">
+              <ReviewCard {...review} />
+            </div>
           ))}
         </Marquee>
         <Marquee
           pauseOnHover
           vertical
-          className="[--duration:20s] hidden sm:block [--gap:2px]"
+          className="hidden [--duration:20s] [--gap:2px] lg:block"
         >
           {thirdRow.map((review) => (
             <div key={review.name} className="mb-4">
@@ -63,7 +70,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative h-full w-full cursor-pointer overflow-hidden rounded-3xl border p-2 sm:p-8 shadow-sm space-y-8",
+        "relative h-full w-full cursor-pointer space-y-8 overflow-hidden rounded-3xl border p-4 shadow-sm sm:p-8",
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
       )}
@@ -71,10 +78,10 @@ const ReviewCard = ({
       <div className="flex flex-row items-center gap-2">
         <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm md:text-base font-medium dark:text-white">
+          <figcaption className="text-sm font-medium dark:text-white md:text-base">
             {name}
           </figcaption>
-          <p className="text-xs md:text-sm font-medium dark:text-white/40 truncate">
+          <p className="truncate text-xs font-medium dark:text-white/40 md:text-sm">
             {email}
           </p>
         </div>

@@ -1,4 +1,21 @@
-import React from "react";
+// Instructions for integrating continuous logo animation in Tailwind CSS:
+// Add the following configurations to the `extend` section of your `tailwind.config.js`:
+// module.exports = {
+//   theme: {
+//     extend: {
+//       keyframes: {
+//         "logo-cloud": {
+//           "0%": { transform: "translateX(0)" },
+//           "100%": { transform: "translateX(-100%)" },
+//         },
+//       },
+//       animation: {
+//         "logo-cloud": "logo-cloud 30s linear infinite",
+//       },
+//     },
+//   },
+//   plugins: [],
+// };
 
 const logos = [
   {
@@ -27,35 +44,38 @@ const logos = [
   },
 ];
 
-const LogoCloud = () => {
+const AnimatedLogoCloud = () => {
   return (
-    <div className="mx-auto my-10 px-5">
-      <div className="flex flex-col justify-center">
-        <div className="text-center">
-          <h2 className="mx-auto max-w-md text-xl font-semibold md:text-2xl">
-            Trusted by world class companies, design teams & popular designers
-          </h2>
-        </div>
-        <div className="w-full py-12">
-          <div className="flex w-full flex-col items-center justify-center px-4 md:px-8">
-            <div className="grid grid-cols-3 gap-x-6 md:grid-cols-5 lg:grid-cols-6">
-              {logos.map((logo, key) => (
-                <img
-                  key={key}
-                  src={logo.url}
-                  className="h-12 w-28 px-2"
-                  alt={`${logo.name}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="text-center text-gray-600 dark:text-gray-300">
-          <p>and 1000+ more companies</p>
+    <div className="w-full py-12">
+      <div className="mx-auto w-full px-4 md:px-8">
+        <div
+          className="group relative mt-6 flex gap-6 overflow-hidden p-2"
+          style={{
+            maskImage:
+              "linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)",
+          }}
+        >
+          {Array(5)
+            .fill(null)
+            .map((index) => (
+              <div
+                key={index}
+                className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6"
+              >
+                {logos.map((logo, key) => (
+                  <img
+                    key={key}
+                    src={logo.url}
+                    className="h-10 w-28 px-2 brightness-0 hover:brightness-200 dark:invert dark:hover:invert-0"
+                    alt={`${logo.name}`}
+                  />
+                ))}
+              </div>
+            ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default LogoCloud;
+export default AnimatedLogoCloud;

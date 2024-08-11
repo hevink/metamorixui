@@ -65,7 +65,7 @@ const Login = () => {
                     htmlFor="email"
                     className="text-base font-medium text-gray-900 dark:text-gray-100"
                   >
-                    Email address
+                    First name
                   </label>
                   <div className="mt-2">
                     <input

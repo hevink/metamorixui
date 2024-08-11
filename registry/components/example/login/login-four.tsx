@@ -192,9 +192,9 @@ const Testimonial: React.FC<Testimonial> = ({ image, name, text }) => {
   return (
     <motion.div
       className="flex flex-col items-center justify-center rounded-lg p-6 shadow-md"
-      initial={{ opacity: 0, x: 150 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -150 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       <img src={image} alt={name} className="mb-4 size-24 rounded-full" />
@@ -237,9 +237,9 @@ const TestimonialSlider: React.FC<{ testimonials: Testimonial[] }> = ({
         <motion.div
           key={currentIndex}
           className="absolute inset-0 flex items-center justify-center"
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
+          exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
         >
           <Testimonial

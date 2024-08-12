@@ -55,55 +55,155 @@ const Cta = () => {
           </motion.form>
         </div>
         <div className="relative lg:w-1/2">
-          <motion.div className="relative z-10">
-            <svg viewBox="0 0 200 200" className="mx-auto w-full max-w-lg">
+          <motion.div
+            className="relative z-10 h-80 w-full"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 1 }}
+          >
+            <svg viewBox="0 0 400 300" className="h-full w-full">
+              <rect width="400" height="300" fill="url(#bg-gradient)" />
+
               <motion.path
-                d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                d="M0,100 Q100,50 200,100 T400,100"
                 fill="none"
-                strokeWidth="8"
-                stroke="url(#light-gradient)"
+                stroke="url(#line-gradient)"
+                strokeWidth="4"
+                initial={{ pathLength: 0 }}
                 animate={isInView ? { pathLength: 1 } : {}}
                 transition={{ duration: 2, ease: "easeInOut" }}
-                className="dark:hidden"
               />
+
               <motion.path
-                d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
-                fill="none"
-                strokeWidth="8"
-                stroke="url(#dark-gradient)"
-                animate={isInView ? { pathLength: 1 } : {}}
-                transition={{ duration: 2, ease: "easeInOut" }}
-                className="hidden dark:block"
+                d="M0,300 L50,300 L50,250 L100,250 L100,300 L150,300 L150,200 L200,200 L200,300 L250,300 L250,150 L300,150 L300,300 L350,300 L350,250 L400,250 L400,300 L400,300 Z"
+                fill="url(#city-gradient)"
+                initial={{ y: 50, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 1, delay: 0.5 }}
               />
+
+              {[...Array(20)].map((_, i) => (
+                <motion.circle
+                  key={i}
+                  r="2"
+                  fill="url(#particle-gradient)"
+                  initial={{ x: Math.random() * 400, y: Math.random() * 300 }}
+                  animate={{
+                    y: [Math.random() * 300, Math.random() * 300],
+                    x: [Math.random() * 400, Math.random() * 400],
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                />
+              ))}
+
+              <text
+                x="200"
+                y="150"
+                textAnchor="middle"
+                fontSize="48"
+                fontWeight="bold"
+                fill="url(#text-gradient)"
+              >
+                {new Date().getFullYear()}
+              </text>
 
               <defs>
                 <linearGradient
-                  id="light-gradient"
+                  id="bg-gradient"
                   x1="0%"
                   y1="0%"
                   x2="100%"
-                  y2="0%"
+                  y2="100%"
                 >
-                  <stop offset="0%" stopColor="#F97316" />
-                  <stop offset="100%" stopColor="#EF4444" />
+                  <stop
+                    offset="0%"
+                    stopColor="#FEF3C7"
+                    className="dark:stop-color-gray-800"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="#FED7AA"
+                    className="dark:stop-color-gray-900"
+                  />
                 </linearGradient>
                 <linearGradient
-                  id="dark-gradient"
+                  id="line-gradient"
                   x1="0%"
                   y1="0%"
                   x2="100%"
                   y2="0%"
                 >
-                  <stop offset="0%" stopColor="#3B82F6" />
-                  <stop offset="100%" stopColor="#A855F7" />
+                  <stop
+                    offset="0%"
+                    stopColor="#F97316"
+                    className="dark:stop-color-blue-500"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="#EF4444"
+                    className="dark:stop-color-purple-600"
+                  />
+                </linearGradient>
+                <linearGradient
+                  id="city-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="#FDBA74"
+                    className="dark:stop-color-blue-700"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="#FB923C"
+                    className="dark:stop-color-blue-900"
+                  />
+                </linearGradient>
+                <linearGradient
+                  id="particle-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="#F97316"
+                    className="dark:stop-color-blue-400"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="#EF4444"
+                    className="dark:stop-color-purple-500"
+                  />
+                </linearGradient>
+                <linearGradient
+                  id="text-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="#EA580C"
+                    className="dark:stop-color-blue-300"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="#C2410C"
+                    className="dark:stop-color-purple-400"
+                  />
                 </linearGradient>
               </defs>
             </svg>
-            <motion.div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-6xl font-bold text-orange-900 dark:text-white">
-                {new Date().getFullYear()}
-              </span>
-            </motion.div>
           </motion.div>
         </div>
       </div>

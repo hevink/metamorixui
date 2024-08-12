@@ -16,7 +16,7 @@ const Header = () => {
         transition={{ duration: 0.5 }}
         className="absolute left-0 top-0 z-40 flex h-24 w-full items-center"
       >
-        <nav className="relative mx-auto flex w-full items-center justify-between gap-x-5 px-5 sm:px-10 md:px-12 lg:max-w-7xl lg:px-5">
+        <nav className="relative mx-auto flex w-full items-center justify-between gap-x-5 px-4 sm:px-10 md:px-12 lg:max-w-7xl lg:px-5">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -51,7 +51,7 @@ const Header = () => {
 
           <div
             className={`
-                absolute left-0  top-full border-b border-gray-200 bg-white px-5 py-8 duration-300 ease-linear dark:border-gray-800 dark:bg-gray-950 sm:px-10 md:px-12 lg:relative lg:top-0 lg:flex lg:w-max lg:space-x-16 lg:border-none  lg:!bg-transparent lg:px-0 lg:py-0 lg:transition-none
+                absolute left-0 top-full border-b border-gray-200 bg-white px-5 py-8 duration-300 ease-linear dark:border-gray-800 dark:bg-gray-950 sm:px-10 md:px-12 lg:relative lg:top-0 lg:flex lg:w-max lg:space-x-16 lg:border-none  lg:!bg-transparent lg:px-0 lg:py-0 lg:transition-none
                 ${openNavbar ? "visible translate-y-0 opacity-0" : "invisible translate-y-10 opacity-0 lg:visible  lg:translate-y-0 lg:opacity-100"}
             `}
           >
@@ -106,9 +106,7 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className={`
-                  absolute left-0 top-10 w-full border-b border-gray-200 bg-white px-5 py-8 dark:border-gray-800 dark:bg-gray-950 sm:px-10 md:px-12 lg:relative lg:top-0 lg:flex lg:w-max lg:space-x-16 lg:border-none lg:!bg-transparent lg:px-0 lg:py-0
-                `}
+                className={`absolute -top-6 left-0 w-full border-gray-200 bg-white/30 px-4 py-8 backdrop-blur-lg dark:border-gray-800 dark:bg-gray-950/30 sm:px-10 md:px-12 lg:relative lg:top-0 lg:flex lg:w-max lg:space-x-16 lg:border-none lg:!bg-transparent lg:px-0 lg:py-0`}
               >
                 <ul className="flex flex-col gap-6 text-gray-700 dark:text-gray-300 lg:w-full lg:flex-row lg:items-center lg:justify-center">
                   {["Portfolio", "Company", "Products", "Resources"].map(
@@ -139,7 +137,7 @@ const Header = () => {
                     href="#"
                     className="flex h-12 w-full items-center justify-center rounded-full border border-gray-200 bg-gray-100 px-6 text-purple-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 sm:w-auto"
                   >
-                    Get It touch
+                    Get In Touch
                   </Link>
                 </motion.div>
               </motion.div>
@@ -199,7 +197,7 @@ const Header = () => {
           <div className="h-20 w-3/5 bg-gradient-to-r from-blue-600 opacity-40 blur-2xl dark:from-purple-700 dark:opacity-40"></div>
         </div>
         <div className="absolute left-1/2 top-1/2 aspect-[2/0.5] w-2/5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-purple-600 to-violet-400 opacity-50 blur-2xl"></div>
-        <div className="relative mx-auto w-full space-y-10 px-5 pb-24 pt-32 text-center sm:px-10 md:px-12 lg:max-w-7xl lg:px-5">
+        <div className="relative mx-auto w-full space-y-10 pb-24 pt-32 text-center sm:px-10 md:px-12 lg:max-w-7xl lg:px-5">
           <h1 className="mx-auto max-w-5xl text-4xl/tight font-bold text-gray-900 dark:text-white sm:text-5xl/tight lg:text-6xl/tight xl:text-7xl/tight">
             We create, we design, we develop Modern tools.
           </h1>

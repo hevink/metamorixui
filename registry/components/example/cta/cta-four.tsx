@@ -7,7 +7,10 @@ const Cta = () => {
   return (
     <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-400 to-red-600 py-12">
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div
+        ref={ref}
+        className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8"
+      >
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="text-white">
             <motion.h2
@@ -20,7 +23,6 @@ const Cta = () => {
               Transform Your Business Today
             </motion.h2>
             <motion.p
-              ref={ref}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -86,7 +88,6 @@ const Cta = () => {
         </div>
       </div>
       <motion.div
-        ref={ref}
         className="absolute bottom-4 left-4 text-white text-opacity-60"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}

@@ -14,6 +14,7 @@ import "@/styles/mdx.css";
 
 import type { Viewport } from "next";
 import { Metadata } from "next";
+import CrispChat from "@/components/CrispChat";
 
 export const metadata: Metadata = constructMetadata({
   title: "Metamorix UI",
@@ -47,6 +48,7 @@ export default function RootLayout({
         <PHProvider>
           <ThemeProvider attribute="class" defaultTheme="dark">
             <TooltipProvider>
+              <CrispChat />
               {children}
               <Toaster />
               <Analytics />

@@ -14,7 +14,7 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="absolute left-0 top-0 z-40 flex h-24 w-full items-center"
+        className="absolute left-0 top-0 z-10 flex h-24 w-full items-center"
       >
         <nav className="relative mx-auto flex w-full items-center justify-between gap-x-5 px-4 sm:px-10 md:px-12 lg:max-w-7xl lg:px-5">
           <motion.div

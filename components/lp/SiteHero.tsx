@@ -31,17 +31,14 @@ const SiteHero = () => {
                 <p className="px-4 text-center text-sm font-medium text-foreground md:text-base lg:pr-0">
                   ✨ {"  "} Start building your dream website now!
                 </p>
-                <Link
-                  href={"/docs/components/hero"}
-                  className="group relative m-1 inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full border-x-2 border-b-2 border-blue-700 bg-gradient-to-tr from-blue-600 to-violet-500 px-4 py-1 text-white shadow-lg transition duration-100 ease-in-out active:translate-y-0.5 active:border-blue-600 active:shadow-none"
-                >
+                <button className="group relative m-1 inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full border-x-2 border-b-2 border-blue-700 bg-gradient-to-tr from-blue-600 to-violet-500 px-4 py-1 text-white shadow-lg transition duration-100 ease-in-out active:translate-y-0.5 active:border-blue-600 active:shadow-none">
                   <span className="absolute size-0 rounded-full bg-white opacity-10 transition-all duration-300 ease-out group-hover:size-36"></span>
                   <span className="relative flex items-center font-medium ">
                     {" "}
                     Get Started
                     <ArrowRight className="ml-1 size-4" />
                   </span>
-                </Link>
+                </button>
               </Link>
             </div>
           </div>

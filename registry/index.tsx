@@ -301,6 +301,14 @@ const example: Registry = {
       () => import("@/registry/components/example/hero/hero-four"),
     ),
   },
+  "hero-five": {
+    name: "hero-five",
+    type: "components:example",
+    files: ["registry/components/example/hero/hero-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/hero/hero-five"),
+    ),
+  },
   "faq-one": {
     name: "faq-one",
     type: "components:example",

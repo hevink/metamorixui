@@ -6,39 +6,39 @@ import { cn } from "@/lib/utils";
 
 const States = () => {
   return (
-    <div className="">
-      <div className="flex flex-col justify-center items-center">
-        <p className="text-sm text-center">Launch faster</p>
-        <h2 className="text-2xl mt-2 font-medium">Build Something great</h2>
-        <p className="mt-3 text-gray-600 dark:text-gray-300 max-w-xl text-center">
+    <div className="py-10">
+      <div className="flex flex-col items-center justify-center">
+        <p className="text-center text-sm">Launch faster</p>
+        <h2 className="mt-2 text-2xl font-medium">Build Something great</h2>
+        <p className="mt-3 max-w-xl text-center text-gray-600 dark:text-gray-300">
           Empower your projects with state-of-the-art AI solutions, tailored to
           enhance efficiency and drive success. Discover the future of
           innovation with our cutting-edge technology.a
         </p>
       </div>
-      <div className="block md:flex items-center justify-between mt-16 gap-10">
-        <div className="grid grid-cols-2 gap-6 md:w-1/2">
+      <div className="mt-16 block items-center justify-between gap-10 md:flex">
+        <div className="grid grid-cols-1 gap-6 md:w-1/2 md:grid-cols-2">
           {states.map((state) => (
             <div key={state.id} className="rounded-lg text-center">
-              <h1 className="text-3xl md:text-4xl font-bold">
+              <h1 className="text-3xl font-bold md:text-4xl">
                 <NumberTicker value={state.percentage} />%
               </h1>
-              <p className="text-lg mt-3 font-medium">{state.title}</p>
-              <p className="text-gray-700 dark:text-gray-400 mt-2">
+              <p className="mt-3 text-lg font-medium">{state.title}</p>
+              <p className="mt-2 text-gray-700 dark:text-gray-400">
                 {state.description}
               </p>
             </div>
           ))}
         </div>
-        <div className="md:w-1/2 mt-10 md:mt-0">
-          <div className="w-fit rounded-lg bg-gray-900/5 dark:bg-slate-300/10 p-2 ring-1 ring-inset ring-gray-900/10 dark:ring-slate-500/10 lg:rounded-2xl lg:p-3">
+        <div className="mt-10 md:mt-0 md:w-1/2">
+          <div className="w-fit rounded-lg bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 dark:bg-slate-300/10 dark:ring-slate-500/10 lg:rounded-2xl lg:p-3">
             <Image
               src="/dashboard.png"
               width={500}
               height={500}
               alt={""}
               quality={"100"}
-              className="w-full rounded-md bg-white dark:bg-black shadow-2xl ring-1 ring-gray-900/10"
+              className="w-full rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10 dark:bg-black"
             />
           </div>
         </div>
@@ -91,7 +91,7 @@ const NumberTicker = ({
   return (
     <span
       className={cn(
-        "inline-block tabular-nums text-black dark:text-white tracking-wider",
+        "inline-block tabular-nums tracking-wider text-black dark:text-white",
         className,
       )}
       ref={ref}

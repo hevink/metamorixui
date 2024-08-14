@@ -47,7 +47,7 @@ const Pricing = () => {
                 className="flex flex-col justify-between border-r-0 md:odd:border-r xl:last:!border-r-0 xl:even:border-r"
               >
                 <div>
-                  <div className="border-b bg-gray-100 dark:bg-gray-600/10 p-6">
+                  <div className="border-b bg-gray-100 p-6 dark:bg-neutral-800/10">
                     <h3
                       id={tier.id}
                       className="text-balance text-xl leading-8 text-gray-900 dark:text-white"
@@ -97,7 +97,7 @@ const Pricing = () => {
                           </div>
                           <div
                             className={cn(
-                              "relative w-fit rounded-3xl border border-gray-900 dark:border-gray-400 px-1.5 py-0.5 text-xs uppercase text-gray-900 dark:text-white",
+                              "relative w-fit rounded-3xl border border-gray-900 px-1.5 py-0.5 text-xs uppercase text-gray-900 dark:border-gray-400 dark:text-white",
                               !toggleProYear &&
                                 "border-gray-400 text-gray-400 opacity-40",
                             )}
@@ -247,11 +247,11 @@ const Pricing = () => {
                 <div className="p-6">
                   <Link href={tier.href}>
                     {tier.id === "tier-business" ? (
-                      <button className="rounded-3xl text-base w-full px-3 py-2 bg-orange-600 hover:bg-orange-500 text-white">
+                      <button className="w-full rounded-3xl bg-orange-600 px-3 py-2 text-base text-white hover:bg-orange-500">
                         {tier.buttonText}
                       </button>
                     ) : (
-                      <button className="rounded-3xl bg-black dark:bg-white text-white dark:text-black text-base hover:bg-gray-900 w-full px-3 py-2">
+                      <button className="w-full rounded-3xl bg-black px-3 py-2 text-base text-white hover:bg-gray-900 dark:bg-white dark:text-black">
                         {tier.buttonText}
                       </button>
                     )}
@@ -297,18 +297,17 @@ const tiers: {
   {
     name: "Free",
     id: "tier-free",
-    href: "/login",
+    href: "/#",
     price: { monthly: "€0", annually: "€0" },
-    description: "The essentials to start sharing documents securely.",
-    featureIntro: "What's included:",
+    description: "Basic tools for personal project management.",
+    featureIntro: "Core features:",
     features: [
-      "1 user",
-      "Unlimited links",
-      "Page-by-page analytics",
-      "30-day analytics retention",
-      "Document sharing controls",
+      "Single user access",
+      "5 active projects",
+      "Basic task tracking",
+      "Weekly progress reports",
+      "Mobile app access",
     ],
-
     bgColor: "bg-gray-200",
     borderColor: "#bg-gray-800",
     textColor: "#bg-gray-800",
@@ -318,15 +317,15 @@ const tiers: {
   {
     name: "Pro",
     id: "tier-pro",
-    href: "/login",
+    href: "/#",
     price: { monthly: "€39", annually: "€25" },
-    description: "The branded experience for your documents.",
-    featureIntro: "Everything in Free, plus:",
+    description: "Advanced features for freelancers and small teams.",
+    featureIntro: "All Free features, plus:",
     features: [
-      "2 users included",
-      "Custom branding",
-      "1-year analytics retention",
-      "Folder organization",
+      "5 team members",
+      "Unlimited projects",
+      "Advanced reporting",
+      "Time tracking",
     ],
     bgColor: "bg-gray-200",
     borderColor: "#bg-gray-800",
@@ -337,20 +336,20 @@ const tiers: {
   {
     name: "Business",
     id: "tier-business",
-    href: "/login",
+    href: "/#",
     price: { monthly: "€79", annually: "€45" },
-    description: "The one for more control, data room, and multi-file sharing.",
-    featureIntro: "Everything in Pro, plus:",
+    description: "Comprehensive solution for growing businesses.",
+    featureIntro: "All Pro features, plus:",
     features: [
-      "3 users included",
-      "1 dataroom",
-      "Custom domain for documents",
-      "Advanced link controls",
-      "Multi-file sharing",
-      "Unlimited documents",
-      "Unlimited subfolder levels",
-      "Large file uploads",
-      "48h priority support",
+      "20 team members",
+      "Resource management",
+      "Custom workflows",
+      "Priority support",
+      "Client portal",
+      "Integrations",
+      "Advanced security",
+      "Team training",
+      "Dedicated account manager",
     ],
     bgColor: "#fb7a00",
     borderColor: "#fb7a00",
@@ -359,27 +358,27 @@ const tiers: {
     mostPopular: true,
   },
   {
-    name: "Data Rooms",
+    name: "Enterprise",
     id: "tier-datarooms",
-    href: "/login",
+    href: "/#",
     price: { monthly: "€199", annually: "€99" },
-    description: "Advanced data rooms infrastructure for your company.",
-    featureIntro: "Everything in Business, plus:",
+    description: "Tailored solutions for large organizations.",
+    featureIntro: "All Business features, plus:",
     features: [
-      "5 users included",
-      "Unlimited data rooms",
-      "Custom domain for data rooms",
-      "Unlimited documents",
-      "Unlimited folders and subfolders",
-      "Advanced data rooms analytics",
-      "NDA agreements",
-      "24h priority support",
-      "Custom onboarding",
+      "Unlimited team members",
+      "Custom development",
+      "On-premise deployment option",
+      "Advanced analytics",
+      "Multi-team management",
+      "Enterprise-grade security",
+      "SLA guarantees",
+      "24/7 premium support",
+      "Dedicated success manager",
     ],
     bgColor: "bg-gray-200",
     borderColor: "#bg-gray-800",
     textColor: "#bg-gray-800",
-    buttonText: "Create Data Rooms",
-    mostPopular: true,
+    buttonText: "Contact Sales",
+    mostPopular: false,
   },
 ];

@@ -39,7 +39,7 @@ export default Testimonial;
 const TestimonialCard = ({ name, image, description, index }: any) => {
   return (
     <div
-      className={`dark:border-gray-850 w-full p-5 font-light text-gray-800 ${index === 0 || index === 1 ? "border-b border-r" : index === 2 ? "border-b sm:border-r" : index === 3 || index === 4 ? "border-b sm:border-r" : ""}`}
+      className={`dark:border-gray-850 w-full p-5 font-light text-gray-800 ${index === 0 || index === 1 ? "border-b border-r" : index === 2 ? "border-b" : index === 3 || index === 4 ? "border-r" : ""}`}
     >
       <div className="flex h-full flex-col justify-between">
         <p className="mb-6 text-base leading-snug text-gray-800 dark:text-gray-400">

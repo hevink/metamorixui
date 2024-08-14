@@ -30,8 +30,8 @@ const links = {
 
 const Footer = () => {
   return (
-    <footer className="py-4 xl:py-6 md:rounded-t-2xl font-sans tracking-wide">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <footer className="py-4 font-sans tracking-wide md:rounded-t-2xl xl:py-6">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-4">
           <Link href="/" className="block max-w-fit">
             <div className="inline-flex items-center space-x-2">
@@ -62,23 +62,23 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 font-semibold text-lg mb-6">
+          <h4 className="mb-6  text-lg  font-semibold text-black dark:text-gray-400">
             Subscribe
           </h4>
 
-          <p className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]">
+          <p className="text-[15px]  text-gray-500  dark:text-gray-400">
             Subscribe to stay updated with the latest news, offers, and
             exclusive content. Join our mailing list and be the first to receive
             exciting updates delivered directly to your inbox
           </p>
 
-          <div className="flex mt-6">
+          <div className="mt-6 flex">
             <input
               type="email"
               placeholder="Your email"
-              className="dark:bg-transparent dark:text-white bg-gray-200 dark:border-2  text-[15px] rounded-l py-3 px-4 max-md:w-full outline-none"
+              className="rounded-l bg-gray-200 px-4 py-3  text-[15px] outline-none dark:border-2 dark:bg-transparent dark:text-white max-md:w-full"
             />
-            <button className="bg-[#FE6019] text-white rounded-r py-3 px-4 text-[15px] tracking-wide">
+            <button className="rounded-r bg-[#FE6019] px-4 py-3 text-[15px] tracking-wide text-white">
               Subscribe
             </button>
           </div>
@@ -87,9 +87,9 @@ const Footer = () => {
 
       <hr className="my-12" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <h4 className="text-black dark:text-white font-semibold text-lg mb-6">
+          <h4 className="mb-6 text-lg font-semibold text-black dark:text-white">
             Quick Links
           </h4>
           <ul className="space-y-4">
@@ -98,7 +98,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                    className="text-[15px] text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                   >
                     {item.name}
                   </Link>
@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-black dark:text-white font-semibold text-lg mb-6">
+          <h4 className="mb-6 text-lg font-semibold text-black dark:text-white">
             Services
           </h4>
           <ul className="space-y-4">
@@ -118,7 +118,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                    className="text-[15px] text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                   >
                     {item.name}
                   </Link>
@@ -129,7 +129,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-black dark:text-white font-semibold text-lg mb-6">
+          <h4 className="mb-6 text-lg font-semibold text-black dark:text-white">
             Platforms
           </h4>
           <ul className="space-y-4">
@@ -138,7 +138,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                    className="text-[15px] text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                   >
                     {item.name}
                   </Link>
@@ -149,7 +149,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-black dark:text-white font-semibold text-lg mb-6">
+          <h4 className="mb-6 text-lg font-semibold text-black dark:text-white">
             Company
           </h4>
           <ul className="space-y-4">
@@ -158,7 +158,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-[15px]"
+                    className="text-[15px] text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
                   >
                     {item.name}
                   </Link>

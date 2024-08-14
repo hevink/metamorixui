@@ -9,9 +9,9 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="py-4 xl:py-6 md:rounded-t-2xl font-sans tracking-wide">
-      <div className="flex max-lg:flex-col items-center justify-between">
-        <div className="flex items-center mt-1">
+    <footer className="py-4 font-sans tracking-wide md:rounded-t-2xl xl:py-6">
+      <div className="flex items-center justify-between max-lg:flex-col">
+        <div className="mt-1 flex items-center">
           <Link href="/" className="block max-w-fit">
             <div className="inline-flex items-center space-x-2">
               <svg
@@ -33,16 +33,13 @@ const Footer = () => {
           </Link>
         </div>
 
-        <p className="text-sm leading-5 text-gray-600 dark:text-gray-300">
-          © {new Date().getFullYear()} Metamorix consultancy, Inc.
-        </p>
-        <ul className="flex gap-2 whitespace-nowrap">
+        <ul className="flex gap-4 whitespace-nowrap pb-3 lg:pb-0">
           {links.map((item) => {
             return (
               <li key={item.name}>
                 <Link
                   href={item.href}
-                  className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 text-sm sm:text-base"
+                  className="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 sm:text-base"
                 >
                   {item.name}
                 </Link>
@@ -50,6 +47,10 @@ const Footer = () => {
             );
           })}
         </ul>
+
+        <p className="text-sm leading-5 text-gray-600 dark:text-gray-300 sm:text-base">
+          © {new Date().getFullYear()} Metamorix consultancy, Inc.
+        </p>
       </div>
     </footer>
   );

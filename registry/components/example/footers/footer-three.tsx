@@ -10,9 +10,9 @@ const navigation = [
 
 const Footer = () => {
   return (
-    <footer className="overflow-hidden py-4 xl:py-6 md:rounded-t-2xl">
+    <footer className="overflow-hidden py-4 md:rounded-t-2xl xl:py-6">
       <div className="w-full space-y-4 sm:space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-2 sm:space-y-0">
+        <div className="flex flex-col items-center justify-between space-y-2 sm:flex-row sm:space-y-0">
           <Link href="/" className="block max-w-fit">
             <div className="inline-flex items-center space-x-2">
               <svg
@@ -32,13 +32,13 @@ const Footer = () => {
               <span className="font-bold">Metamorix UI</span>
             </div>
           </Link>
-          <ul className="flex flex-wrap items-center mb-2 font-medium sm:mb-0">
+          <ul className="mb-2 flex flex-wrap items-center font-medium sm:mb-0">
             {navigation.map((item) => {
               return (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="me-4 md:me-6 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
+                    className="me-4 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 md:me-6"
                   >
                     {item.name}
                   </Link>

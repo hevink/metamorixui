@@ -513,6 +513,14 @@ const example: Registry = {
       () => import("@/registry/components/example/cta/cta-five"),
     ),
   },
+  "cta-six": {
+    name: "cta-six",
+    type: "components:example",
+    files: ["registry/components/example/cta/cta-six.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cta/cta-six"),
+    ),
+  },
 };
 
 export const registry: Registry = {

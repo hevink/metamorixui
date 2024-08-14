@@ -37,230 +37,231 @@ const Pricing = () => {
   }, [toggleProYear, toggleBusinessYear, toggleDataroomsYear]);
 
   return (
-    <section>
-      <div className="py-16">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border md:grid-cols-2 xl:grid-cols-4">
-            {tiers.map((tier) => (
-              <div
-                key={tier.id}
-                className="flex flex-col justify-between border-r-0 md:odd:border-r xl:last:!border-r-0 xl:even:border-r"
-              >
-                <div>
-                  <div className="border-b bg-gray-100 p-6 dark:bg-neutral-800/10">
-                    <h3
-                      id={tier.id}
-                      className="text-balance text-xl leading-8 text-gray-900 dark:text-white"
-                    >
-                      {tier.name}
-                    </h3>
-                  </div>
-                  <div className="p-6">
-                    <div className="mt-2 min-h-20">
-                      {tier.id === "tier-free" ? (
-                        <div className="min-h-12">
-                          <div className="flex flex-col text-sm">
-                            <div className="h-6"></div>
-                            <h4>No credit card required</h4>
-                          </div>
-                        </div>
-                      ) : null}
-                      {tier.id === "tier-pro" ? (
-                        <div className="min-h-12">
-                          <Switch
-                            className="!bg-orange-600"
-                            checked={toggleProYear}
-                            onCheckedChange={() =>
-                              setToggleProYear(!toggleProYear)
-                            }
-                          />
-                          <div className="mb-1 flex items-center gap-x-1 text-sm">
-                            <span
-                              className={cn(
-                                toggleProYear
-                                  ? "text-gray-400"
-                                  : "text-black dark:text-white",
-                              )}
-                            >
-                              Monthly
-                            </span>
-                            <span>|</span>
-                            <span
-                              className={cn(
-                                toggleProYear
-                                  ? "text-black dark:text-white"
-                                  : "text-gray-400",
-                              )}
-                            >
-                              Annually
-                            </span>
-                          </div>
-                          <div
-                            className={cn(
-                              "relative w-fit rounded-3xl border border-gray-900 px-1.5 py-0.5 text-xs uppercase text-gray-900 dark:border-gray-400 dark:text-white",
-                              !toggleProYear &&
-                                "border-gray-400 text-gray-400 opacity-40",
-                            )}
-                          >
-                            <span
-                              className={cn(
-                                !toggleProYear
-                                  ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
-                                  : "hidden",
-                              )}
-                            />
-                            35% Saving
-                          </div>
-                        </div>
-                      ) : null}
-                      {tier.id === "tier-business" ? (
-                        <div className="min-h-12">
-                          <Switch
-                            className="!bg-orange-600"
-                            checked={toggleBusinessYear}
-                            onCheckedChange={() =>
-                              setToggleBusinessYear(!toggleBusinessYear)
-                            }
-                          />
-                          <div className="mb-1 flex items-center gap-x-1 text-sm">
-                            <span
-                              className={cn(
-                                toggleBusinessYear
-                                  ? "text-gray-400"
-                                  : "text-black dark:text-white",
-                              )}
-                            >
-                              Monthly
-                            </span>
-                            <span>|</span>
-                            <span
-                              className={cn(
-                                toggleBusinessYear
-                                  ? "text-black dark:text-white"
-                                  : "text-gray-400",
-                              )}
-                            >
-                              Annually
-                            </span>
-                          </div>
-                          <div
-                            className={cn(
-                              "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
-                              !toggleBusinessYear &&
-                                "border-gray-400 text-gray-400 opacity-40",
-                            )}
-                          >
-                            <span
-                              className={cn(
-                                !toggleBusinessYear
-                                  ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
-                                  : "hidden",
-                              )}
-                            />
-                            43% Saving
-                          </div>
-                        </div>
-                      ) : null}
-                      {tier.id === "tier-datarooms" ? (
-                        <div className="min-h-12">
-                          <Switch
-                            className="!bg-orange-600"
-                            checked={toggleDataroomsYear}
-                            onCheckedChange={() =>
-                              setToggleDataroomsYear(!toggleDataroomsYear)
-                            }
-                          />
-                          <div className="mb-1 flex items-center gap-x-1 text-sm">
-                            <span
-                              className={cn(
-                                toggleDataroomsYear
-                                  ? "text-gray-400"
-                                  : "text-black dark:text-white",
-                              )}
-                            >
-                              Monthly
-                            </span>
-                            <span>|</span>
-                            <span
-                              className={cn(
-                                toggleDataroomsYear
-                                  ? "text-black dark:text-white"
-                                  : "text-gray-400",
-                              )}
-                            >
-                              Annually
-                            </span>
-                          </div>
-                          <div
-                            className={cn(
-                              "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
-                              !toggleDataroomsYear &&
-                                "border-gray-400 text-gray-400 opacity-40",
-                            )}
-                          >
-                            <span
-                              className={cn(
-                                !toggleDataroomsYear
-                                  ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
-                                  : "hidden",
-                              )}
-                            />
-                            50% Saving
-                          </div>
-                        </div>
-                      ) : null}
-                    </div>
-                    <p className="mt-6 flex items-baseline gap-x-1">
-                      <span
-                        className="text-balance text-4xl font-medium text-gray-900 dark:text-white"
-                        style={{ fontVariantNumeric: "tabular-nums" }}
-                      >
-                        {tier.id === "tier-pro"
-                          ? tier.price[frequencyPro.value]
-                          : tier.id === "tier-business"
-                            ? tier.price[frequencyBusiness.value]
-                            : tier.id === "tier-datarooms"
-                              ? tier.price[frequencyDatarooms.value]
-                              : tier.price[frequency.value]}
-                      </span>
-                    </p>
-                    <p className="mt-6 text-balance text-sm leading-6 text-gray-600 dark:text-gray-300">
-                      {tier.description}
-                    </p>
-                    <ul
-                      role="list"
-                      className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300"
-                    >
-                      <li>{tier.featureIntro}</li>
-                      {tier.features.map((feature) => (
-                        <li key={feature} className="flex gap-x-3">
-                          <CheckIcon
-                            className="h-6 w-5 flex-none text-[#fb7a00]"
-                            aria-hidden="true"
-                          />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <Link href={tier.href}>
-                    {tier.id === "tier-business" ? (
-                      <button className="w-full rounded-3xl bg-orange-600 px-3 py-2 text-base text-white hover:bg-orange-500">
-                        {tier.buttonText}
-                      </button>
-                    ) : (
-                      <button className="w-full rounded-3xl bg-black px-3 py-2 text-base text-white hover:bg-gray-900 dark:bg-white dark:text-black">
-                        {tier.buttonText}
-                      </button>
-                    )}
-                  </Link>
-                </div>
+    <section className="py-16">
+      <div className="text-center mb-16">
+        <h1 className="text-3xl font-bold lg:text-5xl">Pricing</h1>
+
+        <p className="mx-auto mt-4 max-w-sm text-lg leading-normal text-gray-600 dark:text-gray-300">
+          Designed for every stage of your journey. Get started today.
+        </p>
+      </div>
+      <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border md:grid-cols-2 xl:grid-cols-4">
+        {tiers.map((tier) => (
+          <div
+            key={tier.id}
+            className="flex flex-col justify-between border-r-0 md:odd:border-r xl:last:!border-r-0 xl:even:border-r"
+          >
+            <div>
+              <div className="border-b bg-gray-100 p-6 dark:bg-neutral-800/10">
+                <h3
+                  id={tier.id}
+                  className="text-balance text-xl leading-8 text-gray-900 dark:text-white"
+                >
+                  {tier.name}
+                </h3>
               </div>
-            ))}
+              <div className="p-6">
+                <div className="mt-2 min-h-20">
+                  {tier.id === "tier-free" ? (
+                    <div className="min-h-12">
+                      <div className="flex flex-col text-sm">
+                        <div className="h-6"></div>
+                        <h4>No credit card required</h4>
+                      </div>
+                    </div>
+                  ) : null}
+                  {tier.id === "tier-pro" ? (
+                    <div className="min-h-12">
+                      <Switch
+                        className="!bg-orange-600"
+                        checked={toggleProYear}
+                        onCheckedChange={() => setToggleProYear(!toggleProYear)}
+                      />
+                      <div className="mb-1 flex items-center gap-x-1 text-sm">
+                        <span
+                          className={cn(
+                            toggleProYear
+                              ? "text-gray-400"
+                              : "text-black dark:text-white",
+                          )}
+                        >
+                          Monthly
+                        </span>
+                        <span>|</span>
+                        <span
+                          className={cn(
+                            toggleProYear
+                              ? "text-black dark:text-white"
+                              : "text-gray-400",
+                          )}
+                        >
+                          Annually
+                        </span>
+                      </div>
+                      <div
+                        className={cn(
+                          "relative w-fit rounded-3xl border border-gray-900 px-1.5 py-0.5 text-xs uppercase text-gray-900 dark:border-gray-400 dark:text-white",
+                          !toggleProYear &&
+                            "border-gray-400 text-gray-400 opacity-40",
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            !toggleProYear
+                              ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
+                              : "hidden",
+                          )}
+                        />
+                        35% Saving
+                      </div>
+                    </div>
+                  ) : null}
+                  {tier.id === "tier-business" ? (
+                    <div className="min-h-12">
+                      <Switch
+                        className="!bg-orange-600"
+                        checked={toggleBusinessYear}
+                        onCheckedChange={() =>
+                          setToggleBusinessYear(!toggleBusinessYear)
+                        }
+                      />
+                      <div className="mb-1 flex items-center gap-x-1 text-sm">
+                        <span
+                          className={cn(
+                            toggleBusinessYear
+                              ? "text-gray-400"
+                              : "text-black dark:text-white",
+                          )}
+                        >
+                          Monthly
+                        </span>
+                        <span>|</span>
+                        <span
+                          className={cn(
+                            toggleBusinessYear
+                              ? "text-black dark:text-white"
+                              : "text-gray-400",
+                          )}
+                        >
+                          Annually
+                        </span>
+                      </div>
+                      <div
+                        className={cn(
+                          "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
+                          !toggleBusinessYear &&
+                            "border-gray-400 text-gray-400 opacity-40",
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            !toggleBusinessYear
+                              ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
+                              : "hidden",
+                          )}
+                        />
+                        43% Saving
+                      </div>
+                    </div>
+                  ) : null}
+                  {tier.id === "tier-datarooms" ? (
+                    <div className="min-h-12">
+                      <Switch
+                        className="!bg-orange-600"
+                        checked={toggleDataroomsYear}
+                        onCheckedChange={() =>
+                          setToggleDataroomsYear(!toggleDataroomsYear)
+                        }
+                      />
+                      <div className="mb-1 flex items-center gap-x-1 text-sm">
+                        <span
+                          className={cn(
+                            toggleDataroomsYear
+                              ? "text-gray-400"
+                              : "text-black dark:text-white",
+                          )}
+                        >
+                          Monthly
+                        </span>
+                        <span>|</span>
+                        <span
+                          className={cn(
+                            toggleDataroomsYear
+                              ? "text-black dark:text-white"
+                              : "text-gray-400",
+                          )}
+                        >
+                          Annually
+                        </span>
+                      </div>
+                      <div
+                        className={cn(
+                          "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
+                          !toggleDataroomsYear &&
+                            "border-gray-400 text-gray-400 opacity-40",
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            !toggleDataroomsYear
+                              ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
+                              : "hidden",
+                          )}
+                        />
+                        50% Saving
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+                <p className="mt-6 flex items-baseline gap-x-1">
+                  <span
+                    className="text-balance text-4xl font-medium text-gray-900 dark:text-white"
+                    style={{ fontVariantNumeric: "tabular-nums" }}
+                  >
+                    {tier.id === "tier-pro"
+                      ? tier.price[frequencyPro.value]
+                      : tier.id === "tier-business"
+                        ? tier.price[frequencyBusiness.value]
+                        : tier.id === "tier-datarooms"
+                          ? tier.price[frequencyDatarooms.value]
+                          : tier.price[frequency.value]}
+                  </span>
+                </p>
+                <p className="mt-6 text-balance text-sm leading-6 text-gray-600 dark:text-gray-300">
+                  {tier.description}
+                </p>
+                <ul
+                  role="list"
+                  className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300"
+                >
+                  <li>{tier.featureIntro}</li>
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex gap-x-3">
+                      <CheckIcon
+                        className="h-6 w-5 flex-none text-[#fb7a00]"
+                        aria-hidden="true"
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="p-6">
+              <Link href={tier.href}>
+                {tier.id === "tier-business" ? (
+                  <button className="w-full rounded-3xl bg-orange-600 px-3 py-2 text-base text-white hover:bg-orange-500">
+                    {tier.buttonText}
+                  </button>
+                ) : (
+                  <button className="w-full rounded-3xl bg-black px-3 py-2 text-base text-white hover:bg-gray-900 dark:bg-white dark:text-black">
+                    {tier.buttonText}
+                  </button>
+                )}
+              </Link>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

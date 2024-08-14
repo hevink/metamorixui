@@ -4,7 +4,7 @@ const Badge = () => {
   return (
     <section className="flex items-center justify-center">
       <div className="inline-flex items-center rounded-xl border border-neutral-300 bg-gray-200 p-1 dark:border-neutral-700 dark:bg-neutral-900">
-        <span className="mx-1 flex size-2 md:mx-3">
+        <span className="mx-1.5 flex size-2 md:mx-3">
           <span className="absolute inline-flex size-2 animate-ping rounded-full bg-purple-400 opacity-75" />
           <span className="relative inline-flex size-2 rounded-full bg-purple-500" />
         </span>

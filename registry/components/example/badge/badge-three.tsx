@@ -13,7 +13,7 @@ const Badge = () => {
           href="#"
           className="ml-3 flex cursor-pointer items-center justify-center gap-1 rounded-lg border border-neutral-300 bg-neutral-100 px-1 py-0.5 text-sm dark:border-neutral-700 dark:bg-neutral-500/20"
         >
-          Get started
+          <span className="hidden sm:block">Get started</span>
           <ArrowRight size={14} className="ml-px" />
         </a>
       </div>

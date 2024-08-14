@@ -101,6 +101,11 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/logo-cloud`,
           items: [],
         },
+        {
+          title: "Badge",
+          href: `/docs/components/badge`,
+          items: [],
+        },
       ],
     },
     {

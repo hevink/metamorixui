@@ -521,6 +521,46 @@ const example: Registry = {
       () => import("@/registry/components/example/cta/cta-six"),
     ),
   },
+  "badge-one": {
+    name: "badge-one",
+    type: "components:example",
+    files: ["registry/components/example/badge/badge-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/badge/badge-one"),
+    ),
+  },
+  "badge-two": {
+    name: "badge-two",
+    type: "components:example",
+    files: ["registry/components/example/badge/badge-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/badge/badge-two"),
+    ),
+  },
+  "badge-three": {
+    name: "badge-three",
+    type: "components:example",
+    files: ["registry/components/example/badge/badge-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/badge/badge-three"),
+    ),
+  },
+  "badge-four": {
+    name: "badge-four",
+    type: "components:example",
+    files: ["registry/components/example/badge/badge-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/badge/badge-four"),
+    ),
+  },
+  "badge-five": {
+    name: "badge-five",
+    type: "components:example",
+    files: ["registry/components/example/badge/badge-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/badge/badge-five"),
+    ),
+  },
 };
 
 export const registry: Registry = {

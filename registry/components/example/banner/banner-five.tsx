@@ -7,7 +7,7 @@ const Banner = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, x: -50 }}
+      initial={{ opacity: 0, y: -50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
@@ -15,11 +15,11 @@ const Banner = () => {
         style={{
           background: "linear-gradient(90deg, #4b6cb7 0%, #182848 100%)",
         }}
-        className="flex h-12 flex-col gap-2 px-4 py-4 md:flex-row md:items-center md:justify-center md:gap-4 md:px-6 lg:py-0"
+        className="flex h-12 w-full flex-col gap-2 px-4 py-4 md:flex-row md:items-center md:justify-center md:gap-4 md:px-6 lg:py-0"
         ref={ref}
       >
         <motion.p
-          className="text-base font-semibold"
+          className="text-base font-semibold text-white"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -29,7 +29,7 @@ const Banner = () => {
         </motion.p>
 
         <motion.button
-          className="whitespace-nowrap text-start text-base font-semibold underline"
+          className="whitespace-nowrap text-start text-base font-semibold text-white underline"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

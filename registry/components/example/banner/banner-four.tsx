@@ -12,7 +12,7 @@ const Banner = () => {
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            initial={{ y: 0, opacity: 0 }}
+            initial={{ y: -100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             exit={{ y: -100, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -25,12 +25,7 @@ const Banner = () => {
                 background: "linear-gradient(90deg, #1cb5e0 0%, #000851 100%)",
               }}
             >
-              <motion.div
-                className="flex flex-col items-start text-sm font-medium leading-6 text-white sm:flex-row sm:items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
+              <div className="flex flex-col items-start text-sm font-medium leading-6 text-white sm:flex-row sm:items-center">
                 <p className="text-base font-medium">
                   Get Premium Components for your next project on Metamorix UI
                 </p>
@@ -43,7 +38,7 @@ const Banner = () => {
                 >
                   Get Started
                 </motion.a>
-              </motion.div>
+              </div>
               <div className="flex flex-1 justify-end">
                 <motion.button
                   type="button"
@@ -52,18 +47,14 @@ const Banner = () => {
                   whileHover={{ rotate: 90 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X />
+                  <X className="text-white" />
                 </motion.button>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-      <motion.div
-        initial={{ height: 150 }}
-        animate={isInView ? { height: 150 } : {}}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-      />
+      <div style={{ height: 150 }} />
     </section>
   );
 };

@@ -626,6 +626,30 @@ const example: Registry = {
         ),
     ),
   },
+  "banner-three": {
+    name: "banner-three",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-three"),
+    ),
+  },
+  "banner-four": {
+    name: "banner-four",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-four"),
+    ),
+  },
+  "banner-five": {
+    name: "banner-five",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-five"),
+    ),
+  },
 };
 
 export const registry: Registry = {

@@ -50,7 +50,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "relative mb-4 mt-10 flex flex-col space-y-2 lg:max-w-[120ch]",
+        "relative my-4 flex flex-col space-y-2 lg:max-w-[120ch]",
         className,
       )}
       {...props}

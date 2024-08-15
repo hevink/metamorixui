@@ -6,7 +6,6 @@ import { RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ComponentWrapper from "@/components/component-wrapper";
 import { Icons } from "@/components/icons";
 import { ComponentName, registry } from "@/registry/index";
 
@@ -51,7 +50,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "relative my-4 flex flex-col space-y-2 lg:max-w-[120ch]",
+        "relative mb-4 mt-10 flex flex-col space-y-2 lg:max-w-[120ch]",
         className,
       )}
       {...props}
@@ -59,16 +58,16 @@ export function ComponentPreview({
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         {!preview && (
           <div className="flex items-center justify-between pb-3">
-            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+            <TabsList className="inline-flex h-9 items-center justify-center rounded-lg border bg-muted p-1 text-muted-foreground">
               <TabsTrigger
                 value="preview"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
               >
                 Preview
               </TabsTrigger>
               <TabsTrigger
                 value="code"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
               >
                 Code
               </TabsTrigger>

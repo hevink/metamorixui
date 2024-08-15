@@ -20,6 +20,7 @@ import { ComponentInstallation } from "./component-installation";
 import { ComponentPreview } from "./component-preview";
 import { ComponentSource } from "./component-source";
 import { CopyButton, CopyNpmCommandButton } from "./copy-button";
+import { Separator } from "./ui/separator";
 
 const CustomLink = (props: any) => {
   const href = props.href;
@@ -177,6 +178,16 @@ const components = {
   Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
     <Tabs className={cn("relative mt-6 w-full", className)} {...props} />
   ),
+  Separator: ({ ...props }) => (
+    <Separator
+      style={{
+        background:
+          "radial-gradient(50% 100% at 50% 100%,rgba(255,255,255,.32) 0%,rgba(255,255,255,0) 100%)",
+      }}
+      className="my-10"
+      {...props}
+    />
+  ),
   TabsList: ({
     className,
     ...props
@@ -292,7 +303,7 @@ export function Mdx({ code, className }: MDXProps) {
   const Component = useMDXComponent(code);
 
   return (
-    <article className={cn("max-w-[120ch] mx-auto", className)}>
+    <article className={cn("mx-auto max-w-[120ch]", className)}>
       <Component components={components} />
     </article>
   );

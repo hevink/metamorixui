@@ -14,7 +14,9 @@ import "@/styles/mdx.css";
 
 import type { Viewport } from "next";
 import { Metadata } from "next";
+
 import CrispChat from "@/components/CrispChat";
+import TwSizeIndicator from "../components/TwSizeIndicator";
 
 export const metadata: Metadata = constructMetadata({
   title: "Metamorix UI",
@@ -53,6 +55,7 @@ export default function RootLayout({
               <Toaster />
               <Analytics />
               <SpeedInsights />
+              <TwSizeIndicator />
             </TooltipProvider>
           </ThemeProvider>
         </PHProvider>

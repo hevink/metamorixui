@@ -9,7 +9,6 @@ const Banner = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Animated network lines */}
       <svg
         className="absolute inset-0 h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +32,6 @@ const Banner = () => {
         <rect width="100%" height="100%" fill="url(#network)" />
       </svg>
 
-      {/* Glowing orb */}
       <motion.div
         className="absolute left-0 top-1/2 h-32 w-32 rounded-full bg-blue-500 opacity-20 blur-3xl filter"
         animate={{

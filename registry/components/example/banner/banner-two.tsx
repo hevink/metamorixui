@@ -1,95 +1,90 @@
 import React from "react";
-import { CircleArrowRight, Users } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Banner = () => {
-  const destinations = [
-    {
-      img: "https://cdn.pixabay.com/photo/2023/07/04/10/15/boat-8105949_1280.jpg",
-      title: "Trip to the mountains",
-      attendees: 31,
-      id: 1,
-    },
-    {
-      img: "https://cdn.pixabay.com/photo/2015/09/14/02/48/egypt-938993_1280.jpg",
-      title: "Trip to the Egypt",
-      attendees: 29,
-      id: 2,
-    },
-    {
-      img: "https://cdn.pixabay.com/photo/2019/03/09/20/52/santorini-4044972_1280.jpg",
-      title: "Trip to the Greece",
-      attendees: 21,
-      id: 3,
-    },
-  ];
-
   return (
-    <div
-      className="flex h-[80vh] flex-col bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://cdn.pixabay.com/photo/2017/08/06/01/07/nature-2587331_1280.jpg')",
-      }}
+    <motion.div
+      className="relative w-full overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 px-8 py-6 text-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
-      <div className="flex items-center justify-center p-6 md:justify-end md:p-12 lg:p-16">
-        <nav className="flex items-center text-white sm:space-x-6">
-          {["Home", "About Us", "Premium", "Blogs"].map((item) => (
-            <a key={item} href="#" className="hover:underline">
-              {item}
-            </a>
-          ))}
-          <a
-            href="#"
-            className="rounded-lg border border-white px-4 py-2 hover:bg-white hover:text-black"
+      {/* Animated network lines */}
+      <svg
+        className="absolute inset-0 h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id="network"
+            x="0"
+            y="0"
+            width="100"
+            height="100"
+            patternUnits="userSpaceOnUse"
           >
-            Explore
-          </a>
-        </nav>
-      </div>
+            <path
+              d="M0 50 L100 50 M50 0 L50 100"
+              stroke="rgba(255,255,255,0.1)"
+              strokeWidth="0.5"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#network)" />
+      </svg>
 
-      <div className="flex items-center justify-center p-4 md:justify-start md:p-12 lg:p-16">
-        <div className="max-w-md space-y-4 sm:max-w-lg">
-          <p className="mt-4 text-white">Mountains | Plains | Beaches</p>
-          <h1 className="text-4xl font-bold text-white">
-            Spend your vacation with our activities
-          </h1>
+      {/* Glowing orb */}
+      <motion.div
+        className="absolute left-0 top-1/2 h-32 w-32 rounded-full bg-blue-500 opacity-20 blur-3xl filter"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+      />
 
-          <div className="sm:mt-8">
-            <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold text-white">
-                Most Popular
-              </h2>
-              <CircleArrowRight className="cursor-pointer text-white" />
-            </div>
-            <div className="mt-4 flex space-x-6">
-              {destinations.map((destination, index) => (
-                <div
-                  key={destination.title}
-                  className={`card rounded-lg bg-slate-100 p-2 shadow-md ${
-                    index === destinations.length - 1 ? "hidden sm:block" : ""
-                  }`}
-                >
-                  <img
-                    src={destination.img}
-                    alt={destination.title}
-                    className="size-36 cursor-pointer rounded-lg object-cover"
-                  />
-                  <p className="pt-1 text-xs font-medium text-black">
-                    {destination.title}
-                  </p>
-                  <span className="flex items-center gap-1">
-                    <Users className="text-black" size={12} />
-                    <p className="text-xs text-black">
-                      {destination.attendees} people going
-                    </p>
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="relative z-10 flex items-center justify-between">
+        <motion.div
+          className="flex-1"
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <h2 className="mb-2 text-2xl font-bold">Metamorix UI</h2>
+          <p className="max-w-md text-blue-300">
+            Forge the future of web design with our cutting-edge premium
+            components
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="flex items-center space-x-4"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <span className="text-blue-300">Ready to innovate?</span>
+          <motion.a
+            href="#"
+            className="group relative flex items-center space-x-2 overflow-hidden rounded-full bg-blue-500 px-6 py-2 font-bold text-white shadow-lg transition duration-300 ease-in-out hover:shadow-xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="relative z-10">Get Started</span>
+            <motion.div
+              className="absolute inset-0 bg-blue-600"
+              initial={{ x: "100%" }}
+              whileHover={{ x: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.a>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

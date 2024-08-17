@@ -125,7 +125,7 @@ const Pricing = () => {
             key={index}
             className={`flex flex-col items-center justify-start rounded-lg ${
               tier.highlight
-                ? "border-2 shadow-[0px_0px_0px_4px_#E3E3E380] dark:shadow-[0px_0px_0px_4px_#26262680]"
+                ? "border-2 shadow-[0px_0px_0px_3px_#ea580c]"
                 : "border shadow-lg"
             }  px-8 py-12`}
           >
@@ -147,7 +147,8 @@ const Pricing = () => {
 
             <p className="mt-4 max-w-[30ch] text-center ">{tier.description}</p>
 
-            <button className="mt-8 w-full rounded-lg bg-orange-600 px-3 py-2 text-base text-white hover:bg-orange-500">
+            <button className="group relative m-1 mt-8 inline-flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border-x-2 border-b-2 border-orange-700 bg-gradient-to-tr from-orange-600 to-orange-500 px-4 py-2 text-white shadow-lg transition duration-100 ease-in-out active:translate-y-0.5 active:border-orange-600 active:shadow-none">
+              <span className="absolute size-0 rounded-full bg-white opacity-10 transition-all duration-300 ease-out group-hover:size-80" />
               <Link href={tier.buttonLink} target="_blank">
                 {tier.buttonText}
               </Link>

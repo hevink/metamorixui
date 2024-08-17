@@ -147,11 +147,12 @@ const Pricing = () => {
 
             <p className="mt-4 max-w-[30ch] text-center ">{tier.description}</p>
 
-            <button className="group relative m-1 mt-8 inline-flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border-x-2 border-b-2 border-orange-700 bg-gradient-to-tr from-orange-600 to-orange-500 px-4 py-2 text-white shadow-lg transition duration-100 ease-in-out active:translate-y-0.5 active:border-orange-600 active:shadow-none">
-              <span className="absolute size-0 rounded-full bg-white opacity-10 transition-all duration-300 ease-out group-hover:size-80" />
-              <Link href={tier.buttonLink} target="_blank">
-                {tier.buttonText}
-              </Link>
+            <button className="group mt-8 flex h-10 w-full items-center justify-center rounded-md border border-orange-600 bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 px-4 text-neutral-50 shadow-[inset_0_1px_0px_0px_#fdba74] active:[box-shadow:none]">
+              <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                <Link href={tier.buttonLink} target="_blank">
+                  {tier.buttonText}
+                </Link>
+              </span>
             </button>
 
             <div className="mt-8 flex w-full flex-col divide-y">

@@ -38,40 +38,43 @@ const plans = [
 const Pricing = () => {
   return (
     <section className="my-10">
-      <div className="text-center text-blue-600 text-sm font-semibold">
+      <div className="text-center text-sm font-semibold text-blue-600">
         PRICING
       </div>
-      <h1 className="text-center text-2xl font-semibold leading-tight my-5">
+      <h1 className="my-5 text-center text-2xl font-semibold leading-tight">
         Predictable pricing, designed to scale
       </h1>
-      <p className="text-center text-sm font-medium leading-4 max-w-lg mx-auto text-gray-700 dark:text-gray-300">
+      <p className="mx-auto max-w-lg text-center text-sm font-medium leading-4 text-gray-700 dark:text-gray-300">
         Our pricing is designed to scale with your business. Our plans have no
         hidden fees, and we never take a cut of your sales.
       </p>
 
-      <div className="grid mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
         {plans.map((plan) => (
           <div
             key={plan.id}
-            className="w-full shadow-sm rounded-2xl flex mx-auto flex-col mt-6"
+            className="mx-auto mt-6 flex w-full flex-col rounded-2xl shadow-sm"
           >
-            <div className="space-y-4 w-full mt-4">
+            <div className="mt-4 w-full space-y-4">
               <p className="text-lg font-semibold">{plan.name.toUpperCase()}</p>
 
-              <p className="font-semibold text-4xl">
+              <p className="text-4xl font-semibold">
                 <span>{plan.sellingPrice.monthly}</span>
-                <span className="text-gray-700 dark:text-gray-300 text-base">
+                <span className="text-base text-gray-700 dark:text-gray-300">
                   /mo
                 </span>
               </p>
             </div>
-            <button className="w-full py-2 bg-gradient-to-t from-blue-500 to-blue-600 text-white rounded-lg my-5">
-              Buy Now
+
+            <button className="my-5 w-full group h-10 select-none rounded-lg bg-blue-600 px-3 text-sm leading-8 text-zinc-50 shadow-[0_-1px_0_1px_#1e3a8a_inset,0_0_0_1px_#1d4ed8_inset,0_0.5px_0_1.5px_#60a5fa_inset] hover:bg-blue-700 active:bg-blue-800 active:shadow-[-1px_0px_1px_0px_rgba(0,0,0,.2)_inset,1px_0px_1px_0px_rgba(0,0,0,.2)_inset,0px_0.125rem_0px_0px_rgba(0,0,0,.6)_inset]">
+              <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                Buy Now
+              </span>
             </button>
 
             <hr className="border-gray-300 dark:border-gray-700" />
 
-            <ul role="list" className="space-y-3 mt-6">
+            <ul role="list" className="mt-6 space-y-3">
               {plan.features.map((feature) => (
                 <li
                   key={feature}

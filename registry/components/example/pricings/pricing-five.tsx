@@ -59,7 +59,7 @@ const Pricing = () => {
                     key={index}
                     className={`px-4 py-8 text-center ${
                       tier.popular
-                        ? "rounded-t-xl bg-gray-900 dark:bg-gray-800"
+                        ? "rounded-t-xl bg-gray-900 dark:bg-gray-800/50"
                         : ""
                     }`}
                   >
@@ -104,7 +104,7 @@ const Pricing = () => {
                     <td
                       key={valueIndex}
                       className={`border-b border-gray-200 p-4 text-center dark:border-gray-700 
-                        ${pricingTiers[valueIndex].popular ? "border-white/20 bg-gray-900 text-white dark:bg-gray-800" : ""}`}
+                        ${pricingTiers[valueIndex].popular ? "border-white/20 bg-gray-900 text-white dark:bg-gray-800/50" : ""}`}
                     >
                       {value}
                     </td>
@@ -116,7 +116,7 @@ const Pricing = () => {
                 {pricingTiers.map((tier, index) => (
                   <td
                     key={index}
-                    className={`rounded-b-xl px-4 py-5 text-center ${tier.popular ? "bg-gray-900 dark:bg-gray-800" : ""}`}
+                    className={`rounded-b-xl px-4 py-5 text-center ${tier.popular ? "bg-gray-900 dark:bg-gray-800/50" : ""}`}
                   >
                     <a
                       href="#"

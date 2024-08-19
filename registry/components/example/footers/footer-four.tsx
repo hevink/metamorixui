@@ -69,7 +69,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Your email"
-              className="rounded-l bg-gray-200 px-4 py-3  text-[15px] outline-none dark:border-2 dark:bg-transparent dark:text-white max-md:w-full"
+              className="rounded-l bg-gray-200 px-4 py-3  text-[15px] outline-none dark:border-2 dark:border-[#27272A] dark:bg-transparent dark:text-white max-md:w-full"
             />
             <button className="rounded-r bg-[#FE6019] px-4 py-3 text-[15px] tracking-wide text-white">
               Subscribe
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="my-12" />
+      <hr className="my-12 border-[#27272A]" />
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div>

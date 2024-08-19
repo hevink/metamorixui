@@ -40,7 +40,7 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <hr />
+        <hr className="border-[#27272A]" />
         <p className="text-center text-sm leading-5 text-gray-600 dark:text-gray-300">
           © {new Date().getFullYear()} Metamorix consultancy, Inc.
         </p>

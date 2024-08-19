@@ -35,10 +35,10 @@ const Feature = () => {
         <p className="text-center text-lg font-medium text-blue-600">
           Features
         </p>
-        <h2 className="text-xl md:text-3xl text-center font-semibold">
+        <h2 className="text-center text-xl font-semibold md:text-3xl">
           Everything you need to build your next project
         </h2>
-        <div className="text-sm md:text-base max-w-xl text-center mx-auto text-gray-600 dark:text-gray-300">
+        <div className="mx-auto max-w-xl text-center text-sm text-gray-600 dark:text-gray-300 md:text-base">
           Discover our tools and services for streamlined development. Intuitive
           interfaces and robust backend support ensure a seamless deployment.
         </div>
@@ -48,7 +48,7 @@ const Feature = () => {
           {features.map((feature) => (
             <div
               key={feature.name}
-              className="flex items-start gap-4 p-4 border rounded-xl bg-black/5 dark:bg-white/5  hover:scale-[1.02] transition-all duration-300 ease-in-out"
+              className="flex items-start gap-4 rounded-xl border bg-black/5 p-4 transition-all duration-300  ease-in-out hover:scale-[1.02] dark:border-[#27272A] dark:bg-white/5"
             >
               <div className="shrink-0">
                 <div className="flex size-10 items-center justify-center rounded-lg bg-blue-600">

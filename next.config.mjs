@@ -20,7 +20,23 @@ const nextConfig = {
     },
   },
   images: {
-    domains: ["localhost", "ui.metamorix.com", "framerusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ui.metamorix.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "framerusercontent.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "localhost",
+        pathname: "**",
+      },
+    ],
   },
   async redirects() {
     return [

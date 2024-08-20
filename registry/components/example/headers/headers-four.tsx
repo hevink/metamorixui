@@ -6,13 +6,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const menuItems = [
-    { title: "Product", subItems: ["Issues", "Kanban", "Gantt", "Mind Maps"] },
-    { title: "Solutions", subItems: ["Product Management", "Marketing", "IT"] },
-    { title: "Media", subItems: ["Videos", "Socials", "Blog"] },
-    { title: "Pricing", subItems: ["Startup", "Small Business", "Enterprise"] },
-  ];
-
   return (
     <div className="flex flex-col md:min-h-screen">
       <header className="p-4 dark:bg-black dark:text-white">
@@ -180,3 +173,10 @@ const Header = () => {
 };
 
 export default Header;
+
+const menuItems = [
+  { title: "Product", subItems: ["Issues", "Kanban", "Gantt", "Mind Maps"] },
+  { title: "Solutions", subItems: ["Product Management", "Marketing", "IT"] },
+  { title: "Media", subItems: ["Videos", "Socials", "Blog"] },
+  { title: "Pricing", subItems: ["Startup", "Small Business", "Enterprise"] },
+];

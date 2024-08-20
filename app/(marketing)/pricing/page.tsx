@@ -1,238 +1,126 @@
-import { Particles } from "@/components/particles";
-import { ShinyCardGroup } from "@/components/shiny-card";
-import { Check, Stars } from "lucide-react";
-import Link from "next/link";
-import { Discover } from "./discover";
+import { Check } from "lucide-react";
 
-// import { CTA } from "@/components/cta";
-import { TopLeftShiningLight, TopRightShiningLight } from "@/components/hero";
-import Image from "next/image";
-import {
-  Asterisk,
-  BelowEnterpriseSvg,
-  Bullet,
-  Bullets,
-  Button,
-  Color,
-  Cost,
-  EnterpriseCardHighlight,
-  FreeCardHighlight,
-  PricingCard,
-  PricingCardContent,
-  PricingCardFooter,
-  PricingCardHeader,
-  ProCardHighlight,
-  Separator,
-} from "./components";
-
-export default function PricingPage() {
+const Pricing = () => {
   return (
-    <div className="px-4 mx-auto lg:px-0 pt-[64px]">
-      <TopRightShiningLight />
-      <TopLeftShiningLight />
-      <div
-        aria-hidden
-        className="absolute top-[-4.5rem] left-1/2 -translate-x-1/2 w-[2679px] h-[540px] -scale-x-100"
-      >
-        <div className="absolute left-[-100px] w-[1400px] aspect-[1400/541] [mask-image:radial-gradient(50%_76%_at_92%_28%,_#FFF_0%,_#FFF_30.03%,_rgba(255,_255,_255,_0.00)_100%)]">
-          <Image
-            alt="Visual decoration auth chip"
-            src="/images/landing/leveled-up-api-auth-chip-min.svg"
-            fill
-          />
-        </div>
-        <div className="absolute right-0 w-[1400px] aspect-[1400/541] [mask-image:radial-gradient(26%_76%_at_30%_6%,_#FFF_0%,_#FFF_30.03%,_rgba(255,_255,_255,_0.00)_100%)]">
-          <Image
-            alt="Visual decoration auth chip"
-            src="/images/landing/leveled-up-api-auth-chip-min.svg"
-            fill
-          />
-        </div>
+    <section className="container my-10">
+      <div className="text-center text-sm font-semibold text-orange-600">
+        PRICING
       </div>
+      <h1 className="my-5 text-center text-2xl font-semibold leading-tight">
+        Predictable pricing, designed to scale
+      </h1>
+      <p className="mx-auto max-w-lg text-center text-sm font-medium leading-4 text-gray-700 dark:text-gray-300">
+        Our pricing is designed to scale with your business. Our plans have no
+        hidden fees, and we never take a cut of your sales.
+      </p>
 
-      <div className="flex flex-col items-center justify-center my-16 xl:my-24">
-        <h1 className="section-title-heading-gradient max-sm:mx-6 max-sm:text-4xl font-medium text-[4rem] leading-[4rem] max-w-xl text-center ">
-          Start for free, scale as you go
-        </h1>
-
-        {/* <p className="mt-8 bg-gradient-to-br text-transparent bg-gradient-stop bg-clip-text from-white via-white via-40% to-white/30 max-w-lg text-center">
-          We wanted pricing to be simple and affordable for anyone, so we've created flexible plans
-          that don't need an accounting degree to figure out.
-        </p>  */}
-      </div>
-
-      <ShinyCardGroup className="grid h-full max-w-4xl grid-cols-2 gap-6 mx-auto group">
-        <PricingCard color={Color.White} className="col-span-2 md:col-span-1">
-          <FreeCardHighlight className="absolute top-0 right-0 pointer-events-none" />
-
-          <PricingCardHeader
-            title="Free Tier"
-            description="Everything you need to start!"
-            className="bg-gradient-to-tr from-transparent to-[#ffffff]/10 "
-            color={Color.White}       
-          />
-          <Separator />
-
-          <PricingCardContent>
-            <Cost dollar="$0" />
-            <Button label="Start for Free" />
-            <Bullets>
-              <li>
-                <Bullet Icon={Check} label="1k API keys" color={Color.White} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="2.5k valid verifications / month" color={Color.White} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="100k valid ratelimits / month" color={Color.White} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="7-day analytics retention" color={Color.White} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="30-day audit log retention" color={Color.White} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="Unlimited APIs" color={Color.White} />
-              </li>
-            </Bullets>
-          </PricingCardContent>
-          <PricingCardFooter>
-            <div className="flex flex-col gap-2">
-              <p className="text-sm font-bold text-white">What counts as valid? </p>
-              <p className="text-xs text-white/60">
-                A valid request means everything is fine and you should grant access to the user.
-                Requests may be invalid due to exceeding limits, keys being expired or disabled, or
-                other factors.
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+        {plans.map((plan) => (
+          <div
+            key={plan.id}
+            className={`mx-auto mt-6 flex w-full flex-col rounded-xl p-4 shadow-sm ${
+              plan.id === "pro"
+                ? "border-4 border-orange-600"
+                : "border border-[#e4e4e7] dark:border-[#27272a]"
+            }`}
+          >
+            <div className="w-full space-y-4">
+              <p className="text-lg font-semibold">{plan.name.toUpperCase()}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {plan.description}
               </p>
-              <p className="text-xs text-white/60">
-                To protect your business from abuse, we do not charge for invalid requests.
+              <p className="text-4xl font-semibold">
+                <span>{plan.sellingPrice.monthly}</span>
+                <span className="text-base text-gray-700 dark:text-gray-300">
+                  /mo
+                </span>
               </p>
             </div>
-          </PricingCardFooter>
-        </PricingCard>
-        <PricingCard color={Color.Yellow} className="col-span-2 md:col-span-1">
-          <ProCardHighlight className="absolute top-0 right-0 pointer-events-none" />
-
-          <PricingCardHeader
-            title="Pro Tier"
-            description="For growing teams with powerful demands"
-            className="bg-gradient-to-tr from-black/50 to-[#FFD600]/10 "
-            color={Color.Yellow}
-          />
-          <Separator />
-
-          <PricingCardContent>
-            <Cost dollar="$25" />
-            <Button label="Get Started with Pro" />
-            <Bullets>
-              <li>
-                <Bullet Icon={Check} label="1M API keys" color={Color.Yellow} />
-              </li>
-              <li>
-                <Bullet
-                  Icon={Check}
-                  label="150k valid verifications / month"
-                  color={Color.Yellow}
-                />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="2.5M valid ratelimits / month" color={Color.Yellow} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="90-day analytics retention" color={Color.Yellow} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="90-day audit log retention" color={Color.Yellow} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="Unlimited APIs" color={Color.Yellow} />
-              </li>
-              <li>
-                <Bullet Icon={Check} label="Workspaces with team members" color={Color.Yellow} />
-              </li>
-              <li>
-                <Bullet
-                  Icon={Stars}
-                  label="More coming soon"
-                  color={Color.Yellow}
-                  textColor="text-white/50"
-                />
-              </li>
-            </Bullets>
-          </PricingCardContent>
-          <PricingCardFooter>
-            <div className="flex flex-col gap-2">
-              <Asterisk tag="$1" label="/ additional 10k valid verifications" />
-              <Asterisk tag="$1" label="/ additional 100k valid ratelimits" />
+            <div className="mt-6">
+              {plan.id === "pro" ? (
+                <button
+                  className="group h-10 w-full select-none rounded-lg bg-orange-600 px-3 text-sm leading-8 text-zinc-50 shadow-[0_-1px_0_1px_#ea580c_inset,0_0_0_1px_#f97316_inset,0_0.5px_0_1.5px_#fdba74_inset] hover:bg-orange-700 active:bg-orange-800 active:shadow-[-1px_0px_1px_0px_rgba(0,0,0,.2)_inset,1px_0px_1px_0px_rgba(0,0,0,.2)_inset,0px_0.125rem_0px_0px_rgba(0,0,0,.6)_inset]"
+                >
+                  <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                    Buy Now
+                  </span>
+                </button>
+              ) : (
+                <button className="w-full rounded-lg border border-orange-600 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 dark:hover:bg-gray-800">
+                  Get Started
+                </button>
+              )}
             </div>
-          </PricingCardFooter>
-        </PricingCard>
 
-        <PricingCard color={Color.Purple} className="col-span-2">
-          <EnterpriseCardHighlight className="absolute top-0 right-0 pointer-events-none" />
+            <hr className="my-6 border-[#e4e4e7] dark:border-[#27272a]" />
 
-          <div className="flex flex-col h-full md:flex-row">
-            <div className="flex flex-col w-full gap-8">
-              <PricingCardHeader
-                title="Enterprise Tier"
-                description="Need more support or pricing doesn't work for your business?"
-                color={Color.Purple}
-                className="bg-gradient-to-tr from-transparent to-[#9D72FF]/10 "
-              />
-              <PricingCardContent>
-                <Cost dollar="Custom $" />
-                <Link href="mailto:support@unkey.dev?subject=Unkey Enterprise Quote">
-                  <div className="w-full p-px rounded-lg h-10 bg-gradient-to-r from-[#02DEFC] via-[#0239FC] to-[#7002FC] overflow-hidden">
-                    <div className="bg-black rounded-[7px] h-full bg-opacity-95 hover:bg-opacity-25 duration-1000">
-                      <div className="flex items-center justify-center w-full h-full bg-gradient-to-tr from-[#02DEFC]/20 via-[#0239FC]/20 to-[#7002FC]/20  rounded-[7px]">
-                        <span className="text-sm font-semibold text-white">Contact Us</span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </PricingCardContent>
-            </div>
-            <Separator orientation="vertical" className="hidden md:flex" />
-            <Separator orientation="horizontal" className="md:hidden" />
-            <div className="relative w-full p-8">
-              <Particles
-                className="absolute inset-0 duration-500 opacity-50 -z-10 group-hover:opacity-100"
-                quantity={50}
-                color={Color.Purple}
-                vx={0.1}
-                vy={-0.1}
-              />
-              <Bullets>
-                <li>
-                  <Bullet Icon={Check} label="Custom Quotas" color={Color.Purple} />
+            <ul role="list" className="space-y-3">
+              {plan.features.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-start gap-3 font-medium"
+                >
+                  <span className="size-5">
+                    <Check className="size-5 rounded-full bg-orange-600 p-0.5 text-white" />
+                  </span>
+                  <span>{feature}</span>
                 </li>
-                <li>
-                  <Bullet Icon={Check} label="IP Whitelisting" color={Color.Purple} />
-                </li>
-                <li>
-                  <Bullet Icon={Check} label="Dedicated Support" color={Color.Purple} />
-                </li>
-                <li>
-                  <Bullet
-                    Icon={Stars}
-                    label="More coming soon"
-                    color={Color.Purple}
-                    textColor="text-white/50"
-                  />
-                </li>
-              </Bullets>
-            </div>
+              ))}
+            </ul>
           </div>
-        </PricingCard>
-      </ShinyCardGroup>
-      <BelowEnterpriseSvg className="container inset-x-0 top-0 mx-auto -mt-64 -mb-32" />
-
-      <Discover />
-{/* 
-      <div className="-mx-4 lg:mx-0">
-        <CTA />
-      </div> */}
-    </div>
+        ))}
+      </div>
+    </section>
   );
-}
+};
+
+export default Pricing;
+
+const plans = [
+  {
+    name: "Free",
+    id: "free",
+    description: "Perfect for individuals and small projects",
+    sellingPrice: { monthly: "$0" },
+    features: [
+      "Basic Support",
+      "Community Access",
+      "Public Documentation",
+      "Unlimited API Requests",
+      "7-day Analytics Retention",
+    ],
+  },
+  {
+    name: "Pro",
+    id: "pro",
+    description: "Ideal for growing businesses and teams",
+    sellingPrice: { monthly: "$199" },
+    features: [
+      "Priority Support",
+      "Private Repository Access",
+      "30-day Audit Log Retention",
+      "Customizable Themes",
+      "Weekly Updates",
+      "Integration with 3rd Party APIs",
+      "Unlimited API Requests",
+      "30-day Analytics Retention",
+    ],
+  },
+  {
+    name: "Ultimate",
+    id: "ultimate",
+    description: "For large enterprises with advanced needs",
+    sellingPrice: { monthly: "$499" },
+    features: [
+      "Dedicated Support",
+      "Advanced Analytics",
+      "Customizable Dashboards",
+      "24/7 Monitoring",
+      "Automated Backups",
+      "Role-Based Access Control",
+      "Custom Integrations",
+      "Unlimited API Requests",
+      "Dedicated Account Manager",
+    ],
+  },
+];

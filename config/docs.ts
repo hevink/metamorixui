@@ -11,6 +11,10 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       href: "/components/hero",
     },
+    {
+      title: "Pricing",
+      href: "/pricing",
+    },
   ],
   sidebarNav: [
     {

@@ -2,8 +2,6 @@ import { ImageResponse } from "next/og";
 
 import { capitalize } from "@/lib/utils";
 
-export const runtime = "edge";
-
 const inter600 = fetch(
   new URL(`../../../assets/fonts/Inter-SemiBold.ttf`, import.meta.url),
 ).then((res) => res.arrayBuffer());

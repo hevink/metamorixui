@@ -8,6 +8,13 @@ const Header = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
   };
 
+  const links = [
+    { name: "Portfolio", href: "#" },
+    { name: "Company", href: "#" },
+    { name: "Products", href: "#" },
+    { name: "Resources", href: "#" },
+  ];
+
   return (
     <div>
       <motion.header
@@ -55,48 +62,27 @@ const Header = () => {
                 ${openNavbar ? "visible translate-y-0 opacity-0" : "invisible translate-y-10 opacity-0 lg:visible  lg:translate-y-0 lg:opacity-100"}
             `}
           >
-            <ul className="flex flex-col gap-6 text-gray-700 dark:text-gray-300 lg:w-full lg:flex-row lg:items-center lg:justify-center">
-              <li>
-                <Link
-                  href="#"
-                  className="px-2 py-2.5  transition-colors hover:text-purple-600 "
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="px-2 py-2.5  transition-colors hover:text-purple-600 "
-                >
-                  Company
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="px-2 py-2.5  transition-colors hover:text-purple-600 "
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="px-2 py-2.5  transition-colors hover:text-purple-600 "
-                >
-                  Resources
-                </Link>
-              </li>
+            <ul className="flex flex-col gap-6 text-gray-700 dark:text-gray-300 lg:flex-row lg:items-center lg:justify-center">
+              {links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="px-2 py-2.5 transition-colors hover:text-purple-600"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row  sm:items-center lg:mt-0 lg:min-w-max">
-              <Link
-                href="#"
-                className="flex h-12 w-full items-center justify-center rounded-full border border-gray-200 bg-gray-100 px-6 text-purple-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 sm:w-auto"
-              >
-                Get It touch
-              </Link>
-            </div>
+          </div>
+
+          <div className="mt-10 hidden flex-col gap-4 sm:flex-row sm:items-center lg:mt-0 lg:block lg:min-w-max">
+            <Link
+              href="#"
+              className="flex h-12 items-center justify-center rounded-full border border-gray-200 bg-gray-100 px-6 text-purple-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 sm:w-auto"
+            >
+              Get It touch
+            </Link>
           </div>
 
           <AnimatePresence>

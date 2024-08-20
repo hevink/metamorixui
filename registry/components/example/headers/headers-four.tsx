@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col md:min-h-screen">
-      <header className="bg-black p-4 text-white">
+      <header className="p-4 dark:bg-black dark:text-white">
         <div className="flex items-center justify-between sm:container sm:mx-auto">
           <div className="text-2xl font-bold">
             <svg
@@ -47,7 +47,7 @@ const Header = () => {
                 <AnimatePresence>
                   {activeDropdown === item.title && (
                     <motion.div
-                      className="absolute left-0 z-10 mt-2 w-48 rounded-md bg-white text-black shadow-lg"
+                      className="absolute left-0 z-10 mt-2 w-48 rounded-md shadow-lg dark:bg-white dark:text-black"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
@@ -71,7 +71,7 @@ const Header = () => {
           </nav>
 
           <motion.button
-            className="hidden rounded px-4 py-2 font-bold md:block"
+            className="hidden rounded px-4 py-2 font-bold text-white md:block"
             initial={{ scale: 1, backgroundColor: "#FF6F00" }}
             whileHover={{ scale: 1.1, backgroundColor: "#FF8F00" }}
             whileTap={{ scale: 0.9 }}
@@ -118,7 +118,7 @@ const Header = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="bg-black"
+              className="dark:bg-black"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -166,11 +166,11 @@ const Header = () => {
             repeatType: "mirror",
           }}
           className="pointer-events-none absolute -inset-[100%] opacity-[15%]"
-          style={{ backgroundImage: "url('/blackNoise.png')" }}
+          style={{ backgroundImage: "dark:url('/blackNoise.png')" }}
         />
 
-        <div className="relative grid place-content-center space-y-6 bg-neutral-950 sm:p-4 md:min-h-screen md:p-8">
-          <p className="text-center text-xl font-black text-neutral-50 md:text-5xl lg:text-6xl">
+        <div className="relative grid place-content-center space-y-6 dark:bg-neutral-950 sm:p-4 md:min-h-screen md:p-8">
+          <p className="text-center text-xl font-black dark:text-neutral-50 md:text-5xl lg:text-6xl">
             Welcome to Our Platform !!
           </p>
         </div>

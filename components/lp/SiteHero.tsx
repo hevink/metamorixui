@@ -63,7 +63,7 @@ const SiteHero = () => {
             >
               <Link
                 href="/docs/components/hero"
-                className="shadow-3xl flex w-max cursor-pointer select-none items-center justify-center gap-2 rounded-full border-t border-foreground/30 bg-black/10 px-2 py-1 shadow-background/40 backdrop-blur-lg dark:bg-white/20 md:gap-8 md:py-2"
+                className="shadow-3xl flex w-max cursor-pointer select-none items-center justify-center gap-2 rounded-full border-t border-foreground/30 bg-black/10 px-2 py-1 shadow-background/40 backdrop-blur-lg dark:bg-neutral-900 md:gap-8 md:py-2"
               >
                 <p className="px-4 text-center text-sm font-medium text-foreground md:text-base lg:pr-0">
                   <span className="hidden sm:block">

@@ -52,7 +52,7 @@ export function DocsSidebarNavItems({
               "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline",
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href
-                ? "font-medium text-foreground"
+                ? "font-bold bg-gradient-to-r from-orange-500 via-orange-500 to-amber-600 bg-clip-text text-transparent"
                 : "text-muted-foreground",
             )}
             target={item.external ? "_blank" : ""}

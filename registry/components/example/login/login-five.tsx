@@ -9,7 +9,7 @@ const Login = () => {
     <section>
       <div className="absolute inset-0 -z-10 mx-auto h-[400px] w-full bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:2rem_2rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] md:w-[600px]" />
 
-      <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <div className="flex items-center justify-center py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
         <div className="w-full md:max-w-sm xl:mx-auto ">
           <h2 className="text-center text-xl font-bold leading-tight md:text-2xl">
             {isSignIn ? "Sign in to your account" : "Create a new account"}

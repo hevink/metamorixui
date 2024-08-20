@@ -3,10 +3,10 @@ import React from "react";
 const Testimonial = () => {
   return (
     <section className="min-w-screen flex min-h-screen items-center justify-center sm:py-5">
-      <div className="w-full py-16 text-gray-800 sm:px-5 md:py-24">
+      <div className="w-full text-gray-800 sm:px-5 sm:py-16 md:py-24">
         <div className="mx-auto w-full max-w-6xl">
           <div className="mx-auto max-w-xl text-center">
-            <h1 className="mb-5 text-6xl font-bold text-gray-800 dark:text-gray-200 md:text-7xl">
+            <h1 className="mb-5 text-5xl font-bold text-gray-800 dark:text-gray-200 sm:text-6xl md:text-7xl">
               What people <br />
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
                 are saying.
@@ -15,7 +15,7 @@ const Testimonial = () => {
             <h3 className="mb-5 text-xl font-light text-gray-800 dark:text-gray-200">
               Check out what our customers have to say about us!
             </h3>
-            <div className="mb-10 text-center">
+            <div className="mb-4 text-center sm:mb-10">
               <span className="ml-1 inline-block h-1 w-1 rounded-full bg-[#FE6019]"></span>
               <span className="ml-1 inline-block h-1 w-3 rounded-full bg-[#FE6019]"></span>
               <span className="inline-block h-1 w-40 rounded-full bg-[#FE6019]"></span>
@@ -39,7 +39,7 @@ export default Testimonial;
 const TestimonialCard = ({ name, image, description, index }: any) => {
   return (
     <div
-      className={`w-full p-5 font-light text-gray-800 dark:border-[#27272A] ${index === 0 || index === 1 ? "border-b border-r" : index === 2 ? "border-b" : index === 3 || index === 4 ? "border-r" : ""}`}
+      className={`w-full font-light text-gray-800 dark:border-[#27272A] sm:p-5 ${index === 0 || index === 1 ? "lg:border-b lg:border-r" : index === 2 ? "lg:border-b" : index === 3 || index === 4 ? "lg:border-r" : ""}`}
     >
       <div className="flex h-full flex-col justify-between">
         <p className="mb-6 text-base leading-snug text-gray-800 dark:text-gray-400">

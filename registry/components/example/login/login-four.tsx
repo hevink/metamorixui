@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="relative flex items-end px-4 pb-10 pt-60 sm:px-6 sm:pb-16 md:justify-center lg:px-8 lg:pb-24">
+        <div className="relative flex items-end pb-10 pt-60 sm:px-6 sm:pb-16 md:justify-center lg:px-8 lg:pb-24">
           <div className="absolute inset-0">
             <img
               className="size-full rounded-md object-cover object-top"
@@ -19,7 +19,7 @@ const Login = () => {
             <TestimonialSlider testimonials={testimonials} />
           </div>
         </div>
-        <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+        <div className="flex items-center justify-center py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
             <div className="mb-3 flex justify-center">
               <img

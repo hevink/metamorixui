@@ -42,7 +42,7 @@ const items: Item[] = [
 
 const FAQ: React.FC = () => {
   return (
-    <div className="mx-auto max-w-3xl space-y-4 p-6">
+    <div className="mx-auto max-w-3xl space-y-4 sm:p-6">
       {items.map((item) => (
         <Collapsible key={item.id} title={item.title}>
           <p>{item.content}</p>

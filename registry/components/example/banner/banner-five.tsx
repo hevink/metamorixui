@@ -15,7 +15,7 @@ const Banner = () => {
         style={{
           background: "linear-gradient(90deg, #4b6cb7 0%, #182848 100%)",
         }}
-        className="flex h-12 w-full flex-col gap-2 px-4 py-4 md:flex-row md:items-center md:justify-center md:gap-4 md:px-6 lg:py-0"
+        className="flex h-auto w-full flex-col gap-2 !py-4 px-4 md:flex-row md:items-center md:justify-center md:gap-4 md:px-6 lg:py-0"
         ref={ref}
       >
         <motion.p

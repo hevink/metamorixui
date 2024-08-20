@@ -65,7 +65,9 @@ const Banner = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <span className="text-blue-300">Ready to innovate?</span>
+          <span className="hidden text-blue-300 sm:block">
+            Ready to innovate?
+          </span>
           <motion.a
             href="#"
             className="group relative flex items-center space-x-2 overflow-hidden rounded-full bg-blue-500 px-6 py-2 font-bold text-white shadow-lg transition duration-300 ease-in-out hover:shadow-xl"

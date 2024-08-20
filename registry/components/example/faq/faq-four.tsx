@@ -134,7 +134,7 @@ const FAQ: React.FC = () => {
   const [openItem, setOpenItem] = useState<number | null>(null);
 
   return (
-    <div className="mx-auto max-w-3xl p-6 text-gray-800 dark:text-gray-200">
+    <div className="mx-auto max-w-3xl text-gray-800 dark:text-gray-200 sm:p-6">
       <h1 className="mb-4 text-center text-3xl font-bold">
         <span className="bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent">
           Frequently{" "}

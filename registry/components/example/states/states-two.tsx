@@ -32,7 +32,7 @@ const StepItem: React.FC<StepItemProps> = ({ number, children }) => (
   <div className="group relative">
     <div className="absolute left-[calc(50%+20px)] top-[20px] hidden h-px w-[calc(100%-40px)] bg-gradient-to-r from-[#e5e7eb] via-[#9ca3af] to-[#e5e7eb] group-last:hidden dark:from-[#18181b] dark:via-[#3F3F46] dark:to-[#18181b]  sm:block"></div>
 
-    <div className="relative mx-auto mb-4 flex size-10 shrink-0 items-center justify-center rounded-lg border border-gray-300 dark:border-neutral-600 font-semibold text-gray-900 dark:text-gray-300">
+    <div className="relative mx-auto mb-4 flex size-10 shrink-0 items-center justify-center rounded-lg border border-gray-300 font-semibold text-gray-900 dark:border-neutral-600 dark:text-gray-300">
       {number}
     </div>
     <p className="prose-primary prose prose-sm mx-auto mt-2 max-w-48 text-center text-gray-600 dark:prose-invert dark:text-gray-400">

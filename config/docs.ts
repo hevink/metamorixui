@@ -132,11 +132,6 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/forgot-password`,
           items: [],
         },
-        {
-          title: "Reset Password",
-          href: `/docs/components/reset-password`,
-          items: [],
-        },
       ],
     },
   ],

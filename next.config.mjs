@@ -36,6 +36,11 @@ const nextConfig = {
         hostname: "localhost",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "**",
+      },
     ],
   },
   async redirects() {

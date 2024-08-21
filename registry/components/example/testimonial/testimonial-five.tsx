@@ -64,7 +64,7 @@ const Testimonial = () => {
               ease: [0, 0.71, 0.2, 1.01],
               scale: {
                 type: "spring",
-                damping: 10,
+                damping: 15,
                 stiffness: 150,
                 restDelta: 0.001,
               },

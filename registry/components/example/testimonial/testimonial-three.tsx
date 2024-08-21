@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 const Testimonial = () => {
   return (
     <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12 px-4 py-4 sm:py-14">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+      <div className="text-center max-w-4xl mx-auto p-4 sm:py-14">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
           Empowering Individuals
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600">
@@ -15,8 +15,7 @@ const Testimonial = () => {
         </h1>
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">
           Discover why over 150,000 users choose our platform to streamline
-          their workflow and enhance their digital presence. From solo
-          entrepreneurs to global enterprises, we're trusted by all.
+          their workflow and enhance their digital presence.
         </p>
       </div>
 

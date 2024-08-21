@@ -21,23 +21,8 @@ export const docsConfig: DocsConfig = {
       title: "UI Blocks",
       items: [
         {
-          title: "Headers",
-          href: `/docs/components/headers`,
-          items: [],
-        },
-        {
-          title: "Footer",
-          href: `/docs/components/footers`,
-          items: [],
-        },
-        {
           title: "Hero",
           href: `/docs/components/hero`,
-          items: [],
-        },
-        {
-          title: "FAQs",
-          href: `/docs/components/faq`,
           items: [],
         },
         {
@@ -45,11 +30,26 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/pricing`,
           items: [],
         },
+        {
+          title: "FAQs",
+          href: `/docs/components/faq`,
+          items: [],
+        },
         // {
         //   title: "Bentogrid",
         //   href: `/docs/components/bentogrid`,
         //   items: [],
         // },
+        {
+          title: "Features",
+          href: `/docs/components/features`,
+          items: [],
+        },
+        {
+          title: "Stats",
+          href: `/docs/components/state`,
+          items: [],
+        },
         {
           title: "Testimonials",
           href: `/docs/components/testimonials`,
@@ -75,21 +75,13 @@ export const docsConfig: DocsConfig = {
         //   href: `/docs/components/sidebar`,
         //   items: [],
         // },
-        {
-          title: "Features",
-          href: `/docs/components/features`,
-          items: [],
-        },
+
         // {
         //   title: "Newsletter",
         //   href: `/docs/components/newsletter`,
         //   items: [],
         // },
-        {
-          title: "Stats",
-          href: `/docs/components/state`,
-          items: [],
-        },
+
         // {
         //   title: "Modal",
         //   href: `/docs/components/modal`,
@@ -100,6 +92,16 @@ export const docsConfig: DocsConfig = {
         //   href: `/docs/components/card`,
         //   items: [],
         // },
+        {
+          title: "Headers",
+          href: `/docs/components/headers`,
+          items: [],
+        },
+        {
+          title: "Footer",
+          href: `/docs/components/footers`,
+          items: [],
+        },
         {
           title: "Logo-cloud",
           href: `/docs/components/logo-cloud`,

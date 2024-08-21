@@ -120,13 +120,11 @@ const Pricing = () => {
                   >
                     <a
                       href="#"
-                      className={`inline-flex w-full items-center justify-center px-4 py-2 text-base font-semibold transition-all duration-200 ${
-                        tier.popular
-                          ? "bg-blue-600 text-white hover:bg-blue-700"
-                          : "bg-blue-600 text-white hover:bg-blue-700"
-                      } rounded-md border border-transparent`}
+                      className="group flex h-10 items-center justify-center rounded-md border border-blue-600 bg-gradient-to-b from-blue-500 via-blue-500 to-blue-600 px-4 text-neutral-50 shadow-[inset_0_1px_0px_0px_#93c5fd] hover:from-blue-600 hover:via-blue-600 hover:to-blue-600 active:[box-shadow:none]"
                     >
-                      Get Started
+                      <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                        Get Started
+                      </span>
                     </a>
                   </td>
                 ))}

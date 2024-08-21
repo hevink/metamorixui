@@ -40,16 +40,18 @@ const Hero = () => {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-400"
+                className="group flex h-10 items-center justify-center rounded-md border border-orange-600 bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 px-4 text-neutral-50 shadow-[inset_0_1px_0px_0px_#fdba74] active:[box-shadow:none]"
               >
-                Get started
+                <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                  Get started
+                </span>
               </a>
 
               <a
                 href="#"
                 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-300"
               >
-                Learn more <span aria-hidden="true">→</span>
+                Learn more <span aria-hidden="true"> → </span>
               </a>
             </div>
           </div>
@@ -100,9 +102,11 @@ const Header = () => {
         <div className="hidden lg:block">
           <a
             href="#"
-            className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-400"
+            className="group flex h-10 items-center justify-center rounded-md border border-orange-600 bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 px-4 text-neutral-50 shadow-[inset_0_1px_0px_0px_#fdba74] active:[box-shadow:none]"
           >
-            Login
+            <span className="block group-active:[transform:translate3d(0,1px,0)]">
+              Login
+            </span>
           </a>
         </div>
         <div className="lg:hidden">
@@ -157,12 +161,14 @@ const Header = () => {
                     ))}
                   </nav>
                 </div>
-                <button
-                  type="button"
-                  className="mt-4 w-full rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-400"
+                <a
+                  href="#"
+                  className="group flex h-10 items-center justify-center rounded-md border border-orange-600 bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 px-4 text-neutral-50 shadow-[inset_0_1px_0px_0px_#fdba74] active:[box-shadow:none]"
                 >
-                  Login
-                </button>
+                  <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                    Login
+                  </span>
+                </a>
               </div>
             </div>
           </div>

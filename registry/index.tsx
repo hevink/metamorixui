@@ -597,6 +597,14 @@ const example: Registry = {
       () => import("@/registry/components/example/badge/badge-five"),
     ),
   },
+  "badge-six": {
+    name: "badge-six",
+    type: "components:example",
+    files: ["registry/components/example/badge/badge-six.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/badge/badge-six"),
+    ),
+  },
   "forgot-password-one": {
     name: "forgot-password-one",
     type: "components:example",

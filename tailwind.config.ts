@@ -84,8 +84,20 @@ module.exports = {
           "background-position-spin 3000ms infinite alternate",
         borderBeam: "border-beam calc(var(--duration)*1s) infinite linear",
         "logo-cloud": "logo-cloud 30s linear infinite",
+        flipper: "flip 6s infinite steps(2, end)",
+        rotater: "rotate 3s linear infinite both",
       },
       keyframes: {
+        flip: {
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+        rotate: {
+          to: {
+            transform: "rotate(90deg)",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -122,14 +134,6 @@ module.exports = {
         "marquee-vertical": {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
-        },
-        flip: {
-          to: { rotate: "360deg" },
-        },
-        rotate: {
-          to: {
-            transform: "rotate(90deg)",
-          },
         },
         "spin-around": {
           "0%": {

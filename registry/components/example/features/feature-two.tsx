@@ -34,7 +34,7 @@ const Feature = () => {
         Discover the power of our platform with these cutting-edge features
         designed to streamline your workflow and enhance productivity
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <div
             key={index}

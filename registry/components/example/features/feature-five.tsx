@@ -1,43 +1,33 @@
 import { CloudUpload, Layers, Lock, Shield } from "lucide-react";
 
+const uptimeData = [
+  { percentage: "99.99%", description: "guaranteed uptime" },
+  { percentage: "99.99%", description: "guaranteed uptime" },
+  { percentage: "99.99%", description: "guaranteed uptime" },
+];
+
 const Feature = () => {
   return (
-    <section className="pt-10">
-      <div className="absolute top-36 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-32 bg-gradient-to-br from-violet-600 to-purple-600 rounded-3xl opacity-40 blur-[200px] -z-50" />
-      <h1 className="text-4xl font-semibold text-center mx-auto max-w-md">
+    <section className="overflow-hidden py-10">
+      <div className="absolute left-1/2 top-36 -z-50 h-32 w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-gradient-to-br from-violet-600 to-purple-600 opacity-40 blur-[200px]" />
+      <h1 className="mx-auto max-w-md text-center text-4xl font-semibold">
         <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
           Dua lipa{" "}
         </span>{" "}
         is the best singer in the world
       </h1>
-      <div className="mt-10 md:mt-20 block md:flex justify-between gap-14 space-y-6 md:space-y-0 mx-auto max-w-xl">
-        <div className="flex items-center gap-5">
-          <div className="w-0.5 h-14 bg-purple-600" />
-          <div className="">
-            <div className="">99.99%</div>
-            <div className="text-sm text-neutral-600 dark:text-zinc-300">
-              guaranteed uptime
+      <div className="mx-auto mt-10 block max-w-xl justify-between gap-14 space-y-6 md:mt-20 md:flex md:space-y-0">
+        {uptimeData.map((item, index) => (
+          <div key={index} className="flex items-center gap-5">
+            <div className="h-14 w-0.5 bg-purple-600" />
+            <div>
+              <div>{item.percentage}</div>
+              <div className="text-sm text-neutral-600 dark:text-zinc-300">
+                {item.description}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex items-center gap-5">
-          <div className="w-0.5 h-14 bg-purple-600" />
-          <div className="">
-            <div className="">99.99%</div>
-            <div className="text-sm text-neutral-600 dark:text-zinc-300">
-              guaranteed uptime
-            </div>
-          </div>
-        </div>
-        <div className="flex items-center gap-5">
-          <div className="w-0.5 h-14 bg-purple-600" />
-          <div className="">
-            <div className="">99.99%</div>
-            <div className="text-sm text-neutral-600 dark:text-zinc-300">
-              guaranteed uptime
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="mt-10 md:mt-24">
         <div className="mx-auto mt-10 sm:mt-14 lg:mt-16">
@@ -45,16 +35,12 @@ const Feature = () => {
             {features.map((feature) => (
               <div
                 key={feature.name}
-                style={{
-                  background:
-                    "radial-gradient(99.75% 99.75% at 50% 99.75%, rgba(30, 41, 59, 0.24) 0%, rgba(15, 23, 42, 2.4e-05) 100%),rgba(0, 0, 0, 0.01)",
-                }}
-                className="flex items-start gap-4 p-4 border rounded-xl transition-all duration-300 ease-in-out"
+                className="flex items-start gap-4 rounded-xl border p-4 transition-all duration-300 ease-in-out"
               >
                 <div>
                   <div className="flex items-center gap-4">
                     <div className="shrink-0">
-                      <div className="flex size-10 items-center justify-center rounded-full bg-purple-600">
+                      <div className="flex size-10 items-center justify-center rounded-lg bg-purple-600">
                         <feature.icon
                           aria-hidden="true"
                           className="size-6 text-white"

@@ -56,7 +56,7 @@ const Feature = () => {
           className="flex flex-col items-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
         >
           <motion.div className="border w-fit border-purple-600 bg-purple-500/10 rounded-full py-0.5 px-2 text-xs mb-3">
             Features
@@ -65,7 +65,7 @@ const Feature = () => {
             className="text-2xl font-semibold mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.2 }}
           >
             Powerful features for your workflow
           </motion.h1>
@@ -73,7 +73,7 @@ const Feature = () => {
             className="text-center max-w-md text-sm text-gray-400"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.2 }}
           >
             Discover the power of our platform with these cutting-edge features
             designed to streamline your workflow and enhance productivity
@@ -98,7 +98,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
       className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center mb-12`}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ delay: 0.2 * index, duration: 0.5 }}
+      transition={{ delay: 0.2 * index, duration: 0.2 }}
     >
       <div className="md:w-1/2 md:px-8 mb-6 md:mb-0">
         <motion.div className="shrink-0 mb-3">
@@ -110,7 +110,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
           className="text-3xl font-semibold mb-2"
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-          transition={{ delay: 0.3 + 0.2 * index, duration: 0.5 }}
+          transition={{ delay: 0.3 + 0.2 * index, duration: 0.2 }}
         >
           {feature.title}
         </motion.h2>
@@ -118,7 +118,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
           className="text-gray-600 dark:text-gray-200 mb-5"
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-          transition={{ delay: 0.4 + 0.2 * index, duration: 0.5 }}
+          transition={{ delay: 0.4 + 0.2 * index, duration: 0.2 }}
         >
           {feature.description}
         </motion.p>
@@ -129,7 +129,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
               className="flex gap-2 items-start"
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ delay: 0.5 + 0.1 * i + 0.2 * index, duration: 0.5 }}
+              transition={{ delay: 0.5 + 0.1 * i + 0.2 * index, duration: 0.2 }}
             >
               <svg
                 className="text-purple-600"
@@ -170,7 +170,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
         animate={
           isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
         }
-        transition={{ delay: 0.6 + 0.2 * index, duration: 0.5 }}
+        transition={{ delay: 0.6 + 0.2 * index, duration: 0.2 }}
       >
         <img
           src={feature.image}

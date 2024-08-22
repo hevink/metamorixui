@@ -151,7 +151,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr />
+        <hr className="border-[#E4E4E7] dark:border-[#27272A]" />
         <p className="text-sm leading-5 text-gray-600 dark:text-gray-300">
           © {new Date().getFullYear()} Metamorix consultancy, Inc.
         </p>

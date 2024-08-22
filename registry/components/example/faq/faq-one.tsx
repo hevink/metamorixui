@@ -33,7 +33,7 @@ const faqItems = [
 
 const FAQ: React.FC = () => {
   return (
-    <div className="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-8 dark:divide-gray-100/10 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32">
+    <div className="mx-auto max-w-2xl divide-y divide-gray-900/10 pb-8 dark:divide-gray-100/10 sm:px-6 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32">
       <h2 className="text-2xl leading-10 text-gray-900 dark:text-gray-100">
         Frequently asked questions
       </h2>

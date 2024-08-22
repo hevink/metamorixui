@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const Cta = () => {
   return (
-    <section className="relative rounded-xl border py-20 overflow-hidden">
+    <section className="relative overflow-hidden rounded-xl border py-20">
       <Particles
         className="absolute inset-0 -z-20"
         quantity={200}

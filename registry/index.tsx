@@ -301,6 +301,14 @@ const example: Registry = {
       () => import("@/registry/components/example/hero/hero-four"),
     ),
   },
+  "hero-five": {
+    name: "hero-five",
+    type: "components:example",
+    files: ["registry/components/example/hero/hero-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/hero/hero-five"),
+    ),
+  },
   "faq-one": {
     name: "faq-one",
     type: "components:example",
@@ -616,6 +624,46 @@ const example: Registry = {
         import(
           "@/registry/components/example/forgot-password/forgot-password-one"
         ),
+    ),
+  },
+  "banner-one": {
+    name: "banner-one",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-one.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-one"),
+    ),
+  },
+  "banner-two": {
+    name: "banner-two",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-two.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-two"),
+    ),
+  },
+  "banner-three": {
+    name: "banner-three",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-three.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-three"),
+    ),
+  },
+  "banner-four": {
+    name: "banner-four",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-four.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-four"),
+    ),
+  },
+  "banner-five": {
+    name: "banner-five",
+    type: "components:example",
+    files: ["registry/components/example/banner/banner-five.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/banner/banner-five"),
     ),
   },
 };

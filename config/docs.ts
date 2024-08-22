@@ -112,6 +112,11 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/badge`,
           items: [],
         },
+        {
+          title: "Banner",
+          href: `/docs/components/banner`,
+          items: [],
+        },
       ],
     },
     {

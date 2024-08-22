@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <div className="">
       <Header />
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate pt-14 sm:px-6 lg:px-8">
         <div className="absolute left-1/2 top-1/2 -z-50 h-32 w-[100px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-gradient-to-br from-orange-600 to-yellow-600 opacity-80 blur-[200px] md:w-[600px]" />
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">

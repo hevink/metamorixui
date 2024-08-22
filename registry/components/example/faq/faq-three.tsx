@@ -89,7 +89,7 @@ const FAQItem = ({
 
 const FAQ = () => {
   return (
-    <div className="mx-auto max-w-2xl p-4">
+    <div className="mx-auto max-w-2xl sm:p-4">
       <h1 className="mb-4 bg-gradient-to-b from-[#434343] to-[#494949] bg-clip-text text-center text-3xl font-bold text-[#F4FFFA00] dark:from-[#fafafa] dark:to-[#b4b4b4]">
         Frequently asked questions
       </h1>

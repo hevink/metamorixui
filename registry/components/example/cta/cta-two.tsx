@@ -5,32 +5,32 @@ const Cta = () => {
   return (
     <section>
       <div className="flex flex-col items-center justify-center md:px-4">
-        <div className="md:p-6 rounded-lg w-full max-w-xl">
-          <h2 className="text-2xl font-bold text-center mb-2">
+        <div className="w-full max-w-xl rounded-lg md:p-6">
+          <h2 className="mb-2 text-center text-2xl font-bold">
             Sign up for our newsletter
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
+          <p className="mb-4 text-center text-gray-600 dark:text-gray-300">
             Be the first to know about releases and industry news and insights.
           </p>
           <form className="flex flex-col">
-            <div className="flex flex-col sm:flex-row gap-4 mb-4">
+            <div className="mb-4 flex flex-col gap-4 sm:flex-row">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow p-2 border rounded-l outline-none"
+                className="flex-grow rounded-l border p-2 outline-none dark:border-[#27272A]"
               />
-              <p className="text-sm block sm:hidden">
+              <p className="block text-sm sm:hidden">
                 We care about your data in our{" "}
                 <Link href="#" className="text-orange-500 underline">
                   privacy policy
                 </Link>
                 .
               </p>
-              <button className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded">
+              <button className="rounded bg-orange-600 px-4 py-2 text-white hover:bg-orange-700">
                 Subscribe
               </button>
             </div>
-            <p className="text-sm text-gray-600 text-center">
+            <p className="text-center text-sm text-gray-600">
               We care about your data in our{" "}
               <Link href="#" className="text-orange-600 underline">
                 privacy policy

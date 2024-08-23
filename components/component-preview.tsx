@@ -50,14 +50,14 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "relative my-4 flex flex-col space-y-2 lg:max-w-[120ch]",
+        "relative my-5 flex flex-col space-y-2 lg:max-w-[120ch]",
         className,
       )}
       {...props}
     >
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         {!preview && (
-          <div className="flex items-center justify-between pb-3">
+          <div className="flex items-center justify-between pb-2">
             <TabsList className="inline-flex h-9 items-center justify-center rounded-lg border bg-muted p-1 text-muted-foreground">
               <TabsTrigger
                 value="preview"

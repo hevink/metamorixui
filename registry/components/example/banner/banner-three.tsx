@@ -1,56 +1,30 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useState } from "react";
+import { X } from "lucide-react";
 
 const Banner = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: -50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5 }}
+    <div
+      className={`${
+        isVisible ? "translate-y-0" : "-translate-y-20"
+      } flex items-center justify-between bg-orange-600 px-4 py-3 text-white transition-transform duration-500 ease-in-out`}
+      style={{ transformOrigin: "top" }}
     >
-      <div
-        style={{
-          background: "linear-gradient(90deg, #4b6cb7 0%, #182848 100%)",
-        }}
-        className="md:gap4 flex flex-col gap-2 px-4 py-4 md:flex-row md:items-center md:justify-center md:px-6 lg:py-0"
-        ref={ref}
+      <span className="grow text-center">
+        🚀 Get Premium Components for your next project on Metamorix UI
+      </span>
+      <button
+        className="text-white transition hover:text-gray-300"
+        onClick={handleClose}
       >
-        <motion.img
-          src="https://about.gitlab.com/_nuxt/image/87eca8.svg"
-          className="hidden lg:block"
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        />
-        <motion.p
-          className="text-base font-semibold text-white"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          Get Premium Components for your next project on Metamorix UI
-        </motion.p>
-
-        <motion.button
-          className="whitespace-nowrap text-start text-base font-semibold text-white underline"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Get Started
-        </motion.button>
-
-        <motion.img
-          src="https://about.gitlab.com/_nuxt/image/65fccb.svg"
-          className="hidden lg:block"
-          initial={{ opacity: 0, x: 50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        />
-      </div>
-    </motion.section>
+        <X className="size-5" />
+      </button>
+    </div>
   );
 };
 

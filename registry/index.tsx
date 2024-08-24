@@ -626,22 +626,22 @@ const example: Registry = {
         ),
     ),
   },
-  "banner-one": {
-    name: "banner-one",
-    type: "components:example",
-    files: ["registry/components/example/banner/banner-one.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/banner/banner-one"),
-    ),
-  },
-  "banner-two": {
-    name: "banner-two",
-    type: "components:example",
-    files: ["registry/components/example/banner/banner-two.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/banner/banner-two"),
-    ),
-  },
+  // "banner-one": {
+  //   name: "banner-one",
+  //   type: "components:example",
+  //   files: ["registry/components/example/banner/banner-one.tsx"],
+  //   component: React.lazy(
+  //     () => import("@/registry/components/example/banner/banner-one"),
+  //   ),
+  // },
+  // "banner-two": {
+  //   name: "banner-two",
+  //   type: "components:example",
+  //   files: ["registry/components/example/banner/banner-two.tsx"],
+  //   component: React.lazy(
+  //     () => import("@/registry/components/example/banner/banner-two"),
+  //   ),
+  // },
   "banner-three": {
     name: "banner-three",
     type: "components:example",

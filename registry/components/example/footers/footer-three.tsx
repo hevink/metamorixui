@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 const navigation = [
-  { name: "About", href: "/" },
-  { name: "Privacy Policy", href: "/" },
-  { name: "Licensing", href: "/" },
-  { name: "Contact", href: "/" },
+  { name: "About", href: "#" },
+  { name: "Privacy Policy", href: "#" },
+  { name: "Licensing", href: "#" },
+  { name: "Contact", href: "#" },
 ];
 
 const Footer = () => {

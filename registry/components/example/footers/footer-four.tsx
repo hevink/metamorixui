@@ -3,28 +3,28 @@ import Link from "next/link";
 
 const links = {
   quickLinks: [
-    { name: "Our Story", href: "/" },
-    { name: "Newsroom", href: "/" },
-    { name: "Careers", href: "/" },
-    { name: "Blog", href: "/" },
+    { name: "Our Story", href: "#" },
+    { name: "Newsroom", href: "#" },
+    { name: "Careers", href: "#" },
+    { name: "Blog", href: "#" },
   ],
   services: [
-    { name: "Web Development", href: "/" },
-    { name: "Testing Automation", href: "/" },
-    { name: "AWS Development Services", href: "/" },
-    { name: "Mobile App Development", href: "/" },
+    { name: "Web Development", href: "#" },
+    { name: "Testing Automation", href: "#" },
+    { name: "AWS Development Services", href: "#" },
+    { name: "Mobile App Development", href: "#" },
   ],
   platforms: [
-    { name: "Hubspot", href: "/" },
-    { name: "Marketo Integration Services", href: "/" },
-    { name: "Marketing Glossary", href: "/" },
-    { name: "UIPath", href: "/" },
+    { name: "Hubspot", href: "#" },
+    { name: "Marketo Integration Services", href: "#" },
+    { name: "Marketing Glossary", href: "#" },
+    { name: "UIPath", href: "#" },
   ],
   company: [
-    { name: "Accessibility", href: "/" },
-    { name: "About", href: "/" },
-    { name: "Contact", href: "/" },
-    { name: "Learn more", href: "/" },
+    { name: "Accessibility", href: "#" },
+    { name: "About", href: "#" },
+    { name: "Contact", href: "#" },
+    { name: "Learn more", href: "#" },
   ],
 };
 
@@ -33,7 +33,7 @@ const Footer = () => {
     <footer className="py-4 font-sans tracking-wide md:rounded-t-2xl xl:py-6">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-4">
-          <Link href="/" className="block max-w-fit">
+          <Link href="#" className="block max-w-fit">
             <div className="inline-flex items-center space-x-2">
               <img
                 src="https://ui.metamorix.com/favicon.ico"

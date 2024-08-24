@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 const links = [
-  { href: "/", name: "Terms of Service" },
-  { href: "/", name: "Privacy Policy" },
-  { href: "/", name: "Contact" },
+  { href: "#", name: "Terms of Service" },
+  { href: "#", name: "Privacy Policy" },
+  { href: "#", name: "Contact" },
 ];
 
 const Footer = () => {

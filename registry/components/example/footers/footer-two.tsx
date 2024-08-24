@@ -5,24 +5,24 @@ import { cn } from "@/lib/utils";
 
 const navigation = {
   features: [
-    { title: "URL Shortener", href: "/" },
-    { title: "Link Checker", href: "/" },
-    { title: "Link Rotator", href: "/" },
+    { title: "URL Shortener", href: "#" },
+    { title: "Link Checker", href: "#" },
+    { title: "Link Rotator", href: "#" },
   ],
   product: [
-    { name: "Blog", href: "/" },
-    { name: "Brand", href: "/" },
-    { name: "Changelog", href: "/" },
+    { name: "Blog", href: "#" },
+    { name: "Brand", href: "#" },
+    { name: "Changelog", href: "#" },
   ],
   compare: [
-    { name: "Bitly", href: "/" },
-    { name: "Branch", href: "/" },
-    { name: "ClickMeter", href: "/" },
+    { name: "Bitly", href: "#" },
+    { name: "Branch", href: "#" },
+    { name: "ClickMeter", href: "#" },
   ],
   legal: [
-    { name: "Privacy", href: "/" },
-    { name: "Terms", href: "/" },
-    { name: "Abuse", href: "/" },
+    { name: "Privacy", href: "#" },
+    { name: "Terms", href: "#" },
+    { name: "Abuse", href: "#" },
   ],
 };
 

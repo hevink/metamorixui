@@ -17,7 +17,7 @@ export const docsConfig: DocsConfig = {
     },
   ],
   sidebarNav: [
-  {
+    {
       title: "Getting Started",
       items: [
         {
@@ -26,8 +26,18 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "CLI",
-          href: "/docs/cli",
+          title: "Installation",
+          href: "/docs/installation",
+          items: [],
+        },
+        {
+          title: "Eslint installation",
+          href: "/docs/eslint-installation",
+          items: [],
+        },
+        {
+          title: "Prettier installation",
+          href: "/docs/prettier-installation",
           items: [],
         },
       ],

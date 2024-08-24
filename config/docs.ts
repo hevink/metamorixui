@@ -17,6 +17,21 @@ export const docsConfig: DocsConfig = {
     },
   ],
   sidebarNav: [
+  {
+      title: "Getting Started",
+      items: [
+        {
+          title: "Introduction",
+          href: "/docs",
+          items: [],
+        },
+        {
+          title: "CLI",
+          href: "/docs/cli",
+          items: [],
+        },
+      ],
+    },
     {
       title: "UI Blocks",
       items: [

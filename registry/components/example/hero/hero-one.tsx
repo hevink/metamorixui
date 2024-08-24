@@ -12,7 +12,7 @@ const menuItems = [
 
 const Hero = () => {
   return (
-    <div className="">
+    <div>
       <Header />
       <div className="relative isolate pt-14 sm:px-6 lg:px-8">
         <div className="absolute left-1/2 top-1/2 -z-50 h-32 w-[100px] -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-gradient-to-br from-orange-600 to-yellow-600 opacity-80 blur-[200px] md:w-[600px]" />

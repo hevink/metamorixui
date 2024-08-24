@@ -153,7 +153,10 @@ const Header = () => {
             repeatType: "mirror",
           }}
           className="pointer-events-none absolute -inset-[100%] opacity-[15%]"
-          style={{ backgroundImage: "dark:url('/blackNoise.png')" }}
+          style={{
+            backgroundImage:
+              "dark:url('https://ui.metamorix.com/blackNoise.png')",
+          }}
         />
 
         <div className="relative grid place-content-center space-y-6 dark:bg-neutral-950 sm:p-4 md:min-h-screen md:p-8">

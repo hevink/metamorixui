@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <section className="">
+    <section>
       <div className="relative flex w-full flex-wrap items-center justify-between py-2 sm:px-8">
         <div className="flex pb-3">
           <div className="inline-flex items-center space-x-2">

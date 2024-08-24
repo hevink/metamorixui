@@ -101,7 +101,7 @@ const FAQ = () => {
           questions.
         </p>
       </div>
-      <div className="">
+      <div>
         {faqData.map((item, index) => (
           <FAQItem key={index} question={item.question} answer={item.answer} />
         ))}

@@ -1,12 +1,11 @@
-import Image from "next/image";
 import { Dog, Heart, Lock } from "lucide-react";
 
 const Hero = () => {
   return (
     <div className="relative block items-center overflow-hidden md:flex">
       <div className="w-full p-4 md:w-1/2">
-        <Image
-          src="/bg-grid.png"
+        <img
+          src="https://ui.metamorix.com/bg-grid.png"
           className="absolute inset-0 -z-50"
           alt="Hero"
           width={600}
@@ -37,19 +36,19 @@ const Hero = () => {
         </div>
         <div className="mt-10 block items-center gap-1 space-y-5 md:flex md:space-y-0">
           <div className="flex items-center gap-2 text-sm">
-            <div className="">
+            <div>
               <Heart className="size-6 text-[#34BC7B]" />
             </div>
             Protect payment gayway
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <div className="">
+            <div>
               <Lock className="size-6 text-[#34BC7B]" />
             </div>
             Easy to use and secure
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <div className="">
+            <div>
               <Dog className="size-6 text-[#34BC7B]" />
             </div>
             24/7 support team
@@ -58,12 +57,12 @@ const Hero = () => {
       </div>
 
       <div className="relative mt-10 w-full md:mt-0 md:w-1/2">
-        <Image
-          src="/dianasour.png"
+        <img
+          src="https://ui.metamorix.com/dianasour.png"
           className="relative"
-          alt="Hero"
-          width={600}
           height={600}
+          width={600}
+          alt="Hero"
         />
         <div
           className="absolute left-1/2 top-1/2 -z-50 h-96

@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 import { cn } from "@/lib/utils";
@@ -32,12 +31,19 @@ const States = () => {
         </div>
         <div className="mt-10 md:mt-0 md:w-1/2">
           <div className="w-fit rounded-lg bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 dark:bg-slate-300/10 dark:ring-slate-500/10 lg:rounded-2xl lg:p-3">
-            <Image
-              src="/dashboard.png"
+            {/* <Image
+              src="https://ui.metamorix.com/_next/image?url=%2Fdashboard.png&w=1080&q=100"
               width={500}
               height={500}
               alt={""}
               quality={"100"}
+              className="w-full rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10 dark:bg-black"
+            /> */}
+            <img
+              src="https://ui.metamorix.com/dashboard.png"
+              width={500}
+              height={500}
+              alt="State"
               className="w-full rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10 dark:bg-black"
             />
           </div>

@@ -3,6 +3,64 @@ title: Prettier Installation
 description: How to install Prettier in your project.
 ---
 
-If you are looking to style your code writing and to have a readable and clean code, then prettier is the best option for that.
+## Why Use Prettier?
 
-If you are working with a team, then I am sure that all of you are going to write the codes in different ways, so prettier is going to handle that so that you are going to have the same code written.
+- Maintains consistent code style
+- Catches potential errors and bad practices
+- Improves code readability
+- Enforces team-wide coding standards
+- Can automatically fix many issues
+
+## Installing Prettier
+
+Follow these steps to install and set up Prettier in your project:
+
+<Steps>
+
+### Installation Steps
+
+Open your terminal and navigate to your project directory.
+
+### Install Prettier as a Dev Dependency:
+
+```bash
+npm install --save-dev prettier
+```
+
+### Create a Configuration File:
+
+To customize Prettier's behavior, create a `.prettierrc` file in the root of your project. Here's an example configuration:
+
+```json
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true
+}
+```
+
+### Add a .prettierignore File:
+
+Create a `.prettierignore` file to specify files or directories that Prettier should ignore. Example:
+
+```json
+node_modules
+dist
+build
+```
+
+### Add a script to your `package.json` file:
+
+```json
+{
+  "scripts": {
+    "format": "prettier --write ."
+  }
+}
+```
+
+</Steps>

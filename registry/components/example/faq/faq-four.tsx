@@ -145,11 +145,11 @@ const FAQ: React.FC = () => {
         Need help with something? Here are our most frequently asked questions.
       </p>
 
-      <div className="mx-auto mb-10 flex max-w-lg rounded-lg border border-[#e4e4e7] p-1 dark:border-[#27272a]">
+      <div className="mx-auto mb-10 flex max-w-lg rounded-lg border border-[#e4e4e7] p-1 dark:border-[#27272a] space-x-1">
         {tabData.map((tab) => (
           <motion.button
             key={tab.id}
-            className={`mx-px flex-1 rounded-md px-3 py-2 text-sm font-medium ${
+            className={`flex-1 rounded px-3 py-2 text-sm font-medium ${
               activeTab === tab.id
                 ? "border border-[#e4e4e7] bg-gray-300/40 font-semibold dark:border-[#27272a] dark:bg-gray-700/10"
                 : "border border-transparent text-gray-500 hover:bg-gray-300/40 hover:dark:border-[#27272a] hover:dark:bg-gray-700/10 hover:dark:text-gray-300"

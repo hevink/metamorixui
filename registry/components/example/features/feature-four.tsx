@@ -12,8 +12,7 @@ const features = [
       "Always give customers a human to chat to",
       "Automate customer support and close leads faster",
     ],
-    image:
-      "https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZ7KRARgFHaZRwcpcVbJepNUjGu6c18gVI86CKcdYiGl9MWpGGvuoI0GQBWfv8a1ZUPF4asaNmtwxhH9fAkarcoXvihhMKBAg=w1023-h640",
+    image: "/spider-man.png",
     alt: "Share team inboxes",
     icon: CloudUpload,
   },
@@ -26,8 +25,7 @@ const features = [
       "Embed help articles right on your website",
       "Customers never have to leave the page to find an answer",
     ],
-    image:
-      "https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihatMPoFC4SEv7c8l6jQEoAk7INWOCCl0aCRIZWTGhe2wiP-vfw1-l05pHTA1ZjYKvBmenlYVKd8TDb_cI0uCW2StB7OeGDOdw=w1023-h640",
+    image: "/spiderman.png",
     alt: "Deliver instant answers",
     button: "Learn More",
     icon: CloudUpload,
@@ -42,8 +40,7 @@ const features = [
       "Connect the tools you already use with 100+ integrations",
     ],
     alt: "Manage your team with reports",
-    image:
-      "https://lh3.googleusercontent.com/drive-viewer/AKGpihYF41rU0YFrZVX_SsJAU0BVRq9R0qxnTblk9rnR3JxKOYUA00z1oPD7UXeMEWWQaW-xnLgzCDidlPaBLezAf5yVpFrvecki1Q=w1023-h640",
+    image: "/funny-spiderman.png",
     icon: CloudUpload,
   },
 ];
@@ -53,16 +50,16 @@ const Feature = () => {
     <section className="py-12">
       <div className="container mx-auto px-4">
         <motion.div
-          className="flex flex-col items-center mb-12"
+          className="mb-12 flex flex-col items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
         >
-          <motion.div className="border w-fit border-purple-600 bg-purple-500/10 rounded-full py-0.5 px-2 text-xs mb-3">
+          <motion.div className="mb-3 w-fit rounded-full border border-purple-600 bg-purple-500/10 px-2 py-0.5 text-xs">
             Features
           </motion.div>
           <motion.h1
-            className="text-2xl font-semibold mb-4"
+            className="mb-4 text-2xl font-semibold"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.2 }}
@@ -70,7 +67,7 @@ const Feature = () => {
             Powerful features for your workflow
           </motion.h1>
           <motion.p
-            className="text-center max-w-md text-sm text-gray-400"
+            className="max-w-md text-center text-sm text-gray-400"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.2 }}
@@ -95,19 +92,19 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
   return (
     <motion.div
       ref={ref}
-      className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center mb-12`}
+      className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} mb-12 items-center`}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ delay: 0.2 * index, duration: 0.2 }}
     >
-      <div className="md:w-1/2 md:px-8 mb-6 md:mb-0">
-        <motion.div className="shrink-0 mb-3">
+      <div className="mb-6 md:mb-0 md:w-1/2 md:px-8">
+        <motion.div className="mb-3 shrink-0">
           <div className="flex size-10 items-center justify-center rounded-lg bg-purple-600">
             <feature.icon aria-hidden="true" className="size-6 text-white" />
           </div>
         </motion.div>
         <motion.h2
-          className="text-3xl font-semibold mb-2"
+          className="mb-2 text-3xl font-semibold"
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ delay: 0.3 + 0.2 * index, duration: 0.2 }}
@@ -115,18 +112,18 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
           {feature.title}
         </motion.h2>
         <motion.p
-          className="text-gray-600 dark:text-gray-200 mb-5"
+          className="mb-5 text-gray-600 dark:text-gray-200"
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ delay: 0.4 + 0.2 * index, duration: 0.2 }}
         >
           {feature.description}
         </motion.p>
-        <ul className="space-y-2 mb-4">
+        <ul className="mb-4 space-y-2">
           {feature.pointers.map((pointer: string, i: number) => (
             <motion.li
               key={i}
-              className="flex gap-2 items-start"
+              className="flex items-start gap-2"
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ delay: 0.5 + 0.1 * i + 0.2 * index, duration: 0.2 }}
@@ -156,7 +153,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
         </ul>
         {feature.button && (
           <motion.button
-            className="mt-4 bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors"
+            className="mt-4 rounded-md bg-purple-600 px-4 py-2 text-white transition-colors hover:bg-purple-700"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -175,7 +172,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
         <img
           src={feature.image}
           alt={feature.alt}
-          className="rounded-lg shadow-md w-full object-cover"
+          className="w-full rounded-lg object-cover"
         />
       </motion.div>
     </motion.div>

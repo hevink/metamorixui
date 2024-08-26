@@ -38,15 +38,13 @@ const Pricing = () => {
             </div>
             <div className="mt-6">
               {plan.id === "pro" ? (
-                <button
-                  className="group h-10 w-full select-none rounded-lg bg-orange-600 px-3 text-sm leading-8 text-zinc-50 shadow-[0_-1px_0_1px_#ea580c_inset,0_0_0_1px_#f97316_inset,0_0.5px_0_1.5px_#fdba74_inset] hover:bg-orange-700 active:bg-orange-800 active:shadow-[-1px_0px_1px_0px_rgba(0,0,0,.2)_inset,1px_0px_1px_0px_rgba(0,0,0,.2)_inset,0px_0.125rem_0px_0px_rgba(0,0,0,.6)_inset]"
-                >
+                <button className="group h-10 w-full select-none rounded-lg bg-orange-600 px-3 text-sm leading-8 text-zinc-50 shadow-[0_-1px_0_1px_#ea580c_inset,0_0_0_1px_#f97316_inset,0_0.5px_0_1.5px_#fdba74_inset] hover:bg-orange-700 active:shadow-[-1px_0px_1px_0px_rgba(0,0,0,.2)_inset,1px_0px_1px_0px_rgba(0,0,0,.2)_inset,0px_0.125rem_0px_0px_rgba(0,0,0,.6)_inset]">
                   <span className="block group-active:[transform:translate3d(0,1px,0)]">
-                    Buy Now
+                    Get Started
                   </span>
                 </button>
               ) : (
-                <button className="w-full rounded-lg border border-orange-600 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 dark:hover:bg-gray-800">
+                <button className="w-full rounded-lg border border-orange-600 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-400/10">
                   Get Started
                 </button>
               )}
@@ -83,11 +81,9 @@ const plans = [
     description: "Perfect for individuals and small projects",
     sellingPrice: { monthly: "$0" },
     features: [
-      "Basic Support",
-      "Community Access",
-      "Public Documentation",
-      "Unlimited API Requests",
-      "7-day Analytics Retention",
+      "Free UI Blocks",
+      "MIT Licence. Personal or commercial projects.",
+      "React, NextJS and Tailwind CSS",
     ],
   },
   {

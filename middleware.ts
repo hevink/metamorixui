@@ -23,12 +23,6 @@ export default async function middleware(req: NextRequest) {
       new URL(pathname, `https://${engyneSubdomain}.engyne.page`),
     );
   }
-
-  if (pathname.startsWith("/blog") || pathname.startsWith("/tags")) {
-    return NextResponse.rewrite(
-      new URL(pathname, `https://${engyneSubdomain}.engyne.page`),
-    );
-  }
   if (pathname.startsWith("/_engyne")) {
     return NextResponse.rewrite(
       new URL(pathname, `https://${engyneSubdomain}.engyne.page`),

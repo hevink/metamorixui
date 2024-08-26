@@ -9,7 +9,7 @@ const SiteTestimonial = () => {
         <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-5xl">
           Empowering Individuals
           <br />
-          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
             and Businesses
           </span>
         </h1>

@@ -1,0 +1,59 @@
+---
+title: Eslint Installation
+description: How to install ESLint in your project for consistent code styling.
+---
+
+## Why Use ESLint?
+
+- Maintains consistent code style
+- Catches potential errors and bad practices
+- Improves code readability
+- Enforces team-wide coding standards
+- Can automatically fix many issues
+
+## Installing ESLint
+
+Follow these steps to install and set up ESLint in your project:
+
+<Steps>
+
+### Installation Steps
+
+Open your terminal and navigate to your project directory.
+
+### Install ESLint as a dev dependency:
+
+```bash
+npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin --f
+```
+
+### Add a script to your `.eslintrc.json` file:
+
+```json
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "root": true,
+  "rules": {
+    "no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": "error"
+  }
+}
+```
+
+### Add a script to your `package.json` file:
+
+```json
+{
+  "scripts": {
+    "lint": "next lint"
+  }
+}
+```
+
+</Steps>

@@ -117,11 +117,11 @@ export const docsConfig: DocsConfig = {
         //   href: `/docs/components/card`,
         //   items: [],
         // },
-        {
-          title: "Headers",
-          href: `/docs/components/headers`,
-          items: [],
-        },
+        // {
+        //   title: "Headers",
+        //   href: `/docs/components/headers`,
+        //   items: [],
+        // },
         {
           title: "Footer",
           href: `/docs/components/footers`,

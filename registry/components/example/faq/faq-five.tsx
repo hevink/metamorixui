@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react"; // Import icons from Lucide
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface CollapsibleProps {
   title: string;
@@ -43,6 +43,12 @@ const items: Item[] = [
 const FAQ: React.FC = () => {
   return (
     <div className="mx-auto max-w-3xl space-y-4 sm:p-6">
+      <h1 className="mb-4 bg-gradient-to-b from-[#434343] to-[#494949] bg-clip-text text-center text-3xl font-bold text-[#F4FFFA00] dark:from-[#fafafa] dark:to-[#b4b4b4]">
+        Frequently asked questions
+      </h1>
+      <p className="mb-10 text-center text-gray-600 dark:text-gray-400">
+        Need help with something? Here are our most frequently asked questions.
+      </p>
       {items.map((item) => (
         <Collapsible key={item.id} title={item.title}>
           <p>{item.content}</p>
@@ -65,7 +71,7 @@ const Collapsible: React.FC<CollapsibleProps> = ({ title, children }) => {
     <div className="rounded-md border shadow-md">
       <button
         onClick={toggleCollapse}
-        className={`flex w-full items-center justify-between border-b px-4 py-2 text-left ${
+        className={`flex w-full items-center justify-between px-4 py-2 text-left ${
           isOpen && "border-b"
         }`}
       >
@@ -81,7 +87,7 @@ const Collapsible: React.FC<CollapsibleProps> = ({ title, children }) => {
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <div className="p-4">{children}</div>
+        <div className="p-4 text-neutral-600 dark:text-neutral-300">{children}</div>
       </div>
     </div>
   );

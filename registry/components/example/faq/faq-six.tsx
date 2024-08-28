@@ -46,7 +46,7 @@ const FAQItem = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-[#e4e4e7] py-4 dark:border-[#27272a]">
+    <div className="border-b border-gray-300 py-4 dark:border-[#27272a]">
       <button
         className="flex w-full items-center justify-between text-left"
         onClick={() => setIsOpen(!isOpen)}

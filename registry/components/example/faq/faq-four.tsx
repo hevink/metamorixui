@@ -145,7 +145,7 @@ const FAQ: React.FC = () => {
         Need help with something? Here are our most frequently asked questions.
       </p>
 
-      <div className="mx-auto mb-10 flex max-w-lg rounded-lg border border-[#e4e4e7] p-1 dark:border-[#27272a] space-x-1">
+      <div className="mx-auto mb-10 flex max-w-lg space-x-1 rounded-lg border border-gray-300 p-1 dark:border-[#27272a]">
         {tabData.map((tab) => (
           <motion.button
             key={tab.id}

@@ -125,7 +125,7 @@ const Footer = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-full border border-gray-200 p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-300"
+                className="group rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-300"
               >
                 <span className="sr-only">Github</span>
                 <Github className="size-4 text-gray-600 transition-colors group-hover:text-black dark:text-gray-200" />
@@ -134,7 +134,7 @@ const Footer = () => {
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-full border border-gray-200 p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-300"
+                className="group rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-300"
               >
                 <span className="sr-only">LinkedIn</span>
                 <LinkedIn className="size-4 text-gray-600 transition-colors group-hover:text-[#0077b5] dark:text-gray-200" />
@@ -143,7 +143,7 @@ const Footer = () => {
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-full border border-gray-200 p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-300"
+                className="group rounded-full border border-gray-300 p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-300"
               >
                 <span className="sr-only">YouTube</span>
                 <YouTube className="size-4 text-gray-600 transition-colors group-hover:text-[#ff0000] dark:text-gray-200" />

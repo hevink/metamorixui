@@ -1,3 +1,27 @@
+// Instructions for integrating continuous logo animation in Tailwind CSS:
+// Add the following configurations to the `extend` section of your `tailwind.config.js`:
+// module.exports = {
+//   theme: {
+//     extend: {
+//       keyframes: {
+//         marquee: {
+//           from: { transform: "translateX(0)" },
+//           to: { transform: "translateX(calc(-100% - var(--gap)))" },
+//         },
+//         "marquee-vertical": {
+//           from: { transform: "translateY(0)" },
+//           to: { transform: "translateY(calc(-100% - var(--gap)))" },
+//         },
+//       },
+//       animation: {
+//         marquee: "marquee var(--duration) infinite linear",
+//         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+//       },
+//     },
+//   },
+//   plugins: [],
+// };
+
 import React from "react";
 
 import { cn } from "@/lib/utils";
@@ -5,15 +29,15 @@ import { cn } from "@/lib/utils";
 const Testimonial = () => {
   return (
     <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <div className="text-center max-w-4xl mx-auto p-4 sm:py-14">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+      <div className="mx-auto max-w-4xl p-4 text-center sm:py-14">
+        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-5xl">
           Empowering Individuals
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600">
+          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
             and Businesses
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">
+        <p className="text-lg text-gray-600 dark:text-gray-300 md:text-xl">
           Discover why over 150,000 users choose our platform to streamline
           their workflow and enhance their digital presence.
         </p>

@@ -43,7 +43,7 @@ const SignIn = () => {
           </p>
 
           <div className="mt-8 flex items-center justify-center space-x-4">
-            <div className="flex w-full items-center space-x-2 rounded-lg border border-[#e4e4e7] p-1 dark:border-[#27272a]">
+            <div className="flex w-full items-center space-x-2 rounded-lg border border-gray-300 p-1 dark:border-[#27272a]">
               <TabButton
                 isActive={isSignIn}
                 onClick={() => setIsSignIn(true)}

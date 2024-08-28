@@ -27,7 +27,7 @@ const State = () => {
   return (
     <section className="py-10">
       <div className="flex flex-col items-center justify-center">
-        <div className="mb-6 flex size-10 items-center justify-center rounded-lg border-2 bg-black/5 dark:bg-white/5">
+        <div className="mb-6 flex size-10 items-center justify-center rounded-lg border-2 border-black/5 bg-black/5 dark:bg-white/5">
           <Zap aria-hidden="true" className="size-6 text-purple-600" />
         </div>
         <h1 className="mx-auto max-w-md text-center text-2xl font-semibold md:text-4xl">

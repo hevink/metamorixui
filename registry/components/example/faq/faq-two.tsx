@@ -91,7 +91,7 @@ const Accordion: React.FC<AccordionProps> = ({
         delay: 0.2 * i,
         duration: 0.8,
       }}
-      className="overflow-hidden rounded-lg border border-[#e4e4e7] dark:border-[#27272a]"
+      className="overflow-hidden rounded-lg border border-gray-300 dark:border-[#27272a]"
     >
       <motion.header
         initial={false}

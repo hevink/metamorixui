@@ -172,7 +172,7 @@ const FeatureItem = ({ feature, index }: { feature: any; index: number }) => {
         <img
           src={feature.image}
           alt={feature.alt}
-          className="w-full rounded-lg object-cover shadow-md"
+          className="w-full rounded-lg object-cover"
         />
       </motion.div>
     </motion.div>

@@ -13,6 +13,7 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: ComponentName;
   align?: "center" | "start" | "end";
   preview?: boolean;
+  title?: string;
 }
 
 export function ComponentPreview({
@@ -21,6 +22,7 @@ export function ComponentPreview({
   className,
   align = "center",
   preview = false,
+  title,
   ...props
 }: ComponentPreviewProps) {
   const [key, setKey] = React.useState(0); // State to trigger re-render of preview
@@ -50,7 +52,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "relative my-5 flex flex-col space-y-2 lg:max-w-[120ch]",
+        "relative my-3 flex flex-col space-y-2 lg:max-w-[120ch]",
         className,
       )}
       {...props}
@@ -58,6 +60,9 @@ export function ComponentPreview({
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         {!preview && (
           <div className="flex items-center justify-between pb-2">
+            <p className="bg-gradient-to-b from-black to-gray-900/50 bg-clip-text text-center text-sm font-bold text-transparent dark:from-gray-50 dark:to-gray-300 md:text-lg lg:text-xl">
+              {title}
+            </p>
             <TabsList className="inline-flex h-9 items-center justify-center rounded-lg border bg-muted p-1 text-muted-foreground">
               <TabsTrigger
                 value="preview"
@@ -72,13 +77,13 @@ export function ComponentPreview({
                 Code
               </TabsTrigger>
             </TabsList>
-            <Button
+            {/* <Button
               onClick={() => setKey((prev) => prev + 1)}
               className="absolute right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
               variant="ghost"
             >
               <RotateCcw size={16} />
-            </Button>
+            </Button> */}
           </div>
         )}
         <TabsContent

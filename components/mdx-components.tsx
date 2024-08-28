@@ -184,7 +184,7 @@ const components = {
         background:
           "radial-gradient(50% 100% at 50% 100%,rgba(255,255,255,.32) 0%,rgba(255,255,255,0) 100%)",
       }}
-      className="my-10"
+      className="my-12"
       {...props}
     />
   ),

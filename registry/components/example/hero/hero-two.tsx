@@ -59,9 +59,7 @@ const Hero = () => {
             <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 backdrop-blur-3xl lg:-m-4 lg:rounded-2xl">
               <div className="gradient absolute inset-0 left-1/2 top-1/2 -z-10 size-3/4 -translate-x-1/2 -translate-y-1/2 blur-[10rem]" />
               <Image
-                src={
-                  "https://framerusercontent.com/images/U5dvfukEWnDVNSFJrIWb4qzBfSA.webp"
-                }
+                src={"https://ui.metamorix.com/hero.png"}
                 alt="banner image"
                 width={1200}
                 height={1200}

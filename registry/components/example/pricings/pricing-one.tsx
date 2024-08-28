@@ -20,25 +20,29 @@ const Pricing = () => {
             key={plan.id}
             className={`mx-auto mt-6 flex w-full flex-col rounded-xl p-4 shadow-sm ${
               plan.id === "pro"
-                ? "border-4 border-blue-600"
+                ? "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#3c45fa] via-[#3b76ff] to-[#000aff] text-white"
                 : "border border-[#e4e4e7] dark:border-[#27272a]"
             }`}
           >
             <div className="w-full space-y-4">
               <p className="text-lg font-semibold">{plan.name.toUpperCase()}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p
+                className={`text-sm ${plan.id === "pro" ? "text-white" : "text-gray-600 dark:text-gray-400"}`}
+              >
                 {plan.description}
               </p>
               <p className="text-4xl font-semibold">
                 <span>{plan.sellingPrice.monthly}</span>
-                <span className="text-base text-gray-700 dark:text-gray-300">
+                <span
+                  className={`text-base ${plan.id === "pro" ? "text-white" : "text-gray-700 dark:text-gray-300"}`}
+                >
                   /mo
                 </span>
               </p>
             </div>
             <div className="mt-6">
               {plan.id === "pro" ? (
-                <button className="group h-10 w-full select-none rounded-lg bg-blue-600 px-3 text-sm leading-8 text-zinc-50 shadow-[0_-1px_0_1px_#1e3a8a_inset,0_0_0_1px_#1d4ed8_inset,0_0.5px_0_1.5px_#60a5fa_inset] hover:bg-blue-700 active:bg-blue-800 active:shadow-[-1px_0px_1px_0px_rgba(0,0,0,.2)_inset,1px_0px_1px_0px_rgba(0,0,0,.2)_inset,0px_0.125rem_0px_0px_rgba(0,0,0,.6)_inset]">
+                <button className="group h-10 w-full select-none rounded-lg bg-white px-3 text-sm leading-8 text-blue-600 shadow-[0_-1px_0_1px_#1e3a8a_inset,0_0_0_1px_#1d4ed8_inset,0_0.5px_0_1.5px_#60a5fa_inset] hover:bg-gray-100 active:bg-gray-200 active:shadow-[-1px_0px_1px_0px_rgba(0,0,0,.2)_inset,1px_0px_1px_0px_rgba(0,0,0,.2)_inset,0px_0.125rem_0px_0px_rgba(0,0,0,.6)_inset]">
                   <span className="block group-active:[transform:translate3d(0,1px,0)]">
                     Buy Now
                   </span>
@@ -49,9 +53,6 @@ const Pricing = () => {
                 </button>
               )}
             </div>
-
-            <hr className="border-[#e4e4e7] dark:border-[#27272a]" />
-
             <ul role="list" className="mt-6 space-y-3">
               {plan.features.map((feature) => (
                 <li
@@ -59,7 +60,9 @@ const Pricing = () => {
                   className="flex items-start gap-3 font-medium"
                 >
                   <span className="size-5">
-                    <Check className="size-5 rounded-full bg-blue-600 p-0.5 text-white" />
+                    <Check
+                      className={`size-5 rounded-full p-0.5 ${plan.id === "pro" ? "bg-white text-blue-600" : "bg-blue-600 text-white"}`}
+                    />
                   </span>
                   <span>{feature}</span>
                 </li>

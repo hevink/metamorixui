@@ -18,30 +18,30 @@ interface AccordionProps {
 
 const accordionItems: AccordionItem[] = [
   {
-    title: "How do I create an Accordion with React and Framer Motion?",
+    title: "Is Metamorix UI free to use?",
     description:
-      "To create an Accordion with React and Framer Motion, you can use the AnimatePresence component along with motion elements. Implement a toggle mechanism to control the expanded state of each accordion item.",
-  },
-  {
-    title: "What are the benefits of using Framer Motion?",
-    description:
-      "Framer Motion provides an easy-to-use API for creating smooth animations in React applications. It offers features like gesture recognition, variants for complex animations, and automatic prefixing for cross-browser compatibility.",
-  },
-  {
-    title: "How can I customize the accordion's appearance?",
-    description:
-      "You can customize the accordion's appearance using Tailwind CSS classes. Adjust colors, padding, margins, and other properties to match your desired design. You can also add icons or other elements to enhance the visual appeal.",
+      "Yes, Metamorix UI is free to use for both personal and commercial projects. You can use it without any restrictions.",
   },
   {
     title:
-      "Is it possible to have multiple accordion items open simultaneously?",
+      "What is the difference between Metamorix UI and other UI libraries?",
     description:
-      "Yes, it's possible. You would need to modify the state management to use an array or object to track multiple open items instead of a single expanded state. Then, update the toggle logic accordingly.",
+      "Metamorix UI is a modern UI blocks that are designed to help you build your next website faster. It is built with Tailwind CSS and Framer Motion.",
   },
   {
-    title: "Can I animate the accordion items when they expand or collapse?",
+    title: "Can I use Metamorix UI with other frameworks?",
     description:
-      "Yes, you can animate the accordion items using Framer Motion. Apply animations to the content elements within each accordion item, such as height transitions, opacity changes, or custom animations based on your design preferences.",
+      "Yes, you can use Metamorix UI with any front-end framework. It is designed to be compatible with any framework.",
+  },
+  {
+    title: "Can i contribute to Metamorix UI?",
+    description:
+      "Yes, you can contribute to Metamorix UI on GitHub. We welcome contributions from the community.",
+  },
+  {
+    title: "You want to build a website with Metamorix UI?",
+    description:
+      "Yes, you can build a website with Metamorix UI. Contact us for more information.",
   },
 ];
 

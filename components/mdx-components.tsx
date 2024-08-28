@@ -180,11 +180,7 @@ const components = {
   ),
   Separator: ({ ...props }) => (
     <Separator
-      style={{
-        background:
-          "radial-gradient(50% 100% at 50% 100%,rgba(255,255,255,.32) 0%,rgba(255,255,255,0) 100%)",
-      }}
-      className="my-10"
+      className="my-10 [background:radial-gradient(50%_100%_at_50%_100%,rgba(0,0,0,.32)_0%,rgba(0,0,0,0)_100%)] dark:[background:radial-gradient(50%_100%_at_50%_100%,rgba(255,255,255,.32)_0%,rgba(255,255,255,0)_100%)]"
       {...props}
     />
   ),

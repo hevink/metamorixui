@@ -120,7 +120,12 @@ const logos = [
 
 const LogoCloud = () => {
   return (
-    <div className="w-full py-12">
+    <motion.div
+      initial={{ scale: 0.9, opacity: 0, filter: "blur(10px)" }}
+      animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      className="w-full py-12"
+    >
       <div className="mx-auto w-full px-2 md:px-4">
         <div
           className="group relative mt-6 flex gap-3 overflow-hidden p-2"
@@ -148,6 +153,6 @@ const LogoCloud = () => {
             ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

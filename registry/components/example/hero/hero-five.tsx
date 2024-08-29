@@ -16,7 +16,7 @@ const Hero = () => {
               className="absolute inset-0 -z-20"
               quantity={100}
               color={theme === "light" ? "#000000" : "#ffffff"}
-              ease={50}
+              ease={20}
               refresh
             />
             <div>

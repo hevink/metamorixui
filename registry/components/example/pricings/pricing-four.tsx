@@ -67,7 +67,7 @@ const Pricing = () => {
   const [period, setPeriod] = useState<"MONTHLY" | "YEARLY">("MONTHLY");
 
   return (
-    <section className="my-10">
+    <section className="mx-auto max-w-7xl py-20">
       <div className="text-center">
         <h1 className="text-3xl font-bold lg:text-5xl">Pricing</h1>
 

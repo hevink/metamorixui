@@ -76,7 +76,7 @@ const Pricing = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="mx-auto max-w-7xl py-20">
       <div className="mx-auto space-y-6 text-center sm:max-w-lg">
         <h1 className="text-2xl font-bold md:text-5xl">
           <span className="bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">

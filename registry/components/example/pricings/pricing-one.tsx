@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 const Pricing = () => {
   return (
-    <section className="my-10">
+    <section className="mx-auto my-10 max-w-7xl">
       <div className="text-center text-sm font-semibold text-blue-600">
         PRICING
       </div>

@@ -2,7 +2,7 @@ import { Dog, Heart, Lock } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="relative block items-center overflow-hidden md:flex">
+    <div className="relative block items-center overflow-hidden md:flex max-w-7xl">
       <div className="w-full p-4 md:w-1/2">
         <img
           src="https://ui.metamorix.com/bg-grid.png"

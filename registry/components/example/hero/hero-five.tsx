@@ -20,7 +20,7 @@ const Hero = () => {
               refresh
             />
             <div>
-              <div className="flex h-full flex-col items-center justify-center pt-20">
+              <div className="flex h-full flex-col items-center justify-center">
                 <div className="mt-8 flex max-w-3xl flex-col items-center md:w-full">
                   <h1 className="text-center text-4xl font-bold text-neutral-800 dark:text-white md:text-6xl">
                     Build your dream website{" "}

@@ -1,4 +1,4 @@
-const Login = () => {
+const forgotPassword = () => {
   return (
     <section>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
@@ -6,7 +6,7 @@ const Login = () => {
           <div className="mb-3 flex justify-center">
             <img
               src="https://ui.metamorix.com/favicon.ico"
-              className="h-14 w-10"
+              className="size-12"
             />
           </div>
           <h2 className="text-center text-xl font-bold leading-tight md:text-2xl">
@@ -46,4 +46,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default forgotPassword;

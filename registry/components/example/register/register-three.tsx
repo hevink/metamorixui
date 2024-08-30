@@ -109,7 +109,7 @@ const SignIn = () => {
             <div className="mb-3 flex justify-center">
               <img
                 src="https://ui.metamorix.com/favicon.ico"
-                className="h-14 w-10"
+                className="size-12"
               />
             </div>
             <h2 className="text-center text-xl font-bold leading-tight md:text-2xl">

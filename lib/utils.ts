@@ -81,8 +81,8 @@ export function constructMetadata({
       "Free landing page components",
       "Free framermotion components",
       "Free Next.js components",
-      "Free Metamorix UI components"
-      "Free animated components",
+      "Free Metamorix UI components",
+      "Free animated components"
     ],
     openGraph: {
       title,

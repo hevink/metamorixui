@@ -82,7 +82,7 @@ export default async function DocPage({ params }: DocPageProps) {
 
   return (
     <main>
-      <div className="mx-auto w-full min-w-0 my-10">
+      <div className="mx-auto w-full min-w-0 my-8">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
           <div className="truncate">Docs</div>
           <ChevronRightIcon className="size-4" />

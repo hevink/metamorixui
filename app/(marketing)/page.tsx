@@ -1,6 +1,6 @@
-import SiteFaq from "@/components/lp/SiteFaq";
-import SiteHero from "@/components/lp/SiteHero";
-import SiteTestimonial from "@/components/lp/SiteTestimonials";
+import SiteFaq from "@/components/lp/site-faq";
+import SiteHero from "@/components/lp/site-hero";
+import SiteTestimonial from "@/components/lp/site-testimonials";
 
 export default function Home() {
   return (

@@ -1,4 +1,5 @@
 const Badge = () => {
+  console.log("Hello World");
   return (
     <div className="flex items-center justify-center">
       <button className="relative inline-flex overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">

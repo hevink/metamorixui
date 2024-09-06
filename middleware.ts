@@ -6,7 +6,7 @@ export const config = {
 };
 
 export default async function middleware(req: NextRequest) {
-  const engyneSubdomain = "magicui"; // change this to your Engyne subdomain
+  const engyneSubdomain = "metamorix"; // change this to your Engyne subdomain
   const url = req.nextUrl.clone();
 
   const { pathname } = req.nextUrl;

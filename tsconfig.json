@@ -28,8 +28,8 @@
       "@/*": [
         "./*"
       ],
-      "@/components/magicui/*": [
-        "./registry/components/magicui/*"
+      "@/components/metamorix/*": [
+        "./registry/components/metamorix/*"
       ],
       "@/components/example/*": [
         "./registry/components/example/*"

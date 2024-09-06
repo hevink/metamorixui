@@ -42,15 +42,19 @@ const Pricing = () => {
             </div>
             <div className="mt-6">
               {plan.id === "pro" ? (
-                <button className="group h-10 w-full select-none rounded-lg bg-white px-3 text-sm leading-8 text-orange-600 shadow-[0_-1px_0_1px_orange_inset,0_0_0_1px_orange_inset,0_0.5px_0_1.5px_orange_inset] hover:bg-gray-100 active:bg-gray-200 active:shadow-[-1px_0px_1px_0px_orange_inset,1px_0px_1px_0px_orange_inset,0px_0.125rem_0px_0px_orange_inset]">  
-                  <span className="block group-active:[transform:translate3d(0,1px,0)]">
-                    Buy Now
-                  </span>
-                </button>
+                <a href="mailto:hevinatwork@gmail.com?subject=I want to build software">
+                  <button className="group h-10 w-full select-none rounded-lg bg-white px-3 text-sm leading-8 text-orange-600 shadow-[0_-1px_0_1px_orange_inset,0_0_0_1px_orange_inset,0_0.5px_0_1.5px_orange_inset] hover:bg-gray-100 active:bg-gray-200 active:shadow-[-1px_0px_1px_0px_orange_inset,1px_0px_1px_0px_orange_inset,0px_0.125rem_0px_0px_orange_inset]">
+                    <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                      Contact us
+                    </span>
+                  </button>
+                </a>
               ) : (
-                <button className="w-full rounded-lg border border-orange-600 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-400/10">
-                  Get Started
-                </button>
+                <a href="mailto:hevinatwork@gmail.com?subject=I want to build software">
+                  <button className="w-full rounded-lg border border-orange-600 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-400/10">
+                    Contact us
+                  </button>
+                </a>
               )}
             </div>
             <ul role="list" className="mt-6 space-y-3">
@@ -93,7 +97,7 @@ const plans = [
     name: "Pro",
     id: "pro",
     description: "Ideal for growing businesses and teams",
-    sellingPrice: { monthly: "$199" },
+    sellingPrice: { monthly: "$499" },
     features: [
       "Priority Support",
       "Private Repository Access",
@@ -109,7 +113,7 @@ const plans = [
     name: "Ultimate",
     id: "ultimate",
     description: "For large enterprises with advanced needs",
-    sellingPrice: { monthly: "$499" },
+    sellingPrice: { monthly: "$999+" },
     features: [
       "Dedicated Support",
       "Advanced Analytics",
@@ -120,6 +124,7 @@ const plans = [
       "Custom Integrations",
       "Unlimited API Requests",
       "Dedicated Account Manager",
+      "Custom Code Implementation",
     ],
   },
 ];

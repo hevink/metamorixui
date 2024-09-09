@@ -11,7 +11,7 @@ const Pricing = () => {
       </h1>
       <p className="mx-auto max-w-lg text-center text-sm font-medium leading-4 text-gray-700 dark:text-gray-300">
         Our pricing is designed to scale with your business. Our plans have no
-        hidden fees, and we never take a cut of your sales.
+        hidden fees.
       </p>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
